@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T16:15:10.464Z",
+  "generatedAt": "2026-07-05T16:16:48.330Z",
   "cutoff": "2024-04-10",
   "dataMaxDate": "2026-07-04",
   "hiddenCutoff": "2026-04-04",
@@ -8263,6 +8263,103 @@
       ]
     },
     {
+      "key": "uid:qwer1317",
+      "mmr": 604.577724023333,
+      "tier": "8",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 635.4591817030721,
+          "win": false
+        },
+        {
+          "opponentRating": 637.3572104713398,
+          "win": false
+        },
+        {
+          "opponentRating": 615.80026007433,
+          "win": true
+        },
+        {
+          "opponentRating": 640.5874446135149,
+          "win": true
+        },
+        {
+          "opponentRating": 620.4432414054825,
+          "win": true
+        },
+        {
+          "opponentRating": 611.508353203611,
+          "win": false
+        },
+        {
+          "opponentRating": 613.4752325286689,
+          "win": false
+        },
+        {
+          "opponentRating": 615.6169599421288,
+          "win": false
+        },
+        {
+          "opponentRating": 606.8834214017862,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        }
+      ],
+      "note": "신규(배치확정) / 관리자고정",
+      "name": "으니",
+      "race": "P",
+      "wins": 47,
+      "losses": 82,
+      "countedMatches": 129,
+      "lastMatchDate": "2026-07-03",
+      "placementSnapshot": [
+        {
+          "opponentRating": 635.4591817030721,
+          "win": false
+        },
+        {
+          "opponentRating": 637.3572104713398,
+          "win": false
+        },
+        {
+          "opponentRating": 615.80026007433,
+          "win": true
+        },
+        {
+          "opponentRating": 640.5874446135149,
+          "win": true
+        },
+        {
+          "opponentRating": 620.4432414054825,
+          "win": true
+        },
+        {
+          "opponentRating": 611.508353203611,
+          "win": false
+        },
+        {
+          "opponentRating": 613.4752325286689,
+          "win": false
+        },
+        {
+          "opponentRating": 615.6169599421288,
+          "win": false
+        },
+        {
+          "opponentRating": 606.8834214017862,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        }
+      ]
+    },
+    {
       "key": "uid:kimp1ay",
       "mmr": 604.2953264440994,
       "tier": "8",
@@ -8841,103 +8938,6 @@
         },
         {
           "opponentRating": 761.6715415454913,
-          "win": false
-        }
-      ]
-    },
-    {
-      "key": "uid:qwer1317",
-      "mmr": 604.577724023333,
-      "tier": "B",
-      "status": "active",
-      "placementList": [
-        {
-          "opponentRating": 635.4591817030721,
-          "win": false
-        },
-        {
-          "opponentRating": 637.3572104713398,
-          "win": false
-        },
-        {
-          "opponentRating": 615.80026007433,
-          "win": true
-        },
-        {
-          "opponentRating": 640.5874446135149,
-          "win": true
-        },
-        {
-          "opponentRating": 620.4432414054825,
-          "win": true
-        },
-        {
-          "opponentRating": 611.508353203611,
-          "win": false
-        },
-        {
-          "opponentRating": 613.4752325286689,
-          "win": false
-        },
-        {
-          "opponentRating": 615.6169599421288,
-          "win": false
-        },
-        {
-          "opponentRating": 606.8834214017862,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        }
-      ],
-      "note": "신규(배치확정) / 관리자고정",
-      "name": "으니",
-      "race": "P",
-      "wins": 47,
-      "losses": 82,
-      "countedMatches": 129,
-      "lastMatchDate": "2026-07-03",
-      "placementSnapshot": [
-        {
-          "opponentRating": 635.4591817030721,
-          "win": false
-        },
-        {
-          "opponentRating": 637.3572104713398,
-          "win": false
-        },
-        {
-          "opponentRating": 615.80026007433,
-          "win": true
-        },
-        {
-          "opponentRating": 640.5874446135149,
-          "win": true
-        },
-        {
-          "opponentRating": 620.4432414054825,
-          "win": true
-        },
-        {
-          "opponentRating": 611.508353203611,
-          "win": false
-        },
-        {
-          "opponentRating": 613.4752325286689,
-          "win": false
-        },
-        {
-          "opponentRating": 615.6169599421288,
-          "win": false
-        },
-        {
-          "opponentRating": 606.8834214017862,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
           "win": false
         }
       ]
