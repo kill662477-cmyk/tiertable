@@ -18,10 +18,18 @@ const DIRECT_UID_SEED_OVERRIDES = {
 };
 
 // 표시(디스플레이)에서 완전히 제외할 인원 — 계산 풀에는 남아있어 상대들 점수에는 영향 없음
-const EXCLUDED_PLAYER_NAMES = new Set(["나도현"]);
+const EXCLUDED_PLAYER_NAMES = new Set(["나도현", "엄키키", "지아송"]);
 
 // 관리자 수동 티어 고정 — 계산 결과와 무관하게 표시 티어를 강제
-const FORCED_TIER_OVERRIDES = { 보혜: "1" };
+const FORCED_TIER_OVERRIDES = {
+  보혜: "1",
+  햄희: "8",
+  먹체토: "8",
+  혜냥: "8",
+  찡찡시아: "8",
+  김말랑: "8",
+  세월: "8",
+};
 
 module.exports = {
   RENAMED_TO_SEED_NAME,

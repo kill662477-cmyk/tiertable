@@ -517,16 +517,6 @@ function main() {
   }
 
   for (const p of displayActive) {
-    const original = players.find(x => x.name === p.name);
-    if (original && original.tierCode) {
-      const ogRank = rankOf(original.tierCode);
-      const calcRank = rankOf(p.tier);
-      if (calcRank > ogRank) {
-        p.tier = original.tierCode;
-        p.note = (p.note || "") + " / 관리자 하한선 보호";
-      }
-    }
-    
     if (FORCED_TIER_OVERRIDES[p.name]) {
       p.tier = FORCED_TIER_OVERRIDES[p.name];
       p.note = (p.note || "") + " / 관리자고정";
