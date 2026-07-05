@@ -501,6 +501,19 @@ function main() {
     ctEntry.note = "복귀자(재측정중) / 관리자 2티어 강제조정";
     ctEntry.returnBadgeUntil = ctEntry.countedMatches + PLACEMENT_GAMES;
   }
+  
+  const sijoEntry = displayActive.find(e => e.name === "시조새") || hidden.find(e => e.name === "시조새");
+  if (sijoEntry) {
+    sijoEntry.mmr = 1950; // 3티어 하한 MMR
+    sijoEntry.tier = "3";
+    sijoEntry.note = "관리자 3티어 강제조정";
+    sijoEntry.lastMatchDate = dataMaxDate; // 임시휴면(흑백) 방지
+    if (hidden.includes(sijoEntry)) {
+      hidden.splice(hidden.indexOf(sijoEntry), 1);
+      displayActive.push(sijoEntry);
+      sijoEntry.status = "active";
+    }
+  }
 
   for (const p of displayActive) {
     if (FORCED_TIER_OVERRIDES[p.name]) {
