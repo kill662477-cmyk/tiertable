@@ -508,6 +508,7 @@ function main() {
     sijoEntry.tier = "3";
     sijoEntry.note = "관리자 3티어 강제조정";
     sijoEntry.lastMatchDate = dataMaxDate; // 임시휴면(흑백) 방지
+    sijoEntry.isTemporaryDormant = false;
     if (hidden.includes(sijoEntry)) {
       hidden.splice(hidden.indexOf(sijoEntry), 1);
       displayActive.push(sijoEntry);

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T15:37:04.947Z",
+  "generatedAt": "2026-07-05T15:40:14.584Z",
   "cutoff": "2024-04-10",
   "dataMaxDate": "2026-07-04",
   "hiddenCutoff": "2026-04-04",
@@ -1303,7 +1303,7 @@
       "countedMatches": 35,
       "lastMatchDate": "2026-07-04",
       "returnBadgeUntil": null,
-      "isTemporaryDormant": true
+      "isTemporaryDormant": false
     },
     {
       "key": "uid:bora99",
