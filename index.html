@@ -429,6 +429,47 @@ footer b{color:var(--cyan);font-weight:700}
   color: #fff; border-radius: 4px; font-family: inherit; font-size: 13px;
 }
 .admin-url-input:focus { border-color: #3b82f6; outline: none; }
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: var(--cyan);
+  color: #000;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+#scrollTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+#scrollTopBtn:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
+}
+@media(max-width:768px) {
+  #scrollTopBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
 </style>
 </head>
 <body>
@@ -454,6 +495,8 @@ footer b{color:var(--cyan);font-weight:700}
 <footer>
   기준: <b>MMR 계산</b> (2024.04~2026.07 전적, 승강제 시뮬레이션) · 전적 데이터 <b>ELOBOARD</b> 연동 · 매달 <b>15일 / 30일</b> 갱신
 </footer>
+
+<button id="scrollTopBtn" title="Go to top">▲</button>
 
 <div id="guideModal" class="modal">
   <div class="modal-content">
@@ -755,6 +798,18 @@ copyPhotosBtn.addEventListener("click", () => {
   }).catch(() => {
     prompt("아래 코드를 복사하세요:", code);
   });
+});
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
 </body>
