@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>티어측정표</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;500;700;900&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#04060d;
+  --bg2:#080d1a;
+  --panel:rgba(13,20,38,.72);
+  --line:rgba(90,130,220,.18);
+  --line-bright:rgba(120,170,255,.45);
+  --text:#dfe8ff;
+  --dim:#5f7099;
+  --terran:#4da6ff;
+  --zerg:#e879f9;
+  --protoss:#ffd54d;
+  --cyan:#54e0ff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Gothic A1',sans-serif;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+/* ---------- starfield backdrop ---------- */
+.space{
+  position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(1100px 500px at 85% -5%, rgba(66,44,140,.35), transparent 60%),
+    radial-gradient(900px 600px at -10% 30%, rgba(20,70,140,.28), transparent 60%),
+    radial-gradient(700px 500px at 60% 110%, rgba(120,40,110,.18), transparent 60%),
+    linear-gradient(180deg,#04060d 0%,#060a16 50%,#04060d 100%);
+}
+.space::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(1px 1px at 12% 22%,rgba(255,255,255,.8) 50%,transparent 51%),
+    radial-gradient(1px 1px at 28% 64%,rgba(255,255,255,.5) 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 41% 12%,rgba(180,210,255,.9) 50%,transparent 51%),
+    radial-gradient(1px 1px at 55% 45%,rgba(255,255,255,.55) 50%,transparent 51%),
+    radial-gradient(1px 1px at 67% 78%,rgba(255,255,255,.65) 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 76% 28%,rgba(200,220,255,.85) 50%,transparent 51%),
+    radial-gradient(1px 1px at 88% 58%,rgba(255,255,255,.5) 50%,transparent 51%),
+    radial-gradient(1px 1px at 8% 85%,rgba(255,255,255,.6) 50%,transparent 51%),
+    radial-gradient(1.2px 1.2px at 94% 90%,rgba(220,235,255,.7) 50%,transparent 51%),
+    radial-gradient(1px 1px at 35% 92%,rgba(255,255,255,.45) 50%,transparent 51%);
+  background-size:900px 700px;
+  animation:twinkle 9s ease-in-out infinite alternate;
+}
+@keyframes twinkle{from{opacity:.55}to{opacity:1}}
+.space::after{
+  content:"";position:absolute;inset:0;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* ---------- header ---------- */
+header{
+  position:relative;
+  padding:88px 24px 64px;
+  text-align:center;
+}
+.h-kicker{
+  font-family:'Orbitron',sans-serif;
+  font-size:12px;letter-spacing:.55em;
+  color:var(--cyan);text-transform:uppercase;
+  margin-bottom:22px;
+  animation:fadeDown .8s ease both;
+}
+h1{
+  font-family:'Black Han Sans',sans-serif;
+  font-size:clamp(44px,7.5vw,84px);
+  line-height:1.05;
+  letter-spacing:.02em;
+  background:linear-gradient(180deg,#ffffff 20%,#9db8e8 60%,#5a7ab8 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 26px rgba(90,140,255,.35));
+  animation:fadeDown .8s .1s ease both;
+}
+.h-sub{
+  margin-top:18px;font-size:14px;color:var(--dim);letter-spacing:.35em;
+  animation:fadeDown .8s .2s ease both;
+}
+.h-rule{
+  width:min(520px,70vw);height:1px;margin:34px auto 0;
+  background:linear-gradient(90deg,transparent,var(--line-bright),transparent);
+  position:relative;
+  animation:fadeDown .8s .3s ease both;
+}
+.h-rule::after{
+  content:"◆";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  color:var(--cyan);font-size:9px;text-shadow:0 0 12px var(--cyan);
+}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+/* ---------- race legend ---------- */
+.legend{
+  display:flex;justify-content:center;gap:34px;flex-wrap:wrap;
+  margin-top:34px;
+  animation:fadeDown .8s .4s ease both;
+}
+.legend span{
+  font-family:'Orbitron','Gothic A1',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.28em;
+  display:flex;align-items:center;gap:9px;
+}
+.legend i{width:9px;height:9px;transform:rotate(45deg);display:inline-block}
+.lg-t{color:var(--terran)}.lg-t i{background:var(--terran);box-shadow:0 0 10px var(--terran)}
+.lg-z{color:var(--zerg)}.lg-z i{background:var(--zerg);box-shadow:0 0 10px var(--zerg)}
+.lg-p{color:var(--protoss)}.lg-p i{background:var(--protoss);box-shadow:0 0 10px var(--protoss)}
+/* ---------- tier nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(14px);
+  background:rgba(4,6,13,.78);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{
+  max-width:1180px;margin:0 auto;
+  display:flex;gap:2px;overflow-x:auto;
+  scrollbar-width:none;
+}
+.nav-in::-webkit-scrollbar{display:none}
+nav a{
+  flex:1 0 auto;
+  padding:15px 18px;
+  text-align:center;
+  font-family:'Orbitron','Gothic A1',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.14em;
+  color:var(--dim);text-decoration:none;
+  position:relative;transition:color .25s;
+  white-space:nowrap;
+}
+nav a::after{
+  content:"";position:absolute;left:20%;right:20%;bottom:0;height:2px;
+  background:var(--cyan);transform:scaleX(0);transition:transform .3s;
+  box-shadow:0 0 12px var(--cyan);
+}
+nav a:hover{color:var(--text)}
+nav a.active{color:var(--cyan)}
+nav a.active::after{transform:scaleX(1)}
+/* ---------- tier sections ---------- */
+main{max-width:1180px;margin:0 auto;padding:30px 22px 120px}
+section{margin-top:74px;scroll-margin-top:80px}
+.t-head{
+  position:relative;
+  display:flex;align-items:baseline;gap:20px;
+  padding:0 0 18px 4px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:34px;
+}
+.t-head::after{
+  content:"";position:absolute;left:0;bottom:-1px;width:120px;height:2px;
+  background:linear-gradient(90deg,var(--acc,#54e0ff),transparent);
+  box-shadow:0 0 14px var(--acc,#54e0ff);
+}
+.t-num{
+  font-family:'Orbitron',sans-serif;
+  font-size:clamp(38px,5vw,56px);font-weight:900;
+  color:var(--acc,#54e0ff);
+  text-shadow:0 0 30px color-mix(in srgb,var(--acc,#54e0ff) 60%,transparent);
+  line-height:1;
+}
+.t-name{
+  font-family:'Black Han Sans',sans-serif;
+  font-size:clamp(24px,3vw,34px);
+  letter-spacing:.06em;color:#f2f6ff;
+}
+.t-count{
+  margin-left:auto;
+  font-family:'Orbitron',sans-serif;
+  font-size:12px;letter-spacing:.3em;color:var(--dim);
+}
+/* ---------- player grid ---------- */
+.race-row{margin-bottom:26px}
+.race-row:last-child{margin-bottom:0}
+.race-label{
+  display:flex;align-items:center;gap:10px;
+  font-family:'Orbitron','Gothic A1',sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:.3em;
+  margin-bottom:14px;
+}
+.race-label i{width:8px;height:8px;transform:rotate(45deg)}
+.race-label::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--rlc) 30%,transparent),transparent);
+}
+.race-label.r-T{color:var(--terran)}.race-label.r-T i{background:var(--terran);box-shadow:0 0 8px var(--terran)}
+.race-label.r-Z{color:var(--zerg)}.race-label.r-Z i{background:var(--zerg);box-shadow:0 0 8px var(--zerg)}
+.race-label.r-P{color:var(--protoss)}.race-label.r-P i{background:var(--protoss);box-shadow:0 0 8px var(--protoss)}
+.race-label.r-T{--rlc:var(--terran)}
+.race-label.r-Z{--rlc:var(--zerg)}
+.race-label.r-P{--rlc:var(--protoss)}
+.grid{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:18px 14px;
+}
+.grid .card{width:124px}
+.card{
+  position:relative;
+  text-align:center;
+  opacity:0;transform:translateY(16px);
+  transition:opacity .5s ease,transform .5s ease;
+}
+.card.in{opacity:1;transform:none}
+.ph{
+  position:relative;
+  aspect-ratio:1/1.08;
+  overflow:hidden;
+  background:linear-gradient(160deg,#0c1226 0%,#141d3d 55%,#0a0f22 100%);
+  border:1px solid var(--line);
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%);
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph .init{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:'Black Han Sans',sans-serif;
+  font-size:34px;color:rgba(160,190,255,.22);
+}
+.ph::after{ /* scanline sheen */
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 0%,rgba(120,180,255,.07) 50%,transparent 100%);
+  background-size:100% 6px;
+  opacity:.5;pointer-events:none;
+}
+.card:hover .ph{
+  transform:translateY(-5px);
+  border-color:var(--rc);
+  box-shadow:0 10px 34px -10px color-mix(in srgb,var(--rc) 55%,transparent),
+             0 0 0 1px color-mix(in srgb,var(--rc) 45%,transparent);
+}
+.nm{
+  margin-top:9px;
+  font-size:15.5px;font-weight:900;letter-spacing:.02em;
+  color:color-mix(in srgb,var(--rc) 62%,#ffffff);
+  text-shadow:0 1px 3px rgba(0,0,0,.9),0 0 18px color-mix(in srgb,var(--rc) 35%,transparent);
+}
+.card.race-T{--rc:var(--terran)}
+.card.race-Z{--rc:var(--zerg)}
+.card.race-P{--rc:var(--protoss)}
+
+.card.grayscale {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.card.grayscale .nm {
+  color: #888;
+}
+/* badges */
+.bdg{
+  position:absolute;top:6px;left:6px;z-index:2;
+  font-family:'Orbitron',sans-serif;
+  font-size:9px;font-weight:700;letter-spacing:.12em;
+  padding:3px 7px;
+  color:#04060d;
+}
+.bdg.new{background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+.bdg.ret{background:#ff9d4d;box-shadow:0 0 14px #ff9d4d}
+/* empty race note */
+.empty-note{
+  grid-column:1/-1;
+  padding:26px;text-align:center;
+  color:var(--dim);font-size:13px;letter-spacing:.2em;
+  border:1px dashed var(--line);
+}
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--line);
+  padding:44px 24px 60px;text-align:center;
+  color:var(--dim);font-size:12px;letter-spacing:.22em;
+}
+footer b{color:var(--cyan);font-weight:700}
+/* tier accent per section */
+#tier-1{--acc:#ffd54d}
+#tier-2{--acc:#ffb35c}
+#tier-3{--acc:#7ee0a3}
+#tier-4{--acc:#54e0ff}
+#tier-5{--acc:#6aa8ff}
+#tier-6{--acc:#8f8aff}
+#tier-7{--acc:#c07dff}
+#tier-8{--acc:#f06fa8}
+#tier-Y{--acc:#9aa8c9}
+@media (max-width:560px){
+  .grid{gap:14px 10px}
+  .grid .card{width:96px}
+  .nm{font-size:12.5px}
+  nav a{padding:13px 13px;font-size:11px}
+}
+
+/* Guide Modal CSS */
+.guide-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--txt);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.guide-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 9999; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.75);
+  backdrop-filter: blur(5px);
+}
+.modal-content {
+  background-color: var(--bg);
+  margin: 10vh auto; 
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: var(--txt);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  position: relative;
+  font-family: 'Gothic A1', sans-serif;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: rgba(255,255,255,0.4);
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: #fff;
+}
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 19px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+}
+.guide-section {
+  margin-bottom: 25px;
+}
+.guide-section h3 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.modal-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+.modal-content ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+  color: #d1d5db;
+}
+.modal-content li {
+  margin-bottom: 8px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.modal-content li strong {
+  color: #fff;
+}
+.modal-content .highlight {
+  color: #60a5fa;
+  font-weight: 500;
+  background: rgba(96, 165, 250, 0.1);
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+/* Admin Panel */
+.admin-btn {
+  background: transparent; border: none; cursor: pointer;
+  font-size: 20px; position: absolute; right: 20px; top: 15px; opacity: 0.3;
+}
+.admin-btn:hover { opacity: 1; }
+.admin-panel {
+  display: none; padding: 20px; max-width: 900px; margin: 0 auto;
+}
+.admin-header {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+}
+.admin-header h2 { color: #fff; margin: 0; font-size: 20px; }
+.admin-table-wrap { overflow-x: auto; }
+#adminTable {
+  width: 100%; border-collapse: collapse; background: var(--bg2); color: var(--txt);
+}
+#adminTable th, #adminTable td {
+  padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left;
+}
+#adminTable th { background: rgba(0,0,0,0.3); font-weight: bold; color: #a4b1cd; }
+.admin-preview {
+  width: 40px; height: 40px; border-radius: 50%; overflow: hidden; background: #222;
+  display: flex; align-items: center; justify-content: center; font-weight: bold;
+}
+.admin-preview img { width: 100%; height: 100%; object-fit: cover; }
+.admin-url-input {
+  width: 100%; padding: 8px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; border-radius: 4px; font-family: inherit; font-size: 13px;
+}
+.admin-url-input:focus { border-color: #3b82f6; outline: none; }
+</style>
+</head>
+<body>
+<div class="space"></div>
+
+<header>
+  <h1>티어측정표</h1>
+  <div class="h-sub">TIER MEASUREMENT BOARD</div>
+  <button id="guideBtn" class="guide-btn">티어측정 가이드</button>
+  <button id="adminBtn" class="admin-btn">⚙️</button>
+  <div class="h-rule"></div>
+  <div class="legend">
+    <span class="lg-t"><i></i>테란 TERRAN</span>
+    <span class="lg-z"><i></i>저그 ZERG</span>
+    <span class="lg-p"><i></i>토스 PROTOSS</span>
+  </div>
+</header>
+
+<nav><div class="nav-in" id="tierNav"></div></nav>
+
+<main id="board"></main>
+
+<footer>
+  기준: <b>MMR 계산</b> (2024.04~2026.07 전적, 승강제 시뮬레이션) · 전적 데이터 <b>ELOBOARD</b> 연동 · 매달 <b>15일 / 30일</b> 갱신
+</footer>
+
+<div id="guideModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeGuide">&times;</span>
+    <h2>티어측정 가이드 (MMR 시스템)</h2>
+    
+    <div class="guide-section">
+      <h3>📈 승급 조건</h3>
+      <p>아래 조건을 <strong>모두 충족</strong> 시 <strong>승급전(3판 2선승)</strong>에 진입하며, 2승 달성 시 승급합니다.</p>
+      <ul>
+        <li>상위 티어 기준선보다 MMR <strong>30점 이상 초과</strong> (턱걸이 방지)</li>
+        <li>현재 티어에서 <strong>15경기 이상</strong> 소화</li>
+        <li>전체 누적 <strong>10경기 이상</strong> 소화</li>
+      </ul>
+    </div>
+
+    <div class="guide-section">
+      <h3>📉 강등 조건</h3>
+      <p>아래 4가지 조건을 <strong>모두 동시 충족</strong>해야만 강등이 확정됩니다.</p>
+      <ul>
+        <li>현재 티어 하한선 미달 상태가 <strong>30일 이상 지속</strong></li>
+        <li>미달 기간 중 <strong>10경기 이상</strong> 소화 (휴면자는 강등 제외)</li>
+        <li><strong>강등 유예 카운트 소진</strong> (미달 중 패배 시 차감, 승리 시 회복)</li>
+        <li>티어 하한선보다 <strong>50점 이상 깊은 수치</strong>로 미달</li>
+      </ul>
+    </div>
+
+    <div class="guide-section">
+      <h3>💤 휴면 및 복귀 시스템</h3>
+      <ul>
+        <li><strong>임시 휴면:</strong> 1개월 이상 전적이 없는 경우 흑백으로 처리됩니다.</li>
+        <li><strong>완전 휴면:</strong> 3개월 이상 전적이 없는 경우 티어표에서 제외됩니다.</li>
+        <li><strong>복귀자:</strong> 휴면 상태에서 다시 전적이 생기면 복귀자 뱃지가 부여되며 재측정 상태가 됩니다.</li>
+        <li><strong>소프트 리셋:</strong> 6개월에 한 번씩 모든 인원의 MMR과 티어가 리셋 및 재배치됩니다.</li>
+      </ul>
+    </div>
+
+    <div class="guide-section">
+      <h3>🧮 MMR 계산 방식</h3>
+      <p>승패 결과에 따라 아래의 <strong>표준 Elo 공식</strong>으로 점수가 변동됩니다.</p>
+      <div class="elo-formula" style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; margin: 12px 0; font-family: 'Orbitron', monospace; color: #a78bfa; font-size: 14px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+        <div>E<sub>A</sub> = 1 / (1 + 10<sup>(R<sub>B</sub> - R<sub>A</sub>) / 400</sup>)</div>
+        <div style="margin-top: 6px;">ΔR = K × (S - E<sub>A</sub>)</div>
+        <div style="font-size: 12px; color: #6b7280; margin-top: 8px; font-family: 'Gothic A1', sans-serif;">(R: 현재점수, S: 승=1/패=0, K: 매치 배율)</div>
+      </div>
+      <ul>
+        <li><strong>매치 배율 (K):</strong> 대회(×3), 대학대전(×2), CK(×1.5), 스폰(×0.5)</li>
+        <li><strong>어뷰징 방지:</strong> 동일 상대와 하루 4판 이상 대결 시 변동폭 대폭 감소</li>
+      </ul>
+    </div>
+
+    <div class="guide-section" style="margin-bottom: 0;">
+      <h3>🔄 시즌 소프트 리셋</h3>
+      <p class="highlight"><strong>6개월에 한 번씩</strong> 소프트 리셋이 진행되며, 압축된 MMR을 기준으로 <strong>티어가 재배치</strong>됩니다.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ 계산 결과 — MMR 기반 티어 (승강제 시뮬레이션 + 수동 강등유예 반영) ============ */
+let TIERS = [];
+
+/* 사진 매핑 — 추후 Supabase(eloboard 크롤링 이미지)에서 주입.
+   key: 선수명, value: 이미지 URL */
+let PHOTOS = {};
+
+/* 뱃지 — 신규:"new", 복귀자:"ret", 유지:"keep" */
+let BADGES = {};
+
+/* ============ render ============ */
+
+/* 활성 선수 목록 (Supabase/players.json 기준) - 휴면 인원 필터링용 */
+let ACTIVE_PLAYERS = new Set();
+
+let TEMP_DORMANT_PLAYERS = new Set();
+const RACE_ORDER = ["T","Z","P"];
+const boardEl = document.getElementById("board");
+const navEl = document.getElementById("tierNav");
+
+async function initBoard() {
+  try {
+    const [resPhotos, resMmr] = await Promise.all([
+      fetch('https://rljvzultuyiudhjjfotg.supabase.co/storage/v1/object/public/calmsv-assets/tiertable/photos.json?t=' + Date.now()),
+      fetch('https://rljvzultuyiudhjjfotg.supabase.co/storage/v1/object/public/calmsv-assets/tiertable/mmr-result.json?t=' + Date.now())
+    ]);
+    if(resPhotos.ok) PHOTOS = await resPhotos.json();
+    if(resMmr.ok) {
+      const mmrData = await resMmr.json();
+      const active = mmrData.active || [];
+      
+      const tierMap = {};
+      active.forEach(p => {
+        ACTIVE_PLAYERS.add(p.name);
+        if (p.isTemporaryDormant) TEMP_DORMANT_PLAYERS.add(p.name);
+        if (p.note && p.note.includes('복귀자')) BADGES[p.name] = 'return';
+        if (p.seeded === false && p.countedMatches < 10) BADGES[p.name] = 'new';
+
+        if (!tierMap[p.tier]) tierMap[p.tier] = { id: p.tier, label: p.tier === 'Y' ? '유스티어' : p.tier + '티어', T: [], Z: [], P: [] };
+        if (tierMap[p.tier][p.race]) tierMap[p.tier][p.race].push(p.name);
+      });
+
+      TIERS = Object.values(tierMap).sort((a, b) => {
+        if (a.id === 'Y') return 1;
+        if (b.id === 'Y') return -1;
+        return parseInt(a.id) - parseInt(b.id);
+      });
+    }
+  } catch(e) { console.error('Failed to load data', e); }
+
+  TIERS.forEach(t=>{
+    // nav
+    const a = document.createElement("a");
+    a.href = `#tier-${t.id}`;
+    a.textContent = t.label;
+    a.dataset.tier = t.id;
+    navEl.appendChild(a);
+  
+    // section
+    const total = RACE_ORDER.reduce((n,r)=>n+t[r].length,0);
+    const sec = document.createElement("section");
+    sec.id = `tier-${t.id}`;
+    const numLabel = t.id==="Y" ? "Y" : t.id;
+    sec.innerHTML = `
+      <div class="t-head">
+        <span class="t-num">${numLabel}</span>
+        <span class="t-name">${t.label}</span>
+        <span class="t-count">${total} PLAYERS</span>
+      </div>`;
+  
+    const RACE_META = {T:"테란 TERRAN", Z:"저그 ZERG", P:"토스 PROTOSS"};
+    RACE_ORDER.forEach(race=>{
+      if(!t[race].length) return;
+      const row = document.createElement("div");
+      row.className = "race-row";
+      row.innerHTML = `
+        <div class="race-label r-${race}"><i></i>${RACE_META[race]}</div>
+        <div class="grid"></div>`;
+      const grid = row.querySelector(".grid");
+      t[race].filter(name => ACTIVE_PLAYERS.has(name) || BADGES[name] === "new").forEach(name=>{
+        const card = document.createElement("div");
+        card.className = `card race-${race}`;
+        if (typeof TEMP_DORMANT_PLAYERS !== "undefined" && TEMP_DORMANT_PLAYERS.has(name)) {
+          card.classList.add("grayscale");
+        }
+        const img = PHOTOS[name]
+          ? `<img src="${PHOTOS[name]}" alt="${name}" loading="lazy">`
+          : `<span class="init">${name.slice(0,2)}</span>`;
+        const badge = BADGES[name]
+          ? `<span class="bdg ${BADGES[name]}">${BADGES[name]==="new"?"NEW":BADGES[name]==="keep"?"유지":"복귀"}</span>` : "";
+        card.innerHTML = `<div class="ph">${badge}${img}</div><div class="nm">${name}</div>`;
+        grid.appendChild(card);
+      });
+      sec.appendChild(row);
+    });
+  
+    boardEl.appendChild(sec);
+  });
+  
+  /* ============ reveal on scroll ============ */
+  const io = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        const cards = e.target.querySelectorAll(".card:not(.in)");
+        cards.forEach((c,i)=>setTimeout(()=>c.classList.add("in"), i*28));
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.08});
+  document.querySelectorAll("section").forEach(s=>io.observe(s));
+  
+  /* ============ nav active state ============ */
+  const secObs = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        document.querySelectorAll("nav a").forEach(a=>
+          a.classList.toggle("active", a.hash === `#${e.target.id}`));
+      }
+    });
+  },{rootMargin:"-30% 0px -60% 0px"});
+  document.querySelectorAll("section").forEach(s=>secObs.observe(s));
+  
+  
+}
+initBoard();
+
+/* ============ Guide Modal ============ */
+const guideModal = document.getElementById("guideModal");
+const guideBtn = document.getElementById("guideBtn");
+const closeGuide = document.getElementById("closeGuide");
+
+guideBtn.addEventListener("click", () => {
+  guideModal.style.display = "block";
+});
+closeGuide.addEventListener("click", () => {
+  guideModal.style.display = "none";
+});
+window.addEventListener("click", (e) => {
+  if (e.target === guideModal) {
+    guideModal.style.display = "none";
+  }
+});
+
+/* ============ Admin Mode ============ */
+const adminBtn = document.getElementById("adminBtn");
+const adminPanel = document.getElementById("adminPanel");
+const closeAdminBtn = document.getElementById("closeAdminBtn");
+const copyPhotosBtn = document.getElementById("copyPhotosBtn");
+const adminTbody = document.querySelector("#adminTable tbody");
+const mainHeader = document.querySelector("header");
+const mainFooter = document.querySelector("footer");
+
+adminBtn.addEventListener("click", async () => {
+  const pw = prompt("관리자 비밀번호를 입력하세요:");
+  if (pw !== "!rkxh141256") {
+    if (pw !== null) alert("비밀번호가 틀렸습니다.");
+    return;
+  }
+  
+  boardEl.style.display = "none";
+  navEl.style.display = "none";
+  mainHeader.style.display = "none";
+  mainFooter.style.display = "none";
+  adminPanel.style.display = "block";
+  
+  let mmrData = {};
+  try {
+    const res = await fetch("data/mmr-result.json");
+    if(res.ok) {
+      const json = await res.json();
+      json.active.forEach(p => {
+        if (p.name) mmrData[p.name] = { mmr: Math.round(p.mmr), tier: p.tier };
+      });
+    }
+  } catch (e) {
+    console.warn("MMR 데이터를 불러올 수 없습니다.", e);
+  }
+
+  adminTbody.innerHTML = "";
+  const allNames = new Set([...ACTIVE_PLAYERS]);
+  TIERS.forEach(t => {
+    ['T','Z','P'].forEach(r => {
+      t[r].forEach(n => allNames.add(n));
+    });
+  });
+
+  const sortedNames = Array.from(allNames).sort((a,b) => {
+    const mmrA = mmrData[a] ? mmrData[a].mmr : 0;
+    const mmrB = mmrData[b] ? mmrData[b].mmr : 0;
+    return mmrB - mmrA;
+  });
+
+  sortedNames.forEach(name => {
+    const data = mmrData[name] || { mmr: "-", tier: "-" };
+    const currentUrl = PHOTOS[name] || "";
+    
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${name}</td>
+      <td>${data.tier}</td>
+      <td>${data.mmr}</td>
+      <td>
+        <div class="admin-preview">
+          ${currentUrl ? `<img src="${currentUrl}">` : `<span class="init">${name.slice(0,2)}</span>`}
+        </div>
+      </td>
+      <td>
+        <input type="text" class="admin-url-input" data-name="${name}" value="${currentUrl}" placeholder="이미지 URL 입력">
+      </td>
+    `;
+    adminTbody.appendChild(tr);
+  });
+
+  document.querySelectorAll(".admin-url-input").forEach(inp => {
+    inp.addEventListener("input", (e) => {
+      const n = e.target.dataset.name;
+      const val = e.target.value.trim();
+      if (val) PHOTOS[n] = val;
+      else delete PHOTOS[n];
+      
+      const previewDiv = e.target.closest("tr").querySelector(".admin-preview");
+      previewDiv.innerHTML = val ? `<img src="${val}">` : `<span class="init">${n.slice(0,2)}</span>`;
+    });
+  });
+});
+
+closeAdminBtn.addEventListener("click", () => {
+  adminPanel.style.display = "none";
+  boardEl.style.display = "block";
+  navEl.style.display = "block";
+  mainHeader.style.display = "block";
+  mainFooter.style.display = "block";
+  renderBoard(); // refresh preview
+});
+
+copyPhotosBtn.addEventListener("click", () => {
+  const code = "const PHOTOS = " + JSON.stringify(PHOTOS, null, 2) + ";";
+  navigator.clipboard.writeText(code).then(() => {
+    alert("PHOTOS 코드가 복사되었습니다! index.html의 PHOTOS 부분에 덮어쓰기 하세요.");
+  }).catch(() => {
+    prompt("아래 코드를 복사하세요:", code);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,6631 @@
+{
+  "generatedAt": "2026-07-05T08:04:10.679Z",
+  "cutoff": "2024-04-10",
+  "active": [
+    {
+      "key": "uid:igoldtree",
+      "mmr": 2042.1437753897633,
+      "tier": "2",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "카리스",
+      "race": "T",
+      "wins": 11,
+      "losses": 4,
+      "countedMatches": 15
+    },
+    {
+      "key": "uid:chs9011",
+      "mmr": 2028.8230046117346,
+      "tier": "2",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "모토케이",
+      "race": "T",
+      "wins": 7,
+      "losses": 10,
+      "countedMatches": 17
+    },
+    {
+      "key": "uid:killgusdnk",
+      "mmr": 1896.850691581968,
+      "tier": "3",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "클템",
+      "race": "T",
+      "wins": 13,
+      "losses": 3,
+      "countedMatches": 16
+    },
+    {
+      "key": "uid:measin",
+      "mmr": 1857.9477501647673,
+      "tier": "3",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1997.7339029462294,
+          "win": false
+        },
+        {
+          "opponentRating": 1991.6630794240998,
+          "win": true
+        },
+        {
+          "opponentRating": 1973.7103782047047,
+          "win": true
+        },
+        {
+          "opponentRating": 1973.7118492440893,
+          "win": false
+        },
+        {
+          "opponentRating": 2196.000399960004,
+          "win": true
+        },
+        {
+          "opponentRating": 1152.7937105307647,
+          "win": true
+        },
+        {
+          "opponentRating": 1148.9530846253829,
+          "win": true
+        },
+        {
+          "opponentRating": 1703.5578206227337,
+          "win": true
+        },
+        {
+          "opponentRating": 1703.5647774217607,
+          "win": false
+        },
+        {
+          "opponentRating": 1699.571733942682,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "앙상국",
+      "race": "P",
+      "wins": 14,
+      "losses": 4,
+      "countedMatches": 18
+    },
+    {
+      "key": "uid:bijyu90",
+      "mmr": 1854.8781562993508,
+      "tier": "3",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "다린",
+      "race": "T",
+      "wins": 278,
+      "losses": 167,
+      "countedMatches": 445
+    },
+    {
+      "key": "uid:thetis",
+      "mmr": 1818.1871624047778,
+      "tier": "3",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "세나",
+      "race": "Z",
+      "wins": 98,
+      "losses": 70,
+      "countedMatches": 168
+    },
+    {
+      "key": "uid:dudwn4974",
+      "mmr": 1811.9874566339531,
+      "tier": "3",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "안아",
+      "race": "P",
+      "wins": 172,
+      "losses": 161,
+      "countedMatches": 333
+    },
+    {
+      "key": "uid:byebye22",
+      "mmr": 1793.7066611926346,
+      "tier": "3",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "애공",
+      "race": "P",
+      "wins": 256,
+      "losses": 149,
+      "countedMatches": 405
+    },
+    {
+      "key": "uid:ehgmldud1233",
+      "mmr": 1668.95434551515,
+      "tier": "4",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "히엉",
+      "race": "T",
+      "wins": 841,
+      "losses": 454,
+      "countedMatches": 1295
+    },
+    {
+      "key": "uid:gddms97",
+      "mmr": 1650.968909810963,
+      "tier": "4",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "하블리",
+      "race": "Z",
+      "wins": 393,
+      "losses": 276,
+      "countedMatches": 669
+    },
+    {
+      "key": "uid:kcl903",
+      "mmr": 1632.917786887502,
+      "tier": "4",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 575.9856785038795,
+          "win": true
+        },
+        {
+          "opponentRating": 1660.6955357760212,
+          "win": true
+        },
+        {
+          "opponentRating": 1660.7044350351075,
+          "win": false
+        },
+        {
+          "opponentRating": 1656.7133338393262,
+          "win": true
+        },
+        {
+          "opponentRating": 1665.689924054995,
+          "win": true
+        },
+        {
+          "opponentRating": 1665.6985716484526,
+          "win": false
+        },
+        {
+          "opponentRating": 1661.7072188123782,
+          "win": true
+        },
+        {
+          "opponentRating": 1657.716066509633,
+          "win": true
+        },
+        {
+          "opponentRating": 1653.7251193697402,
+          "win": true
+        },
+        {
+          "opponentRating": 641.0622036179291,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "채린쟝",
+      "race": "Z",
+      "wins": 8,
+      "losses": 4,
+      "countedMatches": 12
+    },
+    {
+      "key": "uid:s1on0106",
+      "mmr": 1617.741509877279,
+      "tier": "4",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 2000.0018967667859,
+          "win": false
+        },
+        {
+          "opponentRating": 1999.885396008106,
+          "win": true
+        },
+        {
+          "opponentRating": 1995.886661353523,
+          "win": true
+        },
+        {
+          "opponentRating": 1995.8879561536523,
+          "win": false
+        },
+        {
+          "opponentRating": 1810.2554061902065,
+          "win": true
+        },
+        {
+          "opponentRating": 1997.731340699689,
+          "win": true
+        },
+        {
+          "opponentRating": 1997.7326218276817,
+          "win": false
+        },
+        {
+          "opponentRating": 2013.2718887215538,
+          "win": true
+        },
+        {
+          "opponentRating": 2013.2730602505812,
+          "win": false
+        },
+        {
+          "opponentRating": 2013.2742317717104,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김쵸아",
+      "race": "T",
+      "wins": 74,
+      "losses": 79,
+      "countedMatches": 153
+    },
+    {
+      "key": "uid:llqqqq",
+      "mmr": 1617.5618343060726,
+      "tier": "4",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "혜로로",
+      "race": "Z",
+      "wins": 160,
+      "losses": 143,
+      "countedMatches": 303
+    },
+    {
+      "key": "uid:ghkdud1617",
+      "mmr": 1597.9500323279494,
+      "tier": "4",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "카히리",
+      "race": "Z",
+      "wins": 355,
+      "losses": 299,
+      "countedMatches": 654
+    },
+    {
+      "key": "uid:simcheong23",
+      "mmr": 1592.107786580374,
+      "tier": "4",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "또봉순",
+      "race": "Z",
+      "wins": 571,
+      "losses": 554,
+      "countedMatches": 1125
+    },
+    {
+      "key": "uid:seul0316",
+      "mmr": 1581.1028202794053,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "슬돌이",
+      "race": "P",
+      "wins": 468,
+      "losses": 437,
+      "countedMatches": 905
+    },
+    {
+      "key": "uid:cyj982002",
+      "mmr": 1580.5806903895973,
+      "tier": "4",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "다나짱",
+      "race": "P",
+      "wins": 659,
+      "losses": 800,
+      "countedMatches": 1459
+    },
+    {
+      "key": "uid:kwh1992",
+      "mmr": 1575.1755646518654,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "우힝이",
+      "race": "T",
+      "wins": 247,
+      "losses": 322,
+      "countedMatches": 569
+    },
+    {
+      "key": "uid:yjk011599",
+      "mmr": 1528.9571636546293,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "나무늘봉순",
+      "race": "Z",
+      "wins": 321,
+      "losses": 327,
+      "countedMatches": 648
+    },
+    {
+      "key": "uid:dkfka8945",
+      "mmr": 1520.2089592960583,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "라미",
+      "race": "Z",
+      "wins": 612,
+      "losses": 405,
+      "countedMatches": 1017
+    },
+    {
+      "key": "uid:wjswlgns09",
+      "mmr": 1460.439031626833,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "지두두",
+      "race": "T",
+      "wins": 506,
+      "losses": 458,
+      "countedMatches": 964
+    },
+    {
+      "key": "uid:eeceec",
+      "mmr": 1450.0558734661922,
+      "tier": "6",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1600.012609236733,
+          "win": false
+        },
+        {
+          "opponentRating": 1596.012609236733,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 1593.7194197668443,
+          "win": true
+        },
+        {
+          "opponentRating": 1593.7324917009682,
+          "win": false
+        },
+        {
+          "opponentRating": 1593.745562654705,
+          "win": false
+        },
+        {
+          "opponentRating": 1388.7544431804595,
+          "win": true
+        },
+        {
+          "opponentRating": 1600.5298860651842,
+          "win": false
+        },
+        {
+          "opponentRating": 1600.5424570196385,
+          "win": false
+        },
+        {
+          "opponentRating": 1591.0806162744843,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "뚜미",
+      "race": "T",
+      "wins": 839,
+      "losses": 688,
+      "countedMatches": 1527
+    },
+    {
+      "key": "uid:pazzy1",
+      "mmr": 1441.5750181598642,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "파찌",
+      "race": "Z",
+      "wins": 257,
+      "losses": 210,
+      "countedMatches": 467
+    },
+    {
+      "key": "uid:superbsw123",
+      "mmr": 1423.5091384564873,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "시조새",
+      "race": "P",
+      "wins": 11,
+      "losses": 24,
+      "countedMatches": 35
+    },
+    {
+      "key": "uid:boyun96",
+      "mmr": 1412.134750652633,
+      "tier": "5",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1543.1401748143253,
+          "win": true
+        },
+        {
+          "opponentRating": 1459.7580289663945,
+          "win": false
+        },
+        {
+          "opponentRating": 1459.7861866500923,
+          "win": false
+        },
+        {
+          "opponentRating": 1577.8008370952298,
+          "win": true
+        },
+        {
+          "opponentRating": 1571.8223199201213,
+          "win": true
+        },
+        {
+          "opponentRating": 1571.8445521609658,
+          "win": false
+        },
+        {
+          "opponentRating": 1571.8667815672716,
+          "win": false
+        },
+        {
+          "opponentRating": 1565.88900813976,
+          "win": true
+        },
+        {
+          "opponentRating": 1559.9120098754843,
+          "win": true
+        },
+        {
+          "opponentRating": 1559.9358135952161,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김뽀뇨",
+      "race": "P",
+      "wins": 372,
+      "losses": 331,
+      "countedMatches": 703
+    },
+    {
+      "key": "uid:bagguul",
+      "mmr": 1406.0287093901306,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "규리야",
+      "race": "T",
+      "wins": 1007,
+      "losses": 756,
+      "countedMatches": 1763
+    },
+    {
+      "key": "uid:parkle1006",
+      "mmr": 1399.912428905318,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "박듀듀",
+      "race": "P",
+      "wins": 748,
+      "losses": 717,
+      "countedMatches": 1465
+    },
+    {
+      "key": "uid:qpqpro",
+      "mmr": 1390.9436366229465,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "디임",
+      "race": "P",
+      "wins": 187,
+      "losses": 190,
+      "countedMatches": 377
+    },
+    {
+      "key": "uid:jscando77",
+      "mmr": 1390.655749823767,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "빵리나",
+      "race": "P",
+      "wins": 614,
+      "losses": 517,
+      "countedMatches": 1131
+    },
+    {
+      "key": "uid:phh95426",
+      "mmr": 1383.384260629005,
+      "tier": "5",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1580.4476025500937,
+          "win": false
+        },
+        {
+          "opponentRating": 1580.4617086426308,
+          "win": false
+        },
+        {
+          "opponentRating": 1601.0235905278603,
+          "win": false
+        },
+        {
+          "opponentRating": 1597.0361259182926,
+          "win": true
+        },
+        {
+          "opponentRating": 1597.0489514366411,
+          "win": false
+        },
+        {
+          "opponentRating": 1839.700618707819,
+          "win": false
+        },
+        {
+          "opponentRating": 1839.703798970658,
+          "win": false
+        },
+        {
+          "opponentRating": 1588.042681655799,
+          "win": false
+        },
+        {
+          "opponentRating": 1588.0561863437517,
+          "win": false
+        },
+        {
+          "opponentRating": 1553.7878952902076,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "소심",
+      "race": "T",
+      "wins": 406,
+      "losses": 448,
+      "countedMatches": 854
+    },
+    {
+      "key": "uid:ever316",
+      "mmr": 1361.0042033386394,
+      "tier": "6",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 2196.000399960004,
+          "win": true
+        },
+        {
+          "opponentRating": 1793.3006806945493,
+          "win": true
+        },
+        {
+          "opponentRating": 2201.85424267271,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "정소윤",
+      "race": "Z",
+      "wins": 171,
+      "losses": 92,
+      "countedMatches": 263
+    },
+    {
+      "key": "uid:forweourus",
+      "mmr": 1356.9676638439655,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "이유란",
+      "race": "Z",
+      "wins": 292,
+      "losses": 381,
+      "countedMatches": 673
+    },
+    {
+      "key": "uid:jjyjeh5454",
+      "mmr": 1351.0125148433688,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "하리",
+      "race": "P",
+      "wins": 590,
+      "losses": 547,
+      "countedMatches": 1137
+    },
+    {
+      "key": "uid:dmswls4565",
+      "mmr": 1347.8105810043498,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "공다츠",
+      "race": "Z",
+      "wins": 503,
+      "losses": 431,
+      "countedMatches": 934
+    },
+    {
+      "key": "uid:freshtomato",
+      "mmr": 1347.2118540930198,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "토마토",
+      "race": "P",
+      "wins": 429,
+      "losses": 459,
+      "countedMatches": 888
+    },
+    {
+      "key": "uid:rlsk0705",
+      "mmr": 1341.1279106406503,
+      "tier": "5",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "기나",
+      "race": "P",
+      "wins": 246,
+      "losses": 343,
+      "countedMatches": 589
+    },
+    {
+      "key": "uid:tjgpdus97",
+      "mmr": 1335.5118929071864,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "요닝",
+      "race": "Z",
+      "wins": 378,
+      "losses": 395,
+      "countedMatches": 773
+    },
+    {
+      "key": "uid:bora99",
+      "mmr": 1311.4177695693033,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "구보라",
+      "race": "P",
+      "wins": 377,
+      "losses": 457,
+      "countedMatches": 834
+    },
+    {
+      "key": "uid:kmj05317",
+      "mmr": 1308.8670016669673,
+      "tier": "6",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1545.414661291882,
+          "win": true
+        },
+        {
+          "opponentRating": 1541.4319056490078,
+          "win": true
+        },
+        {
+          "opponentRating": 1601.312878405533,
+          "win": true
+        },
+        {
+          "opponentRating": 1544.3123903214853,
+          "win": false
+        },
+        {
+          "opponentRating": 1604.3659314325412,
+          "win": true
+        },
+        {
+          "opponentRating": 1391.9396966417746,
+          "win": true
+        },
+        {
+          "opponentRating": 1605.1903512380134,
+          "win": true
+        },
+        {
+          "opponentRating": 1587.4287434243345,
+          "win": true
+        },
+        {
+          "opponentRating": 1583.4422957618208,
+          "win": true
+        },
+        {
+          "opponentRating": 1795.3587315924433,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "우리밍",
+      "race": "T",
+      "wins": 442,
+      "losses": 339,
+      "countedMatches": 781
+    },
+    {
+      "key": "uid:ovoa3316",
+      "mmr": 1303.759533610228,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "나예리",
+      "race": "T",
+      "wins": 495,
+      "losses": 577,
+      "countedMatches": 1072
+    },
+    {
+      "key": "uid:jieun3297",
+      "mmr": 1298.166185655728,
+      "tier": "6",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "다예",
+      "race": "Z",
+      "wins": 472,
+      "losses": 562,
+      "countedMatches": 1034
+    },
+    {
+      "key": "uid:lovelove7777",
+      "mmr": 1286.5572182819722,
+      "tier": "6",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 1157.8717951895555,
+          "win": true
+        },
+        {
+          "opponentRating": 1152.1042360983568,
+          "win": true
+        },
+        {
+          "opponentRating": 1154.31770308021,
+          "win": true
+        },
+        {
+          "opponentRating": 1148.5547586554196,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "서지수",
+      "race": "T",
+      "wins": 156,
+      "losses": 83,
+      "countedMatches": 239
+    },
+    {
+      "key": "uid:haru1207",
+      "mmr": 1282.1860471420493,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "쥬나",
+      "race": "Z",
+      "wins": 278,
+      "losses": 279,
+      "countedMatches": 557
+    },
+    {
+      "key": "uid:dbwjdcool1",
+      "mmr": 1270.8556106709216,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "키링",
+      "race": "P",
+      "wins": 428,
+      "losses": 244,
+      "countedMatches": 672
+    },
+    {
+      "key": "uid:yochba0402",
+      "mmr": 1264.7161918878346,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "졈니",
+      "race": "P",
+      "wins": 454,
+      "losses": 468,
+      "countedMatches": 922
+    },
+    {
+      "key": "uid:thelddl",
+      "mmr": 1263.2670804620936,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "햇살",
+      "race": "T",
+      "wins": 462,
+      "losses": 479,
+      "countedMatches": 941
+    },
+    {
+      "key": "uid:clclcl8888",
+      "mmr": 1263.1688370722025,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "늑대채린",
+      "race": "Z",
+      "wins": 401,
+      "losses": 478,
+      "countedMatches": 879
+    },
+    {
+      "key": "uid:ftrudals",
+      "mmr": 1243.7098468181903,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "나린",
+      "race": "Z",
+      "wins": 568,
+      "losses": 398,
+      "countedMatches": 966
+    },
+    {
+      "key": "uid:dlaalswl22",
+      "mmr": 1239.8058036512396,
+      "tier": "6",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1094.8606455845277,
+          "win": false
+        },
+        {
+          "opponentRating": 1539.6015134021125,
+          "win": false
+        },
+        {
+          "opponentRating": 1316.0291239305645,
+          "win": false
+        },
+        {
+          "opponentRating": 1316.092950487443,
+          "win": false
+        },
+        {
+          "opponentRating": 1312.1567539717748,
+          "win": true
+        },
+        {
+          "opponentRating": 1312.221995805705,
+          "win": false
+        },
+        {
+          "opponentRating": 1365.8538189957724,
+          "win": false
+        },
+        {
+          "opponentRating": 1136.9823357354621,
+          "win": true
+        },
+        {
+          "opponentRating": 1155.776090117054,
+          "win": true
+        },
+        {
+          "opponentRating": 1372.7895326138676,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "임밍지",
+      "race": "P",
+      "wins": 234,
+      "losses": 182,
+      "countedMatches": 416
+    },
+    {
+      "key": "uid:ititit",
+      "mmr": 1234.5530485541992,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "정중만",
+      "race": "P",
+      "wins": 3,
+      "losses": 7,
+      "countedMatches": 10
+    },
+    {
+      "key": "uid:totlllsz",
+      "mmr": 1225.014886751779,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "몽순",
+      "race": "Z",
+      "wins": 463,
+      "losses": 351,
+      "countedMatches": 814
+    },
+    {
+      "key": "uid:yyh3397",
+      "mmr": 1211.6301621647528,
+      "tier": "6",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 1601.555217058989,
+          "win": false
+        },
+        {
+          "opponentRating": 1596.5550270672968,
+          "win": true
+        },
+        {
+          "opponentRating": 1596.5678880398577,
+          "win": false
+        },
+        {
+          "opponentRating": 1596.5807480633696,
+          "win": false
+        },
+        {
+          "opponentRating": 1617.2913960097599,
+          "win": false
+        },
+        {
+          "opponentRating": 1617.302814009663,
+          "win": false
+        },
+        {
+          "opponentRating": 1597.8061002696516,
+          "win": false
+        },
+        {
+          "opponentRating": 1589.992268496612,
+          "win": false
+        },
+        {
+          "opponentRating": 1590.0123002151415,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "렘레미",
+      "race": "Z",
+      "wins": 190,
+      "losses": 299,
+      "countedMatches": 489
+    },
+    {
+      "key": "uid:agah1106",
+      "mmr": 1207.453842711039,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "링고",
+      "race": "P",
+      "wins": 590,
+      "losses": 501,
+      "countedMatches": 1091
+    },
+    {
+      "key": "uid:alaelddl97",
+      "mmr": 1198.7335095271637,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "찌킹",
+      "race": "Z",
+      "wins": 765,
+      "losses": 731,
+      "countedMatches": 1496
+    },
+    {
+      "key": "uid:gks2wl",
+      "mmr": 1193.6694360906993,
+      "tier": "6",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1401.868942438573,
+          "win": true
+        },
+        {
+          "opponentRating": 1397.9081267551808,
+          "win": true
+        },
+        {
+          "opponentRating": 1580.2783684138385,
+          "win": true
+        },
+        {
+          "opponentRating": 1580.2924882065536,
+          "win": false
+        },
+        {
+          "opponentRating": 1576.3066068557084,
+          "win": true
+        },
+        {
+          "opponentRating": 1587.8451903663818,
+          "win": false
+        },
+        {
+          "opponentRating": 1583.858710363964,
+          "win": true
+        },
+        {
+          "opponentRating": 1583.8725431207188,
+          "win": false
+        },
+        {
+          "opponentRating": 1368.8314995591659,
+          "win": false
+        },
+        {
+          "opponentRating": 1368.8787946048365,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "앵지",
+      "race": "Z",
+      "wins": 223,
+      "losses": 309,
+      "countedMatches": 532
+    },
+    {
+      "key": "uid:bjcherrybs",
+      "mmr": 1186.7936838262806,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "김하선",
+      "race": "T",
+      "wins": 37,
+      "losses": 44,
+      "countedMatches": 81
+    },
+    {
+      "key": "uid:123rhaxld",
+      "mmr": 1173.888848187859,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "최도랑",
+      "race": "P",
+      "wins": 421,
+      "losses": 452,
+      "countedMatches": 873
+    },
+    {
+      "key": "uid:rabbitmiffy",
+      "mmr": 1157.7708974917307,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "최세상",
+      "race": "T",
+      "wins": 522,
+      "losses": 290,
+      "countedMatches": 812
+    },
+    {
+      "key": "uid:djathekd",
+      "mmr": 1141.9377040706313,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "연애인",
+      "race": "P",
+      "wins": 656,
+      "losses": 720,
+      "countedMatches": 1376
+    },
+    {
+      "key": "uid:chchchshai",
+      "mmr": 1140.2593503176588,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "유이",
+      "race": "T",
+      "wins": 833,
+      "losses": 621,
+      "countedMatches": 1454
+    },
+    {
+      "key": "uid:lily0104",
+      "mmr": 1139.5568873906452,
+      "tier": "6",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "정소이",
+      "race": "Z",
+      "wins": 347,
+      "losses": 257,
+      "countedMatches": 604
+    },
+    {
+      "key": "uid:della2440",
+      "mmr": 1125.7708390549988,
+      "tier": "7",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "예실",
+      "race": "P",
+      "wins": 247,
+      "losses": 104,
+      "countedMatches": 351
+    },
+    {
+      "key": "uid:9rumee",
+      "mmr": 1113.9687938992295,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1388.5404410883025,
+          "win": true
+        },
+        {
+          "opponentRating": 1417.9756196115034,
+          "win": false
+        },
+        {
+          "opponentRating": 1418.0113652014413,
+          "win": false
+        },
+        {
+          "opponentRating": 1366.7561576076369,
+          "win": false
+        },
+        {
+          "opponentRating": 1366.8040142576654,
+          "win": false
+        },
+        {
+          "opponentRating": 1381.4666591635187,
+          "win": true
+        },
+        {
+          "opponentRating": 1377.5106728887831,
+          "win": true
+        },
+        {
+          "opponentRating": 1437.526706982272,
+          "win": false
+        },
+        {
+          "opponentRating": 1437.55867811734,
+          "win": false
+        },
+        {
+          "opponentRating": 1389.6388033669782,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "구루미",
+      "race": "Z",
+      "wins": 220,
+      "losses": 289,
+      "countedMatches": 509
+    },
+    {
+      "key": "uid:dlrnf",
+      "mmr": 1092.094116326156,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "쌍디",
+      "race": "Z",
+      "wins": 4,
+      "losses": 2,
+      "countedMatches": 6
+    },
+    {
+      "key": "uid:zcv0320",
+      "mmr": 1082.0733132482508,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1814.2517246395853,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 2200.3543829501364,
+          "win": true
+        },
+        {
+          "opponentRating": 1488.1089518019398,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "보혜",
+      "race": "P",
+      "wins": 82,
+      "losses": 94,
+      "countedMatches": 176
+    },
+    {
+      "key": "uid:ekfrqkf",
+      "mmr": 1077.4999514619021,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "슬아",
+      "race": "Z",
+      "wins": 244,
+      "losses": 360,
+      "countedMatches": 604
+    },
+    {
+      "key": "uid:kitty1029",
+      "mmr": 1071.896274828844,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1145.0379481436973,
+          "win": true
+        },
+        {
+          "opponentRating": 1145.2874702720787,
+          "win": false
+        },
+        {
+          "opponentRating": 1268.4891104333963,
+          "win": false
+        },
+        {
+          "opponentRating": 1264.5726083399268,
+          "win": true
+        },
+        {
+          "opponentRating": 1189.7466993388884,
+          "win": true
+        },
+        {
+          "opponentRating": 1239.6876663955177,
+          "win": false
+        },
+        {
+          "opponentRating": 1146.7136651308103,
+          "win": false
+        },
+        {
+          "opponentRating": 1146.8784821031377,
+          "win": false
+        },
+        {
+          "opponentRating": 1147.0431492117032,
+          "win": false
+        },
+        {
+          "opponentRating": 1143.207666723018,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "꼬니부깅",
+      "race": "P",
+      "wins": 88,
+      "losses": 90,
+      "countedMatches": 178
+    },
+    {
+      "key": "uid:soju2022",
+      "mmr": 1059.5354743826626,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "소주양",
+      "race": "T",
+      "wins": 649,
+      "losses": 520,
+      "countedMatches": 1169
+    },
+    {
+      "key": "uid:pookygamja",
+      "mmr": 1056.8070251886757,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 601.974711359069,
+          "win": false
+        },
+        {
+          "opponentRating": 599.9633441291259,
+          "win": true
+        },
+        {
+          "opponentRating": 597.9635551372797,
+          "win": true
+        },
+        {
+          "opponentRating": 599.9752777219938,
+          "win": false
+        },
+        {
+          "opponentRating": 601.9754200348656,
+          "win": false
+        },
+        {
+          "opponentRating": 1572.7292635753124,
+          "win": true
+        },
+        {
+          "opponentRating": 1566.7513804755522,
+          "win": true
+        },
+        {
+          "opponentRating": 1560.7742687431908,
+          "win": true
+        },
+        {
+          "opponentRating": 1560.79795506972,
+          "win": false
+        },
+        {
+          "opponentRating": 1554.8216381795987,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김인호",
+      "race": "Z",
+      "wins": 9,
+      "losses": 12,
+      "countedMatches": 21
+    },
+    {
+      "key": "uid:lkim12",
+      "mmr": 1055.6697465295003,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "뚜비",
+      "race": "T",
+      "wins": 768,
+      "losses": 612,
+      "countedMatches": 1380
+    },
+    {
+      "key": "uid:db001202",
+      "mmr": 1036.6367562595563,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "치리",
+      "race": "Z",
+      "wins": 644,
+      "losses": 598,
+      "countedMatches": 1242
+    },
+    {
+      "key": "uid:aram1213",
+      "mmr": 1032.6532195796947,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "아라미",
+      "race": "Z",
+      "wins": 420,
+      "losses": 316,
+      "countedMatches": 736
+    },
+    {
+      "key": "uid:gkdud3294",
+      "mmr": 1025.4050310954158,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "오하얀",
+      "race": "P",
+      "wins": 198,
+      "losses": 263,
+      "countedMatches": 461
+    },
+    {
+      "key": "uid:nerve89",
+      "mmr": 1012.7099350618238,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "깨림이",
+      "race": "T",
+      "wins": 272,
+      "losses": 274,
+      "countedMatches": 546
+    },
+    {
+      "key": "uid:ywww123",
+      "mmr": 1009.785872238692,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1952.304760131011,
+          "win": true
+        },
+        {
+          "opponentRating": 1948.306423993389,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "트슈",
+      "race": "P",
+      "wins": 17,
+      "losses": 12,
+      "countedMatches": 29
+    },
+    {
+      "key": "uid:snowssa",
+      "mmr": 974.2676028989727,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "설둥이",
+      "race": "P",
+      "wins": 405,
+      "losses": 495,
+      "countedMatches": 900
+    },
+    {
+      "key": "uid:qocnrhdwn1",
+      "mmr": 972.8548589508142,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "연수",
+      "race": "T",
+      "wins": 280,
+      "losses": 272,
+      "countedMatches": 552
+    },
+    {
+      "key": "uid:hee4343",
+      "mmr": 970.4121222675892,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "비재희",
+      "race": "Z",
+      "wins": 605,
+      "losses": 632,
+      "countedMatches": 1237
+    },
+    {
+      "key": "uid:synyoung",
+      "mmr": 964.9886582680459,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "시녕뭉",
+      "race": "Z",
+      "wins": 270,
+      "losses": 262,
+      "countedMatches": 532
+    },
+    {
+      "key": "uid:ys9024",
+      "mmr": 960.354048570312,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "주서리",
+      "race": "P",
+      "wins": 370,
+      "losses": 571,
+      "countedMatches": 941
+    },
+    {
+      "key": "uid:goni2677",
+      "mmr": 943.4752910772653,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "내가먼지",
+      "race": "T",
+      "wins": 497,
+      "losses": 312,
+      "countedMatches": 809
+    },
+    {
+      "key": "uid:lingolinga",
+      "mmr": 936.8459293972833,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "링가",
+      "race": "T",
+      "wins": 518,
+      "losses": 507,
+      "countedMatches": 1025
+    },
+    {
+      "key": "uid:yoomingseo",
+      "mmr": 935.6715256392,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "유복실",
+      "race": "P",
+      "wins": 68,
+      "losses": 156,
+      "countedMatches": 224
+    },
+    {
+      "key": "uid:dptmfl1258",
+      "mmr": 929.5578213145538,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "예슬",
+      "race": "P",
+      "wins": 352,
+      "losses": 428,
+      "countedMatches": 780
+    },
+    {
+      "key": "uid:mew030709",
+      "mmr": 914.6758411548356,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "남수댕",
+      "race": "P",
+      "wins": 344,
+      "losses": 318,
+      "countedMatches": 662
+    },
+    {
+      "key": "uid:fpahsdltu1",
+      "mmr": 906.2063441648738,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "주하랑",
+      "race": "P",
+      "wins": 503,
+      "losses": 573,
+      "countedMatches": 1076
+    },
+    {
+      "key": "uid:moguleave",
+      "mmr": 904.6282883607262,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "모리",
+      "race": "T",
+      "wins": 555,
+      "losses": 456,
+      "countedMatches": 1011
+    },
+    {
+      "key": "uid:alsgus00",
+      "mmr": 900.5572308572827,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "미니언",
+      "race": "Z",
+      "wins": 34,
+      "losses": 37,
+      "countedMatches": 71
+    },
+    {
+      "key": "uid:dlaguswl501",
+      "mmr": 892.5780466419925,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "임조이",
+      "race": "Z",
+      "wins": 671,
+      "losses": 595,
+      "countedMatches": 1266
+    },
+    {
+      "key": "uid:ldk8481",
+      "mmr": 889.1912108019134,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "슈슈",
+      "race": "Z",
+      "wins": 654,
+      "losses": 878,
+      "countedMatches": 1532
+    },
+    {
+      "key": "uid:zzzz809",
+      "mmr": 886.8351065496482,
+      "tier": "8",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1000.1364783415455,
+          "win": true
+        },
+        {
+          "opponentRating": 1003.1478937312205,
+          "win": false
+        },
+        {
+          "opponentRating": 1003.5055840110992,
+          "win": false
+        },
+        {
+          "opponentRating": 697.8872117521255,
+          "win": true
+        },
+        {
+          "opponentRating": 806.5445620725334,
+          "win": false
+        },
+        {
+          "opponentRating": 1067.2314269777874,
+          "win": true
+        },
+        {
+          "opponentRating": 1063.4857862376596,
+          "win": true
+        },
+        {
+          "opponentRating": 1059.7453297298093,
+          "win": true
+        },
+        {
+          "opponentRating": 1060.0101482664247,
+          "win": false
+        },
+        {
+          "opponentRating": 1056.2745900845016,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "백갑숙",
+      "race": "P",
+      "wins": 479,
+      "losses": 479,
+      "countedMatches": 958
+    },
+    {
+      "key": "uid:seols2",
+      "mmr": 880.1805055212046,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "정서린",
+      "race": "P",
+      "wins": 340,
+      "losses": 210,
+      "countedMatches": 550
+    },
+    {
+      "key": "uid:rhf104",
+      "mmr": 879.0279596035186,
+      "tier": "7",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "란란",
+      "race": "Z",
+      "wins": 168,
+      "losses": 265,
+      "countedMatches": 433
+    },
+    {
+      "key": "uid:dmsthfdldia",
+      "mmr": 860.9670417870086,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "라운이",
+      "race": "P",
+      "wins": 194,
+      "losses": 346,
+      "countedMatches": 540
+    },
+    {
+      "key": "uid:aybjc2319",
+      "mmr": 860.8037283002867,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "진유성",
+      "race": "P",
+      "wins": 614,
+      "losses": 544,
+      "countedMatches": 1158
+    },
+    {
+      "key": "uid:tato1104",
+      "mmr": 854.5117478551467,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "밍가",
+      "race": "P",
+      "wins": 335,
+      "losses": 395,
+      "countedMatches": 730
+    },
+    {
+      "key": "uid:wlsdkd1",
+      "mmr": 851.6404465695246,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "엄보리",
+      "race": "P",
+      "wins": 561,
+      "losses": 402,
+      "countedMatches": 963
+    },
+    {
+      "key": "uid:rnfma14",
+      "mmr": 845.5863402605721,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김설",
+      "race": "Z",
+      "wins": 330,
+      "losses": 295,
+      "countedMatches": 625
+    },
+    {
+      "key": "uid:wlgua7272",
+      "mmr": 844.7083790666592,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "2라니",
+      "race": "Z",
+      "wins": 501,
+      "losses": 484,
+      "countedMatches": 985
+    },
+    {
+      "key": "uid:qkrgkdms01",
+      "mmr": 843.3901953763839,
+      "tier": "8",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 657.3552754713578,
+          "win": false
+        },
+        {
+          "opponentRating": 659.0280788322355,
+          "win": false
+        },
+        {
+          "opponentRating": 715.1584005368343,
+          "win": true
+        },
+        {
+          "opponentRating": 716.5187498833084,
+          "win": false
+        },
+        {
+          "opponentRating": 730.0598203887107,
+          "win": true
+        },
+        {
+          "opponentRating": 734.0967171393625,
+          "win": true
+        },
+        {
+          "opponentRating": 761.1112113864909,
+          "win": false
+        },
+        {
+          "opponentRating": 758.244996440868,
+          "win": true
+        },
+        {
+          "opponentRating": 759.3922335479954,
+          "win": false
+        },
+        {
+          "opponentRating": 756.5340748636514,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "박하악",
+      "race": "Z",
+      "wins": 409,
+      "losses": 435,
+      "countedMatches": 844
+    },
+    {
+      "key": "uid:2ahgo1203",
+      "mmr": 840.9293277977132,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "이아깽",
+      "race": "T",
+      "wins": 466,
+      "losses": 406,
+      "countedMatches": 872
+    },
+    {
+      "key": "uid:k1s2s3",
+      "mmr": 839.9903615263149,
+      "tier": "8",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 725.1766186688963,
+          "win": true
+        },
+        {
+          "opponentRating": 722.4856845800163,
+          "win": true
+        },
+        {
+          "opponentRating": 718.4698002401379,
+          "win": true
+        },
+        {
+          "opponentRating": 714.4847348339113,
+          "win": true
+        },
+        {
+          "opponentRating": 710.5304839844242,
+          "win": true
+        },
+        {
+          "opponentRating": 712.6070324828104,
+          "win": false
+        },
+        {
+          "opponentRating": 714.6673795467246,
+          "win": false
+        },
+        {
+          "opponentRating": 710.7117114177761,
+          "win": true
+        },
+        {
+          "opponentRating": 706.7868435713732,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김상수",
+      "race": "T",
+      "wins": 14,
+      "losses": 8,
+      "countedMatches": 22
+    },
+    {
+      "key": "uid:busky3",
+      "mmr": 838.7856513208009,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "하두링",
+      "race": "P",
+      "wins": 461,
+      "losses": 462,
+      "countedMatches": 923
+    },
+    {
+      "key": "uid:595935",
+      "mmr": 835.5108397131071,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "상어녀",
+      "race": "Z",
+      "wins": 37,
+      "losses": 70,
+      "countedMatches": 107
+    },
+    {
+      "key": "uid:kangsinwoos",
+      "mmr": 827.285972984595,
+      "tier": "8",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 1244.1398155909962,
+          "win": false
+        },
+        {
+          "opponentRating": 1244.2355762001114,
+          "win": false
+        },
+        {
+          "opponentRating": 1248.8109175268382,
+          "win": false
+        },
+        {
+          "opponentRating": 1248.9041967831054,
+          "win": false
+        },
+        {
+          "opponentRating": 1244.997427132818,
+          "win": true
+        },
+        {
+          "opponentRating": 1246.1761690160185,
+          "win": false
+        },
+        {
+          "opponentRating": 1257.1513845762436,
+          "win": true
+        },
+        {
+          "opponentRating": 1257.2403884530654,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "지방시",
+      "race": "P",
+      "wins": 14,
+      "losses": 30,
+      "countedMatches": 44
+    },
+    {
+      "key": "uid:ynblbee",
+      "mmr": 822.7217270751736,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "연블비",
+      "race": "Z",
+      "wins": 149,
+      "losses": 145,
+      "countedMatches": 294
+    },
+    {
+      "key": "uid:ouo20411",
+      "mmr": 820.8476767788585,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "히댕",
+      "race": "Z",
+      "wins": 272,
+      "losses": 304,
+      "countedMatches": 576
+    },
+    {
+      "key": "uid:ka9rapang",
+      "mmr": 813.7695374952339,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "연둥바둥",
+      "race": "P",
+      "wins": 57,
+      "losses": 88,
+      "countedMatches": 145
+    },
+    {
+      "key": "uid:sdkels",
+      "mmr": 805.6645681463702,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "강덕구",
+      "race": "T",
+      "wins": 403,
+      "losses": 823,
+      "countedMatches": 1226
+    },
+    {
+      "key": "uid:tjwjddms1565",
+      "mmr": 803.04499010001,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "선정은",
+      "race": "T",
+      "wins": 432,
+      "losses": 473,
+      "countedMatches": 905
+    },
+    {
+      "key": "uid:maeong2",
+      "mmr": 798.1825546588675,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "메옹",
+      "race": "T",
+      "wins": 284,
+      "losses": 241,
+      "countedMatches": 525
+    },
+    {
+      "key": "uid:rhakdncjs90",
+      "mmr": 797.9136364705001,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "으냉이",
+      "race": "T",
+      "wins": 246,
+      "losses": 202,
+      "countedMatches": 448
+    },
+    {
+      "key": "uid:mooaoom",
+      "mmr": 794.1853618076698,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "김무아",
+      "race": "P",
+      "wins": 258,
+      "losses": 251,
+      "countedMatches": 509
+    },
+    {
+      "key": "uid:yunheehoho",
+      "mmr": 794.0743006088577,
+      "tier": "8",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "서윤",
+      "race": "Z",
+      "wins": 102,
+      "losses": 207,
+      "countedMatches": 309
+    },
+    {
+      "key": "uid:nreupne",
+      "mmr": 790.3753666742247,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "핑핑",
+      "race": "Z",
+      "wins": 307,
+      "losses": 251,
+      "countedMatches": 558
+    },
+    {
+      "key": "uid:diniowo",
+      "mmr": 784.2104121563366,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "막내현진",
+      "race": "P",
+      "wins": 465,
+      "losses": 341,
+      "countedMatches": 806
+    },
+    {
+      "key": "uid:seemin88",
+      "mmr": 774.6879472097062,
+      "tier": "8",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "비타밍",
+      "race": "T",
+      "wins": 543,
+      "losses": 650,
+      "countedMatches": 1193
+    },
+    {
+      "key": "uid:have1y",
+      "mmr": 765.9706617479529,
+      "tier": "Y",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "김채이",
+      "race": "P",
+      "wins": 382,
+      "losses": 391,
+      "countedMatches": 773
+    },
+    {
+      "key": "uid:scv6256",
+      "mmr": 756.585319633522,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 752.2076282323374,
+          "win": false
+        },
+        {
+          "opponentRating": 599.828476705877,
+          "win": true
+        },
+        {
+          "opponentRating": 515.1611546497511,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "이재호",
+      "race": "T",
+      "wins": 947,
+      "losses": 636,
+      "countedMatches": 1583
+    },
+    {
+      "key": "uid:vldpfm2",
+      "mmr": 750.4915151107996,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "아리송이",
+      "race": "P",
+      "wins": 210,
+      "losses": 137,
+      "countedMatches": 347
+    },
+    {
+      "key": "uid:queenzu",
+      "mmr": 747.486064715267,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "퀸주",
+      "race": "Z",
+      "wins": 290,
+      "losses": 154,
+      "countedMatches": 444
+    },
+    {
+      "key": "uid:min030606",
+      "mmr": 745.4756371165453,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "면추가",
+      "race": "Z",
+      "wins": 248,
+      "losses": 139,
+      "countedMatches": 387
+    },
+    {
+      "key": "uid:khsoo0105",
+      "mmr": 739.4494286321797,
+      "tier": "Y",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "귀요민정",
+      "race": "Z",
+      "wins": 313,
+      "losses": 430,
+      "countedMatches": 743
+    },
+    {
+      "key": "uid:imducko3o",
+      "mmr": 720.7792403909223,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "오리꿍",
+      "race": "Z",
+      "wins": 356,
+      "losses": 361,
+      "countedMatches": 717
+    },
+    {
+      "key": "uid:tmsh401",
+      "mmr": 712.4538508006434,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 599.9884872017008,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 751.0260916490897,
+          "win": true
+        },
+        {
+          "opponentRating": 604.9713831112343,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "장윤철",
+      "race": "P",
+      "wins": 1117,
+      "losses": 784,
+      "countedMatches": 1901
+    },
+    {
+      "key": "uid:jjjjeong",
+      "mmr": 710.1557126198666,
+      "tier": "Y",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "태린",
+      "race": "P",
+      "wins": 267,
+      "losses": 348,
+      "countedMatches": 615
+    },
+    {
+      "key": "uid:eunseo0152",
+      "mmr": 707.8839245742441,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "은서",
+      "race": "P",
+      "wins": 460,
+      "losses": 418,
+      "countedMatches": 878
+    },
+    {
+      "key": "uid:queen030",
+      "mmr": 705.7773348474132,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "효짱",
+      "race": "P",
+      "wins": 487,
+      "losses": 529,
+      "countedMatches": 1016
+    },
+    {
+      "key": "uid:byflash",
+      "mmr": 701.3682609046275,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "이영호",
+      "race": "T",
+      "wins": 61,
+      "losses": 28,
+      "countedMatches": 89
+    },
+    {
+      "key": "uid:gangeda",
+      "mmr": 697.0104766285801,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "갱이다",
+      "race": "T",
+      "wins": 269,
+      "losses": 153,
+      "countedMatches": 422
+    },
+    {
+      "key": "uid:yoo376",
+      "mmr": 696.0059569010574,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "유영진",
+      "race": "T",
+      "wins": 1496,
+      "losses": 1242,
+      "countedMatches": 2738
+    },
+    {
+      "key": "uid:kittysh1",
+      "mmr": 694.3097004777893,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "키모야",
+      "race": "T",
+      "wins": 281,
+      "losses": 243,
+      "countedMatches": 524
+    },
+    {
+      "key": "uid:dohyun83",
+      "mmr": 693.1172425518589,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "나도현",
+      "race": "T",
+      "wins": 32,
+      "losses": 27,
+      "countedMatches": 59
+    },
+    {
+      "key": "uid:sa03030",
+      "mmr": 692.7932918771678,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "다예나",
+      "race": "P",
+      "wins": 178,
+      "losses": 129,
+      "countedMatches": 307
+    },
+    {
+      "key": "uid:pokimasiso",
+      "mmr": 691.8682296392966,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "또해영",
+      "race": "Z",
+      "wins": 325,
+      "losses": 340,
+      "countedMatches": 665
+    },
+    {
+      "key": "uid:byhero",
+      "mmr": 691.1473466552051,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 598,
+          "win": true
+        },
+        {
+          "opponentRating": 600.0115127982992,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 523.6687632192246,
+          "win": false
+        },
+        {
+          "opponentRating": 521.3174565657393,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "조일장",
+      "race": "Z",
+      "wins": 1192,
+      "losses": 1144,
+      "countedMatches": 2336
+    },
+    {
+      "key": "uid:momo130",
+      "mmr": 688.9296731778406,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김정우",
+      "race": "Z",
+      "wins": 444,
+      "losses": 379,
+      "countedMatches": 823
+    },
+    {
+      "key": "uid:rfvtgb778",
+      "mmr": 688.8804635566132,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "이영웅",
+      "race": "T",
+      "wins": 72,
+      "losses": 53,
+      "countedMatches": 125
+    },
+    {
+      "key": "uid:minchul",
+      "mmr": 687.5658542397906,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김민철",
+      "race": "Z",
+      "wins": 669,
+      "losses": 472,
+      "countedMatches": 1141
+    },
+    {
+      "key": "uid:bye1013",
+      "mmr": 687.5306510818889,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "변현제",
+      "race": "P",
+      "wins": 1031,
+      "losses": 969,
+      "countedMatches": 2000
+    },
+    {
+      "key": "uid:rudzhd123",
+      "mmr": 682.1650054035777,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "경콩",
+      "race": "T",
+      "wins": 335,
+      "losses": 245,
+      "countedMatches": 580
+    },
+    {
+      "key": "uid:jaedong23",
+      "mmr": 682.0709078770299,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "이제동",
+      "race": "Z",
+      "wins": 688,
+      "losses": 586,
+      "countedMatches": 1274
+    },
+    {
+      "key": "uid:wodnrdldia",
+      "mmr": 681.984200976876,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 601.9885534746951,
+          "win": false
+        },
+        {
+          "opponentRating": 757.1389889958032,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 676.3211790790812,
+          "win": true
+        },
+        {
+          "opponentRating": 672.6725685177381,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "도재욱",
+      "race": "P",
+      "wins": 906,
+      "losses": 876,
+      "countedMatches": 1782
+    },
+    {
+      "key": "uid:sharpragu",
+      "mmr": 681.5102837933835,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 644.8950343452398,
+          "win": false
+        },
+        {
+          "opponentRating": 646.6380266142584,
+          "win": false
+        },
+        {
+          "opponentRating": 648.3711575384111,
+          "win": false
+        },
+        {
+          "opponentRating": 650.0944959912333,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "조기석",
+      "race": "T",
+      "wins": 960,
+      "losses": 819,
+      "countedMatches": 1779
+    },
+    {
+      "key": "uid:wittyku",
+      "mmr": 676.3027941402684,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "냥수디",
+      "race": "Z",
+      "wins": 248,
+      "losses": 196,
+      "countedMatches": 444
+    },
+    {
+      "key": "uid:nasd06",
+      "mmr": 672.9090615333017,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "수니양",
+      "race": "T",
+      "wins": 398,
+      "losses": 409,
+      "countedMatches": 807
+    },
+    {
+      "key": "uid:goodgame07",
+      "mmr": 670.4661312942239,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "유성민",
+      "race": "P",
+      "wins": 46,
+      "losses": 29,
+      "countedMatches": 75
+    },
+    {
+      "key": "uid:paralyze92",
+      "mmr": 666.2564630652774,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "정경두",
+      "race": "P",
+      "wins": 194,
+      "losses": 144,
+      "countedMatches": 338
+    },
+    {
+      "key": "uid:ho1godme",
+      "mmr": 665.1483026486032,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 603,
+          "win": false
+        },
+        {
+          "opponentRating": 599.9740965614697,
+          "win": true
+        },
+        {
+          "opponentRating": 596.974320229737,
+          "win": true
+        },
+        {
+          "opponentRating": 600.0004453885548,
+          "win": false
+        },
+        {
+          "opponentRating": 603.0004415427609,
+          "win": false
+        },
+        {
+          "opponentRating": 599.9745342919282,
+          "win": true
+        },
+        {
+          "opponentRating": 596.974754180527,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김지성",
+      "race": "T",
+      "wins": 1257,
+      "losses": 1317,
+      "countedMatches": 2574
+    },
+    {
+      "key": "uid:rlaxordyd",
+      "mmr": 664.0091950324307,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김택용",
+      "race": "P",
+      "wins": 135,
+      "losses": 112,
+      "countedMatches": 247
+    },
+    {
+      "key": "uid:peros777",
+      "mmr": 660.1771762528028,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600.8432665887025,
+          "win": true
+        },
+        {
+          "opponentRating": 602.8384123655429,
+          "win": false
+        },
+        {
+          "opponentRating": 600.8220735140382,
+          "win": true
+        },
+        {
+          "opponentRating": 622.1246656326928,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 598.1988487075807,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 643.9527508925433,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "박성균",
+      "race": "T",
+      "wins": 422,
+      "losses": 390,
+      "countedMatches": 812
+    },
+    {
+      "key": "uid:dollooo",
+      "mmr": 659.522593835583,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "제갈츄빈",
+      "race": "T",
+      "wins": 297,
+      "losses": 227,
+      "countedMatches": 524
+    },
+    {
+      "key": "uid:bangsong12",
+      "mmr": 656.254360320211,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "사사삼",
+      "race": "P",
+      "wins": 249,
+      "losses": 309,
+      "countedMatches": 558
+    },
+    {
+      "key": "uid:totoo23",
+      "mmr": 656.0634163541473,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "밍또얌",
+      "race": "T",
+      "wins": 223,
+      "losses": 233,
+      "countedMatches": 456
+    },
+    {
+      "key": "uid:koreasbg",
+      "mmr": 652.1243583230653,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "송병구",
+      "race": "P",
+      "wins": 469,
+      "losses": 471,
+      "countedMatches": 940
+    },
+    {
+      "key": "uid:haeun5513",
+      "mmr": 651.412615571778,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "밤하밍",
+      "race": "T",
+      "wins": 197,
+      "losses": 163,
+      "countedMatches": 360
+    },
+    {
+      "key": "uid:jiinii000",
+      "mmr": 649.8165185805672,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "밥새",
+      "race": "T",
+      "wins": 450,
+      "losses": 378,
+      "countedMatches": 828
+    },
+    {
+      "key": "uid:corgi1102",
+      "mmr": 649.0205817292517,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "냥냥코기",
+      "race": "Z",
+      "wins": 273,
+      "losses": 233,
+      "countedMatches": 506
+    },
+    {
+      "key": "uid:eun0c0",
+      "mmr": 647.7659091461072,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "햇참새",
+      "race": "P",
+      "wins": 179,
+      "losses": 151,
+      "countedMatches": 330
+    },
+    {
+      "key": "uid:ndudska620",
+      "mmr": 641.6968168463661,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김영주",
+      "race": "T",
+      "wins": 18,
+      "losses": 5,
+      "countedMatches": 23
+    },
+    {
+      "key": "uid:wjdalsrl95",
+      "mmr": 638.1134926471902,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "정민기",
+      "race": "T",
+      "wins": 61,
+      "losses": 40,
+      "countedMatches": 101
+    },
+    {
+      "key": "uid:kimmyungwun",
+      "mmr": 629.7396322123649,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김명운",
+      "race": "Z",
+      "wins": 1249,
+      "losses": 1188,
+      "countedMatches": 2437
+    },
+    {
+      "key": "uid:hby0724",
+      "mmr": 628.3484054457768,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 617.2456495785789,
+          "win": false
+        },
+        {
+          "opponentRating": 637.350037706707,
+          "win": false
+        },
+        {
+          "opponentRating": 591.8076817793396,
+          "win": false
+        },
+        {
+          "opponentRating": 577.4870837092228,
+          "win": false
+        },
+        {
+          "opponentRating": 589.8548318159163,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "황병영",
+      "race": "T",
+      "wins": 675,
+      "losses": 586,
+      "countedMatches": 1261
+    },
+    {
+      "key": "uid:shj06170",
+      "mmr": 625.4363498028031,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "얌쭈",
+      "race": "Z",
+      "wins": 131,
+      "losses": 143,
+      "countedMatches": 274
+    },
+    {
+      "key": "uid:ghlidhjgioew",
+      "mmr": 622.754844218408,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "다라츄",
+      "race": "Z",
+      "wins": 263,
+      "losses": 268,
+      "countedMatches": 531
+    },
+    {
+      "key": "uid:begoniah",
+      "mmr": 621.5735874620482,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "백원이야",
+      "race": "Z",
+      "wins": 271,
+      "losses": 254,
+      "countedMatches": 525
+    },
+    {
+      "key": "uid:heksd",
+      "mmr": 620.1204797727853,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 762.5724509737449,
+          "win": true
+        },
+        {
+          "opponentRating": 759.6994147824553,
+          "win": true
+        },
+        {
+          "opponentRating": 2144.020887094801,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "파메",
+      "race": "P",
+      "wins": 9,
+      "losses": 18,
+      "countedMatches": 27
+    },
+    {
+      "key": "uid:erosrainbow",
+      "mmr": 614.1596912744332,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김성제",
+      "race": "P",
+      "wins": 3,
+      "losses": 1,
+      "countedMatches": 4
+    },
+    {
+      "key": "uid:dlqudgk1227",
+      "mmr": 612.7713635444197,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "병하",
+      "race": "Z",
+      "wins": 8,
+      "losses": 4,
+      "countedMatches": 12
+    },
+    {
+      "key": "uid:dyaan0v0",
+      "mmr": 612.5236922985238,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "정다닝",
+      "race": "T",
+      "wins": 148,
+      "losses": 106,
+      "countedMatches": 254
+    },
+    {
+      "key": "uid:goyo030",
+      "mmr": 612.0568550708032,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "고요",
+      "race": "Z",
+      "wins": 67,
+      "losses": 50,
+      "countedMatches": 117
+    },
+    {
+      "key": "uid:2meonjin",
+      "mmr": 611.939026894392,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 604.1738437696148,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 576.8256151973686,
+          "win": false
+        },
+        {
+          "opponentRating": 588.2538382370922,
+          "win": true
+        },
+        {
+          "opponentRating": 661.1503827823849,
+          "win": false
+        },
+        {
+          "opponentRating": 658.8019632250863,
+          "win": true
+        },
+        {
+          "opponentRating": 656.4666672347367,
+          "win": true
+        },
+        {
+          "opponentRating": 654.1444510024795,
+          "win": true
+        },
+        {
+          "opponentRating": 651.8352693923329,
+          "win": true
+        },
+        {
+          "opponentRating": 552.6102421423566,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "먼진",
+      "race": "Z",
+      "wins": 464,
+      "losses": 483,
+      "countedMatches": 947
+    },
+    {
+      "key": "uid:snfjdro369",
+      "mmr": 610.9479196739509,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "윤수철",
+      "race": "P",
+      "wins": 541,
+      "losses": 745,
+      "countedMatches": 1286
+    },
+    {
+      "key": "uid:toy2053",
+      "mmr": 610.450543368493,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "햄찌야",
+      "race": "Z",
+      "wins": 164,
+      "losses": 233,
+      "countedMatches": 397
+    },
+    {
+      "key": "uid:wjswpalssla1",
+      "mmr": 609.8814740181449,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "전제민",
+      "race": "P",
+      "wins": 3,
+      "losses": 1,
+      "countedMatches": 4
+    },
+    {
+      "key": "uid:gkgus99",
+      "mmr": 609.3145403298981,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "하이현",
+      "race": "T",
+      "wins": 384,
+      "losses": 497,
+      "countedMatches": 881
+    },
+    {
+      "key": "uid:hckkhc21",
+      "mmr": 607.7338783757922,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "두폴조합",
+      "race": "P",
+      "wins": 7,
+      "losses": 4,
+      "countedMatches": 11
+    },
+    {
+      "key": "uid:bisu20190301",
+      "mmr": 607.717143524384,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박한별",
+      "race": "P",
+      "wins": 2,
+      "losses": 0,
+      "countedMatches": 2
+    },
+    {
+      "key": "uid:ara9687",
+      "mmr": 607.2351445608904,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "이아라",
+      "race": "P",
+      "wins": 3,
+      "losses": 1,
+      "countedMatches": 4
+    },
+    {
+      "key": "uid:vhrtmspt",
+      "mmr": 606.4568050215983,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김민우",
+      "race": "P",
+      "wins": 6,
+      "losses": 4,
+      "countedMatches": 10
+    },
+    {
+      "key": "uid:jhyhlli123",
+      "mmr": 605.9582415375852,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박준혁",
+      "race": "P",
+      "wins": 1,
+      "losses": 0,
+      "countedMatches": 1
+    },
+    {
+      "key": "uid:hoonykkk",
+      "mmr": 605.6532278931048,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 844.1673403409214,
+          "win": false
+        },
+        {
+          "opponentRating": 589.7486876003411,
+          "win": true
+        },
+        {
+          "opponentRating": 839.3157881393774,
+          "win": true
+        },
+        {
+          "opponentRating": 840.1213590593677,
+          "win": false
+        },
+        {
+          "opponentRating": 840.9239508128084,
+          "win": false
+        },
+        {
+          "opponentRating": 585.4791602328872,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김태영",
+      "race": "T",
+      "wins": 288,
+      "losses": 245,
+      "countedMatches": 533
+    },
+    {
+      "key": "uid:neverdieyj",
+      "mmr": 605.5557867936882,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 627.2396482674443,
+          "win": false
+        },
+        {
+          "opponentRating": 660.7911315818532,
+          "win": false
+        },
+        {
+          "opponentRating": 483.26131677394494,
+          "win": true
+        },
+        {
+          "opponentRating": 616.3836810397501,
+          "win": true
+        },
+        {
+          "opponentRating": 509.5020880816948,
+          "win": false
+        },
+        {
+          "opponentRating": 590.7515880503497,
+          "win": false
+        },
+        {
+          "opponentRating": 515.3353337654582,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "정영재",
+      "race": "T",
+      "wins": 289,
+      "losses": 312,
+      "countedMatches": 601
+    },
+    {
+      "key": "uid:youaregood",
+      "mmr": 604.6985837683608,
+      "tier": "Y",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "진니",
+      "race": "Z",
+      "wins": 179,
+      "losses": 300,
+      "countedMatches": 479
+    },
+    {
+      "key": "uid:yyssaa33",
+      "mmr": 603.7301259124124,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 588.7252153528459,
+          "win": true
+        },
+        {
+          "opponentRating": 586.7900954570927,
+          "win": true
+        },
+        {
+          "opponentRating": 588.8661011589874,
+          "win": false
+        },
+        {
+          "opponentRating": 614.1089025513281,
+          "win": false
+        },
+        {
+          "opponentRating": 616.027729794418,
+          "win": false
+        },
+        {
+          "opponentRating": 571.3878415810209,
+          "win": false
+        },
+        {
+          "opponentRating": 573.5521750736602,
+          "win": false
+        },
+        {
+          "opponentRating": 684.5721625525007,
+          "win": false
+        },
+        {
+          "opponentRating": 686.0947189109035,
+          "win": false
+        },
+        {
+          "opponentRating": 640.8880932185594,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "제티",
+      "race": "P",
+      "wins": 186,
+      "losses": 271,
+      "countedMatches": 457
+    },
+    {
+      "key": "uid:nylove276",
+      "mmr": 602.7848621278139,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "삐약삐약",
+      "race": "Z",
+      "wins": 31,
+      "losses": 133,
+      "countedMatches": 164
+    },
+    {
+      "key": "uid:palko1",
+      "mmr": 602.5054827362189,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "신상문",
+      "race": "T",
+      "wins": 53,
+      "losses": 57,
+      "countedMatches": 110
+    },
+    {
+      "key": "uid:lyh8808",
+      "mmr": 602.3777316580686,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "이영한",
+      "race": "Z",
+      "wins": 47,
+      "losses": 51,
+      "countedMatches": 98
+    },
+    {
+      "key": "uid:dduuccu",
+      "mmr": 601.2338047726546,
+      "tier": "Y",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "따뜻",
+      "race": "P",
+      "wins": 38,
+      "losses": 90,
+      "countedMatches": 128
+    },
+    {
+      "key": "uid:tkdduddb06",
+      "mmr": 600.1820841562203,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "와이퍼",
+      "race": "P",
+      "wins": 10,
+      "losses": 11,
+      "countedMatches": 21
+    },
+    {
+      "key": "uid:arinbbidol",
+      "mmr": 600,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "기뉴다",
+      "race": "T",
+      "wins": 8,
+      "losses": 8,
+      "countedMatches": 16
+    },
+    {
+      "key": "uid:zalalz",
+      "mmr": 600,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "오조은",
+      "race": "T",
+      "wins": 28,
+      "losses": 28,
+      "countedMatches": 56
+    },
+    {
+      "key": "uid:jmc06170",
+      "mmr": 600,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "왜냐맨",
+      "race": "P",
+      "wins": 15,
+      "losses": 15,
+      "countedMatches": 30
+    },
+    {
+      "key": "uid:heyyo0123",
+      "mmr": 599.7981439904236,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "헤요이",
+      "race": "P",
+      "wins": 237,
+      "losses": 248,
+      "countedMatches": 485
+    },
+    {
+      "key": "uid:julyzerg",
+      "mmr": 599.6451398732675,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박성준",
+      "race": "Z",
+      "wins": 16,
+      "losses": 17,
+      "countedMatches": 33
+    },
+    {
+      "key": "uid:sr629",
+      "mmr": 599.5625468964553,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "사랑e",
+      "race": "P",
+      "wins": 0,
+      "losses": 2,
+      "countedMatches": 2
+    },
+    {
+      "key": "uid:yuambo",
+      "mmr": 599.4464458097626,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "염보성",
+      "race": "T",
+      "wins": 2,
+      "losses": 2,
+      "countedMatches": 4
+    },
+    {
+      "key": "uid:scan1014",
+      "mmr": 598.9790825920937,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "유승곤",
+      "race": "T",
+      "wins": 267,
+      "losses": 266,
+      "countedMatches": 533
+    },
+    {
+      "key": "uid:roket0829",
+      "mmr": 597.9731319928832,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박퍼니",
+      "race": "T",
+      "wins": 0,
+      "losses": 1,
+      "countedMatches": 1
+    },
+    {
+      "key": "uid:nada11200",
+      "mmr": 597.6701971147438,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 603.9884872017008,
+          "win": false
+        },
+        {
+          "opponentRating": 605.9655286322923,
+          "win": false
+        },
+        {
+          "opponentRating": 607.9311916633234,
+          "win": false
+        },
+        {
+          "opponentRating": 599.1877700135626,
+          "win": true
+        },
+        {
+          "opponentRating": 600.8878631587747,
+          "win": true
+        },
+        {
+          "opponentRating": 602.8827522187153,
+          "win": false
+        },
+        {
+          "opponentRating": 600.0063105647167,
+          "win": true
+        },
+        {
+          "opponentRating": 598.0062742381862,
+          "win": true
+        },
+        {
+          "opponentRating": 596.0177509202601,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "이윤열",
+      "race": "T",
+      "wins": 9,
+      "losses": 11,
+      "countedMatches": 20
+    },
+    {
+      "key": "uid:kalmian",
+      "mmr": 597.3273852467914,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 1250.554552724321,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "토스봇",
+      "race": "P",
+      "wins": 12,
+      "losses": 15,
+      "countedMatches": 27
+    },
+    {
+      "key": "uid:ckmin706",
+      "mmr": 596.7435526727108,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "민찬기",
+      "race": "T",
+      "wins": 42,
+      "losses": 34,
+      "countedMatches": 76
+    },
+    {
+      "key": "uid:xltb355",
+      "mmr": 596.4207244365278,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "은아가",
+      "race": "Z",
+      "wins": 16,
+      "losses": 17,
+      "countedMatches": 33
+    },
+    {
+      "key": "uid:jun10280",
+      "mmr": 595.9593595152136,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "저그맨박성준",
+      "race": "Z",
+      "wins": 0,
+      "losses": 1,
+      "countedMatches": 1
+    },
+    {
+      "key": "uid:comcmxx",
+      "mmr": 595.7506362970378,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "윤준석",
+      "race": "P",
+      "wins": 1,
+      "losses": 2,
+      "countedMatches": 3
+    },
+    {
+      "key": "uid:wjddmstj79",
+      "mmr": 595.6967014790753,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "쟈닌",
+      "race": "Z",
+      "wins": 316,
+      "losses": 388,
+      "countedMatches": 704
+    },
+    {
+      "key": "uid:yuna1024",
+      "mmr": 594.7582259503507,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김유나",
+      "race": "T",
+      "wins": 40,
+      "losses": 30,
+      "countedMatches": 70
+    },
+    {
+      "key": "uid:thdeksql",
+      "mmr": 593.0932359971624,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "단비송",
+      "race": "T",
+      "wins": 146,
+      "losses": 172,
+      "countedMatches": 318
+    },
+    {
+      "key": "uid:yuzzzz",
+      "mmr": 593.0102105043054,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "유즈",
+      "race": "Z",
+      "wins": 70,
+      "losses": 60,
+      "countedMatches": 130
+    },
+    {
+      "key": "uid:cztaemin",
+      "mmr": 592.6788236853114,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박태민",
+      "race": "Z",
+      "wins": 3,
+      "losses": 4,
+      "countedMatches": 7
+    },
+    {
+      "key": "uid:mwhdgus",
+      "mmr": 592.4531316041496,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "윤진규",
+      "race": "Z",
+      "wins": 1,
+      "losses": 2,
+      "countedMatches": 3
+    },
+    {
+      "key": "uid:tiger3006",
+      "mmr": 592.3484114819079,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "마예준",
+      "race": "P",
+      "wins": 4,
+      "losses": 7,
+      "countedMatches": 11
+    },
+    {
+      "key": "uid:jhw1729",
+      "mmr": 592.2053046971716,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "뽀현욱",
+      "race": "P",
+      "wins": 0,
+      "losses": 2,
+      "countedMatches": 2
+    },
+    {
+      "key": "uid:djdbstn",
+      "mmr": 592.1158613498176,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "어윤수",
+      "race": "Z",
+      "wins": 184,
+      "losses": 230,
+      "countedMatches": 414
+    },
+    {
+      "key": "uid:isangwk",
+      "mmr": 590.2249434471908,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "전상욱",
+      "race": "T",
+      "wins": 5,
+      "losses": 7,
+      "countedMatches": 12
+    },
+    {
+      "key": "uid:byromantic",
+      "mmr": 589.6464696210758,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "최재성",
+      "race": "T",
+      "wins": 6,
+      "losses": 7,
+      "countedMatches": 13
+    },
+    {
+      "key": "uid:rladuddo99",
+      "mmr": 589.6150718675414,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "구성훈",
+      "race": "T",
+      "wins": 6,
+      "losses": 7,
+      "countedMatches": 13
+    },
+    {
+      "key": "uid:tjdwnls123",
+      "mmr": 589.3061162156517,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박성진",
+      "race": "T",
+      "wins": 6,
+      "losses": 6,
+      "countedMatches": 12
+    },
+    {
+      "key": "uid:dau5888",
+      "mmr": 589.1484339136888,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "제쥬순",
+      "race": "P",
+      "wins": 16,
+      "losses": 22,
+      "countedMatches": 38
+    },
+    {
+      "key": "uid:zinsim",
+      "mmr": 588.934835473807,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "봄덕이",
+      "race": "P",
+      "wins": 18,
+      "losses": 20,
+      "countedMatches": 38
+    },
+    {
+      "key": "uid:dkswjddn92",
+      "mmr": 588.572723076208,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "안정우",
+      "race": "P",
+      "wins": 1,
+      "losses": 4,
+      "countedMatches": 5
+    },
+    {
+      "key": "uid:dgh9641",
+      "mmr": 587.9286741557344,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김병수",
+      "race": "Z",
+      "wins": 3,
+      "losses": 5,
+      "countedMatches": 8
+    },
+    {
+      "key": "uid:rnjsgurwls15",
+      "mmr": 586.8118768104038,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "권혁진",
+      "race": "P",
+      "wins": 2,
+      "losses": 5,
+      "countedMatches": 7
+    },
+    {
+      "key": "uid:umji1218",
+      "mmr": 586.6909364871967,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "엄키키",
+      "race": "P",
+      "wins": 219,
+      "losses": 235,
+      "countedMatches": 454
+    },
+    {
+      "key": "uid:hongduck9737",
+      "mmr": 586.3629991834707,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "홍덕",
+      "race": "P",
+      "wins": 38,
+      "losses": 42,
+      "countedMatches": 80
+    },
+    {
+      "key": "uid:ioioiobb",
+      "mmr": 585.6928694355043,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "정윤종",
+      "race": "P",
+      "wins": 19,
+      "losses": 32,
+      "countedMatches": 51
+    },
+    {
+      "key": "uid:as1823",
+      "mmr": 585.4170481115306,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "루다",
+      "race": "Z",
+      "wins": 239,
+      "losses": 315,
+      "countedMatches": 554
+    },
+    {
+      "key": "uid:understay",
+      "mmr": 584.1973176321188,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "고석현",
+      "race": "Z",
+      "wins": 0,
+      "losses": 4,
+      "countedMatches": 4
+    },
+    {
+      "key": "uid:bwstar",
+      "mmr": 583.918179823178,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "배병우",
+      "race": "Z",
+      "wins": 9,
+      "losses": 16,
+      "countedMatches": 25
+    },
+    {
+      "key": "uid:danu619",
+      "mmr": 583.3666451165906,
+      "tier": "Y",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "다뉴",
+      "race": "Z",
+      "wins": 289,
+      "losses": 409,
+      "countedMatches": 698
+    },
+    {
+      "key": "uid:shyshy123",
+      "mmr": 583.1755964941716,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김영진",
+      "race": "T",
+      "wins": 35,
+      "losses": 36,
+      "countedMatches": 71
+    },
+    {
+      "key": "uid:h78ert",
+      "mmr": 582.824680679318,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박준오",
+      "race": "Z",
+      "wins": 22,
+      "losses": 25,
+      "countedMatches": 47
+    },
+    {
+      "key": "uid:arr0530",
+      "mmr": 582.3162995334112,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "권아온",
+      "race": "Z",
+      "wins": 82,
+      "losses": 118,
+      "countedMatches": 200
+    },
+    {
+      "key": "uid:killkg2",
+      "mmr": 582.0123834150477,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김건욱",
+      "race": "Z",
+      "wins": 12,
+      "losses": 18,
+      "countedMatches": 30
+    },
+    {
+      "key": "uid:nalra82",
+      "mmr": 581.3583543897602,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "강민",
+      "race": "P",
+      "wins": 1,
+      "losses": 4,
+      "countedMatches": 5
+    },
+    {
+      "key": "uid:jiwooris2",
+      "mmr": 579.6516871353623,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "지우리",
+      "race": "T",
+      "wins": 190,
+      "losses": 224,
+      "countedMatches": 414
+    },
+    {
+      "key": "uid:tjdeosks",
+      "mmr": 577.9200904691061,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김성대",
+      "race": "Z",
+      "wins": 747,
+      "losses": 661,
+      "countedMatches": 1408
+    },
+    {
+      "key": "uid:jh3697",
+      "mmr": 577.464492469004,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 616.5854186566589,
+          "win": true
+        },
+        {
+          "opponentRating": 585.20861054785,
+          "win": true
+        },
+        {
+          "opponentRating": 514.85811185961,
+          "win": true
+        },
+        {
+          "opponentRating": 618.490017767446,
+          "win": false
+        },
+        {
+          "opponentRating": 570.9539928246371,
+          "win": false
+        },
+        {
+          "opponentRating": 569.120806634584,
+          "win": true
+        },
+        {
+          "opponentRating": 571.2980949937754,
+          "win": false
+        },
+        {
+          "opponentRating": 752.3275730666958,
+          "win": false
+        },
+        {
+          "opponentRating": 753.5028819744444,
+          "win": false
+        },
+        {
+          "opponentRating": 749.2574341942218,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "서문지훈",
+      "race": "Z",
+      "wins": 51,
+      "losses": 66,
+      "countedMatches": 117
+    },
+    {
+      "key": "uid:owoouoowo",
+      "mmr": 575.2652007772238,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "모비",
+      "race": "P",
+      "wins": 125,
+      "losses": 150,
+      "countedMatches": 275
+    },
+    {
+      "key": "uid:cksdnddldhkd",
+      "mmr": 575.111003672919,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "손찬웅",
+      "race": "P",
+      "wins": 8,
+      "losses": 15,
+      "countedMatches": 23
+    },
+    {
+      "key": "uid:dohyeon97",
+      "mmr": 574.929769973482,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "선우도현",
+      "race": "Z",
+      "wins": 14,
+      "losses": 20,
+      "countedMatches": 34
+    },
+    {
+      "key": "uid:organ333",
+      "mmr": 573.0882132510275,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "임진묵",
+      "race": "T",
+      "wins": 140,
+      "losses": 154,
+      "countedMatches": 294
+    },
+    {
+      "key": "uid:umeedayo",
+      "mmr": 572.8979498290847,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "하솜",
+      "race": "P",
+      "wins": 64,
+      "losses": 82,
+      "countedMatches": 146
+    },
+    {
+      "key": "uid:xx00uxx",
+      "mmr": 571.0819423219715,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "윤하랑",
+      "race": "P",
+      "wins": 15,
+      "losses": 24,
+      "countedMatches": 39
+    },
+    {
+      "key": "uid:ghtjs3833",
+      "mmr": 570.647272817962,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "최호선",
+      "race": "T",
+      "wins": 67,
+      "losses": 81,
+      "countedMatches": 148
+    },
+    {
+      "key": "uid:goodzerg",
+      "mmr": 570.4396242081008,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "배성흠",
+      "race": "Z",
+      "wins": 0,
+      "losses": 7,
+      "countedMatches": 7
+    },
+    {
+      "key": "uid:miiing0620",
+      "mmr": 570.2032912828175,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "묘묘묫",
+      "race": "Z",
+      "wins": 66,
+      "losses": 66,
+      "countedMatches": 132
+    },
+    {
+      "key": "uid:fidfidfid",
+      "mmr": 569.3157036870639,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박쭈이",
+      "race": "Z",
+      "wins": 54,
+      "losses": 61,
+      "countedMatches": 115
+    },
+    {
+      "key": "uid:dlwldyal1004",
+      "mmr": 568.2881053981506,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "이지다",
+      "race": "Z",
+      "wins": 195,
+      "losses": 223,
+      "countedMatches": 418
+    },
+    {
+      "key": "uid:x1aohongmao",
+      "mmr": 561.558122785411,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "오세은",
+      "race": "T",
+      "wins": 70,
+      "losses": 75,
+      "countedMatches": 145
+    },
+    {
+      "key": "uid:eunjo0105",
+      "mmr": 560.7600308051083,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "은조",
+      "race": "Z",
+      "wins": 166,
+      "losses": 204,
+      "countedMatches": 370
+    },
+    {
+      "key": "uid:xzqwe1",
+      "mmr": 557.4472252705062,
+      "tier": "Y",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "황단비",
+      "race": "Z",
+      "wins": 106,
+      "losses": 167,
+      "countedMatches": 273
+    },
+    {
+      "key": "uid:khl1589",
+      "mmr": 556.5445735692061,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "요시",
+      "race": "P",
+      "wins": 243,
+      "losses": 269,
+      "countedMatches": 512
+    },
+    {
+      "key": "uid:dbsdydx",
+      "mmr": 556.0697127547149,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "윤용태",
+      "race": "P",
+      "wins": 18,
+      "losses": 31,
+      "countedMatches": 49
+    },
+    {
+      "key": "uid:son4069",
+      "mmr": 555.0976055558846,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "빵지니",
+      "race": "T",
+      "wins": 193,
+      "losses": 263,
+      "countedMatches": 456
+    },
+    {
+      "key": "uid:tndkekdy",
+      "mmr": 554.0229555111966,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "하윤",
+      "race": "P",
+      "wins": 32,
+      "losses": 45,
+      "countedMatches": 77
+    },
+    {
+      "key": "uid:jihoon002",
+      "mmr": 549.6224215205759,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "박수범",
+      "race": "P",
+      "wins": 196,
+      "losses": 344,
+      "countedMatches": 540
+    },
+    {
+      "key": "uid:mangd11",
+      "mmr": 549.6144121869398,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "아망뚜",
+      "race": "Z",
+      "wins": 23,
+      "losses": 66,
+      "countedMatches": 89
+    },
+    {
+      "key": "uid:5eulgii",
+      "mmr": 549.0185730662503,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김말랑",
+      "race": "T",
+      "wins": 468,
+      "losses": 467,
+      "countedMatches": 935
+    },
+    {
+      "key": "uid:jsg0301",
+      "mmr": 546.3880537083822,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "삼교",
+      "race": "Z",
+      "wins": 123,
+      "losses": 182,
+      "countedMatches": 305
+    },
+    {
+      "key": "uid:siahag",
+      "mmr": 545.9843972055601,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "찡찡시아",
+      "race": "P",
+      "wins": 54,
+      "losses": 88,
+      "countedMatches": 142
+    },
+    {
+      "key": "uid:jungym0116",
+      "mmr": 544.5778366932515,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "아링",
+      "race": "P",
+      "wins": 122,
+      "losses": 127,
+      "countedMatches": 249
+    },
+    {
+      "key": "uid:1004yomi",
+      "mmr": 542.6287315009353,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "단솔",
+      "race": "P",
+      "wins": 95,
+      "losses": 112,
+      "countedMatches": 207
+    },
+    {
+      "key": "uid:cheto1206",
+      "mmr": 542.0322115410547,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "먹체토",
+      "race": "P",
+      "wins": 19,
+      "losses": 51,
+      "countedMatches": 70
+    },
+    {
+      "key": "uid:sksmsskdsl10",
+      "mmr": 541.8810833636225,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "낭니",
+      "race": "Z",
+      "wins": 10,
+      "losses": 24,
+      "countedMatches": 34
+    },
+    {
+      "key": "uid:hiyoko040",
+      "mmr": 536.7052446338931,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "히요코",
+      "race": "P",
+      "wins": 163,
+      "losses": 269,
+      "countedMatches": 432
+    },
+    {
+      "key": "uid:nkelly6085",
+      "mmr": 534.9195349240402,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "지아송",
+      "race": "P",
+      "wins": 72,
+      "losses": 101,
+      "countedMatches": 173
+    },
+    {
+      "key": "uid:wlswn6565",
+      "mmr": 533.9823191089056,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "진땅콩",
+      "race": "P",
+      "wins": 183,
+      "losses": 276,
+      "countedMatches": 459
+    },
+    {
+      "key": "uid:jackpot",
+      "mmr": 533.7745262296806,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 844.9550940919177,
+          "win": false
+        },
+        {
+          "opponentRating": 845.7399830824254,
+          "win": false
+        },
+        {
+          "opponentRating": 842.5220255692851,
+          "win": true
+        },
+        {
+          "opponentRating": 835.6814472598757,
+          "win": false
+        },
+        {
+          "opponentRating": 836.5005614664435,
+          "win": false
+        },
+        {
+          "opponentRating": 837.3166085742132,
+          "win": false
+        },
+        {
+          "opponentRating": 834.1296085689096,
+          "win": true
+        },
+        {
+          "opponentRating": 830.9545569413688,
+          "win": true
+        },
+        {
+          "opponentRating": 831.7915376502887,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "이창우",
+      "race": "Z",
+      "wins": 70,
+      "losses": 104,
+      "countedMatches": 174
+    },
+    {
+      "key": "uid:clzhf123",
+      "mmr": 533.3744334911498,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "우질",
+      "race": "P",
+      "wins": 57,
+      "losses": 81,
+      "countedMatches": 138
+    },
+    {
+      "key": "uid:zzonii",
+      "mmr": 531.1845703095084,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "한쪼니",
+      "race": "P",
+      "wins": 195,
+      "losses": 321,
+      "countedMatches": 516
+    },
+    {
+      "key": "uid:kjy3443",
+      "mmr": 529.6227706694564,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "연또",
+      "race": "P",
+      "wins": 49,
+      "losses": 76,
+      "countedMatches": 125
+    },
+    {
+      "key": "uid:rlekfu6",
+      "mmr": 529.0691201565338,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "박재혁",
+      "race": "Z",
+      "wins": 97,
+      "losses": 141,
+      "countedMatches": 238
+    },
+    {
+      "key": "uid:zealot0846",
+      "mmr": 526.7119029612663,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 607.5818847582518,
+          "win": true
+        },
+        {
+          "opponentRating": 609.5382468480311,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "원선재",
+      "race": "P",
+      "wins": 501,
+      "losses": 631,
+      "countedMatches": 1132
+    },
+    {
+      "key": "uid:rudals5467",
+      "mmr": 524.3771291774679,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 518.4525472806125,
+          "win": true
+        },
+        {
+          "opponentRating": 516.9135377702002,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "이경민",
+      "race": "P",
+      "wins": 111,
+      "losses": 129,
+      "countedMatches": 240
+    },
+    {
+      "key": "uid:qwer1317",
+      "mmr": 522.7349259373227,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "으니",
+      "race": "P",
+      "wins": 47,
+      "losses": 82,
+      "countedMatches": 129
+    },
+    {
+      "key": "uid:yeom1020",
+      "mmr": 522.6090301331536,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "정연이",
+      "race": "P",
+      "wins": 99,
+      "losses": 131,
+      "countedMatches": 230
+    },
+    {
+      "key": "uid:finepearls",
+      "mmr": 521.0208766480845,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "혜냥",
+      "race": "P",
+      "wins": 34,
+      "losses": 63,
+      "countedMatches": 97
+    },
+    {
+      "key": "uid:bumsoo552",
+      "mmr": 520.0261088520259,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 558.7825799351684,
+          "win": false
+        },
+        {
+          "opponentRating": 619.5467802013223,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 617.4343784560638,
+          "win": true
+        },
+        {
+          "opponentRating": 728.336058841572,
+          "win": true
+        },
+        {
+          "opponentRating": 725.629158747424,
+          "win": true
+        },
+        {
+          "opponentRating": 546.510138176419,
+          "win": false
+        },
+        {
+          "opponentRating": 544.0329283591416,
+          "win": false
+        },
+        {
+          "opponentRating": 574.6636196407115,
+          "win": false
+        },
+        {
+          "opponentRating": 576.8092095836649,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김범수",
+      "race": "P",
+      "wins": 114,
+      "losses": 208,
+      "countedMatches": 322
+    },
+    {
+      "key": "uid:kss33325",
+      "mmr": 517.561011133908,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김수식",
+      "race": "Z",
+      "wins": 20,
+      "losses": 71,
+      "countedMatches": 91
+    },
+    {
+      "key": "uid:kkmkhh1234",
+      "mmr": 514.462315018466,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 605.2734679239722,
+          "win": false
+        },
+        {
+          "opponentRating": 545.1819800800614,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 620.2410508451414,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 596.2092168749891,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김경모",
+      "race": "Z",
+      "wins": 332,
+      "losses": 609,
+      "countedMatches": 941
+    },
+    {
+      "key": "uid:gnsl418",
+      "mmr": 510.18263831118327,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "이예훈",
+      "race": "Z",
+      "wins": 54,
+      "losses": 106,
+      "countedMatches": 160
+    },
+    {
+      "key": "uid:jyh8610",
+      "mmr": 509.69563586370964,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 471.98277920216094,
+          "win": true
+        },
+        {
+          "opponentRating": 474.68807268464104,
+          "win": false
+        },
+        {
+          "opponentRating": 473.37969262073847,
+          "win": true
+        },
+        {
+          "opponentRating": 476.0779348748521,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 632.9005215311429,
+          "win": false
+        },
+        {
+          "opponentRating": 635.6172817092705,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "진영화",
+      "race": "P",
+      "wins": 167,
+      "losses": 311,
+      "countedMatches": 478
+    },
+    {
+      "key": "uid:hamhee",
+      "mmr": 507.8116917188465,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "햄희",
+      "race": "Z",
+      "wins": 54,
+      "losses": 87,
+      "countedMatches": 141
+    },
+    {
+      "key": "uid:rondobba",
+      "mmr": 507.54143924602033,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "지동원",
+      "race": "T",
+      "wins": 91,
+      "losses": 144,
+      "countedMatches": 235
+    },
+    {
+      "key": "uid:brainzerg7",
+      "mmr": 505.51629856544145,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 593.2251780740778,
+          "win": false
+        },
+        {
+          "opponentRating": 481.19366441053535,
+          "win": false
+        },
+        {
+          "opponentRating": 508.93602749961,
+          "win": true
+        },
+        {
+          "opponentRating": 635.2577932925897,
+          "win": false
+        },
+        {
+          "opponentRating": 633.9915565020481,
+          "win": false
+        },
+        {
+          "opponentRating": 635.7965073008949,
+          "win": false
+        },
+        {
+          "opponentRating": 530.5812796024942,
+          "win": false
+        },
+        {
+          "opponentRating": 541.7004438514409,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김윤환",
+      "race": "Z",
+      "wins": 93,
+      "losses": 160,
+      "countedMatches": 253
+    },
+    {
+      "key": "uid:nyayoung98",
+      "mmr": 503.50712393271135,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "우마루대장",
+      "race": "Z",
+      "wins": 109,
+      "losses": 227,
+      "countedMatches": 336
+    },
+    {
+      "key": "uid:jk890202",
+      "mmr": 495.37063720336937,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 606.039749771607,
+          "win": false
+        },
+        {
+          "opponentRating": 619.968488336716,
+          "win": true
+        },
+        {
+          "opponentRating": 646.4797191218962,
+          "win": false
+        },
+        {
+          "opponentRating": 648.2137451662542,
+          "win": false
+        },
+        {
+          "opponentRating": 636.1907502193164,
+          "win": true
+        },
+        {
+          "opponentRating": 511.89255257711886,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "김윤중",
+      "race": "P",
+      "wins": 182,
+      "losses": 386,
+      "countedMatches": 568
+    },
+    {
+      "key": "uid:bts150",
+      "mmr": 494.02564741606227,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "방태수",
+      "race": "Z",
+      "wins": 391,
+      "losses": 579,
+      "countedMatches": 970
+    },
+    {
+      "key": "uid:chanmeyo",
+      "mmr": 492.2409632473316,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김세주",
+      "race": "T",
+      "wins": 222,
+      "losses": 282,
+      "countedMatches": 504
+    },
+    {
+      "key": "uid:asdsa1113",
+      "mmr": 492.06491921317644,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 582.8302158430248,
+          "win": false
+        },
+        {
+          "opponentRating": 582.4973596479819,
+          "win": true
+        },
+        {
+          "opponentRating": 580.5980278005217,
+          "win": true
+        },
+        {
+          "opponentRating": 669.018710073817,
+          "win": false
+        },
+        {
+          "opponentRating": 670.6265514467036,
+          "win": false
+        },
+        {
+          "opponentRating": 668.2255013186027,
+          "win": true
+        },
+        {
+          "opponentRating": 574.6239574800204,
+          "win": true
+        },
+        {
+          "opponentRating": 572.7697745249764,
+          "win": true
+        },
+        {
+          "opponentRating": 682.7313477782876,
+          "win": false
+        },
+        {
+          "opponentRating": 646.9508440833188,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "세월",
+      "race": "T",
+      "wins": 67,
+      "losses": 173,
+      "countedMatches": 240
+    },
+    {
+      "key": "uid:qndnd12",
+      "mmr": 491.16595178959585,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "김기덕",
+      "race": "Z",
+      "wins": 19,
+      "losses": 64,
+      "countedMatches": 83
+    },
+    {
+      "key": "uid:onzzang",
+      "mmr": 490.21830318426055,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "이응씨",
+      "race": "T",
+      "wins": 63,
+      "losses": 96,
+      "countedMatches": 159
+    },
+    {
+      "key": "uid:kimp1ay",
+      "mmr": 477.70258551984904,
+      "tier": "Y",
+      "status": "active",
+      "note": "신규(유스 시작)",
+      "name": "구키",
+      "race": "P",
+      "wins": 131,
+      "losses": 229,
+      "countedMatches": 360
+    },
+    {
+      "key": "uid:70jeontaekyu",
+      "mmr": 439.7366271515551,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 599.775823379931,
+          "win": true
+        },
+        {
+          "opponentRating": 598.6407406441313,
+          "win": false
+        },
+        {
+          "opponentRating": 601.7771138441109,
+          "win": false
+        },
+        {
+          "opponentRating": 604.7617691435075,
+          "win": false
+        },
+        {
+          "opponentRating": 607.7206552978273,
+          "win": false
+        },
+        {
+          "opponentRating": 610.6540007722809,
+          "win": false
+        },
+        {
+          "opponentRating": 607.5620355585326,
+          "win": true
+        },
+        {
+          "opponentRating": 593.6718655468305,
+          "win": false
+        },
+        {
+          "opponentRating": 591.5546350183688,
+          "win": true
+        },
+        {
+          "opponentRating": 592.6788236853114,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "전태규",
+      "race": "P",
+      "wins": 3,
+      "losses": 8,
+      "countedMatches": 11
+    },
+    {
+      "key": "uid:yunhee1222",
+      "mmr": 284.63321563153465,
+      "tier": "Y",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 577.38707526675,
+          "win": false
+        },
+        {
+          "opponentRating": 579.5170622316958,
+          "win": false
+        },
+        {
+          "opponentRating": 581.634835085521,
+          "win": false
+        },
+        {
+          "opponentRating": 583.7404551204648,
+          "win": false
+        },
+        {
+          "opponentRating": 651.8973956807149,
+          "win": false
+        },
+        {
+          "opponentRating": 584.3137335900449,
+          "win": false
+        },
+        {
+          "opponentRating": 586.4039696937867,
+          "win": false
+        },
+        {
+          "opponentRating": 603.0459348363895,
+          "win": false
+        },
+        {
+          "opponentRating": 617.7476431314357,
+          "win": true
+        },
+        {
+          "opponentRating": 545.6728152566901,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치확정)",
+      "name": "깅예솔",
+      "race": "T",
+      "wins": 4,
+      "losses": 18,
+      "countedMatches": 22
+    }
+  ],
+  "placement": [
+    {
+      "key": "uid:1004suna",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1200.119906356638,
+          "win": true
+        },
+        {
+          "opponentRating": 1400.131670309492,
+          "win": false
+        },
+        {
+          "opponentRating": 1400.1712445601052,
+          "win": false
+        },
+        {
+          "opponentRating": 1200.24243806515,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "임아니",
+      "race": "Z",
+      "wins": 1,
+      "losses": 3,
+      "countedMatches": 4,
+      "placementProgress": "4/10"
+    },
+    {
+      "key": "uid:qksdy147",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "하얀눈길",
+      "race": "P",
+      "wins": 0,
+      "losses": 1,
+      "countedMatches": 1,
+      "placementProgress": "1/10"
+    },
+    {
+      "key": "uid:yeeeahm97",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1602.5028932598862,
+          "win": false
+        },
+        {
+          "opponentRating": 1595.7707499329483,
+          "win": true
+        },
+        {
+          "opponentRating": 1589.7901284011764,
+          "win": true
+        },
+        {
+          "opponentRating": 1585.8034983767009,
+          "win": true
+        },
+        {
+          "opponentRating": 1581.8171776646072,
+          "win": true
+        },
+        {
+          "opponentRating": 1124.0159681966072,
+          "win": true
+        },
+        {
+          "opponentRating": 1118.2960899671539,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "림예이",
+      "race": "Z",
+      "wins": 6,
+      "losses": 1,
+      "countedMatches": 7,
+      "placementProgress": "7/10"
+    },
+    {
+      "key": "uid:xodud1898",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 873.4185023478398,
+          "win": true
+        },
+        {
+          "opponentRating": 874.1051335334598,
+          "win": false
+        },
+        {
+          "opponentRating": 870.7895195517656,
+          "win": true
+        },
+        {
+          "opponentRating": 867.4848010503301,
+          "win": true
+        },
+        {
+          "opponentRating": 864.1910780586709,
+          "win": true
+        },
+        {
+          "opponentRating": 1439.7441232655221,
+          "win": true
+        },
+        {
+          "opponentRating": 1082.3987516326392,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "태영",
+      "race": "T",
+      "wins": 8,
+      "losses": 1,
+      "countedMatches": 9,
+      "placementProgress": "9/10"
+    },
+    {
+      "key": "uid:iamaiql",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1284.6306244338261,
+          "win": true
+        },
+        {
+          "opponentRating": 1846.7033385400905,
+          "win": false
+        },
+        {
+          "opponentRating": 1846.706393249182,
+          "win": false
+        },
+        {
+          "opponentRating": 1164.8186300693822,
+          "win": true
+        },
+        {
+          "opponentRating": 1160.9677426369933,
+          "win": true
+        },
+        {
+          "opponentRating": 1157.1200702814867,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "엘사",
+      "race": "T",
+      "wins": 4,
+      "losses": 2,
+      "countedMatches": 6,
+      "placementProgress": "6/10"
+    },
+    {
+      "key": "uid:firebathero",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "흑운장",
+      "race": "T",
+      "wins": 1,
+      "losses": 1,
+      "countedMatches": 2,
+      "placementProgress": "2/10"
+    },
+    {
+      "key": "uid:khc2566",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1781.6834107037012,
+          "win": true
+        },
+        {
+          "opponentRating": 1774.781213130641,
+          "win": true
+        },
+        {
+          "opponentRating": 721.5379180859953,
+          "win": false
+        },
+        {
+          "opponentRating": 722.8654964867426,
+          "win": false
+        },
+        {
+          "opponentRating": 1652.7224389861035,
+          "win": true
+        },
+        {
+          "opponentRating": 1857.9448867334531,
+          "win": false
+        },
+        {
+          "opponentRating": 1857.9477501647673,
+          "win": false
+        },
+        {
+          "opponentRating": 670.4661312942239,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "라히",
+      "race": "T",
+      "wins": 3,
+      "losses": 5,
+      "countedMatches": 8,
+      "placementProgress": "8/10"
+    },
+    {
+      "key": "uid:vlfvlf789",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1739.7574790171025,
+          "win": true
+        },
+        {
+          "opponentRating": 1739.7631290686954,
+          "win": false
+        },
+        {
+          "opponentRating": 1735.768778936787,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "빵훈",
+      "race": "P",
+      "wins": 2,
+      "losses": 1,
+      "countedMatches": 3,
+      "placementProgress": "3/10"
+    },
+    {
+      "key": "uid:gksdidqksxn",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1270.5164256208147,
+          "win": true
+        },
+        {
+          "opponentRating": 865.969350078758,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "준밧드",
+      "race": "T",
+      "wins": 1,
+      "losses": 1,
+      "countedMatches": 2,
+      "placementProgress": "2/10"
+    },
+    {
+      "key": "uid:skarbwhgc",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 695.4475689997963,
+          "win": false
+        },
+        {
+          "opponentRating": 696.9115460249011,
+          "win": false
+        },
+        {
+          "opponentRating": 698.3677099268842,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "팔레트",
+      "race": "T",
+      "wins": 0,
+      "losses": 3,
+      "countedMatches": 3,
+      "placementProgress": "3/10"
+    },
+    {
+      "key": "uid:tjaudtn123",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1938.358130831383,
+          "win": false
+        },
+        {
+          "opponentRating": 693.1172425518589,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "서도일",
+      "race": "Z",
+      "wins": 1,
+      "losses": 1,
+      "countedMatches": 2,
+      "placementProgress": "2/10"
+    },
+    {
+      "key": "uid:joey1114",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1271.6622914158415,
+          "win": false
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "저라뎃",
+      "race": "T",
+      "wins": 0,
+      "losses": 1,
+      "countedMatches": 1,
+      "placementProgress": "1/10"
+    },
+    {
+      "key": "uid:ogm0905",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 1636.1466868560424,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "오뀨",
+      "race": "Z",
+      "wins": 1,
+      "losses": 0,
+      "countedMatches": 1,
+      "placementProgress": "1/10"
+    },
+    {
+      "key": "uid:skygkrtn",
+      "mmr": null,
+      "tier": null,
+      "status": "placement",
+      "placementList": [
+        {
+          "opponentRating": 599.762130886467,
+          "win": true
+        },
+        {
+          "opponentRating": 593.5173220543762,
+          "win": true
+        },
+        {
+          "opponentRating": 593.6032408743588,
+          "win": false
+        },
+        {
+          "opponentRating": 439.7366271515551,
+          "win": true
+        }
+      ],
+      "note": "복귀자(배치중)",
+      "name": "김학수",
+      "race": "P",
+      "wins": 3,
+      "losses": 1,
+      "countedMatches": 4,
+      "placementProgress": "4/10"
+    }
+  ]
+}
