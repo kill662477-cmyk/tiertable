@@ -257,8 +257,8 @@ section{margin-top:74px;scroll-margin-top:80px}
 .bdg{
   position:absolute;top:6px;left:6px;z-index:2;
   font-family:'Orbitron',sans-serif;
-  font-size:9px;font-weight:700;letter-spacing:.12em;
-  padding:3px 7px;
+  font-size:11px;font-weight:700;letter-spacing:.12em;
+  padding:4px 8px;
   color:#04060d;
 }
 .bdg.new{background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
@@ -548,7 +548,7 @@ async function initBoard() {
       active.forEach(p => {
         ACTIVE_PLAYERS.add(p.name);
         if (p.isTemporaryDormant) TEMP_DORMANT_PLAYERS.add(p.name);
-        if (p.note && p.note.includes('복귀자')) BADGES[p.name] = 'return';
+        if (p.note && (p.note.includes('복귀자(재측정중)') || p.note.includes('복귀자(배치중)'))) BADGES[p.name] = 'ret';
         if (p.seeded === false && p.countedMatches < 10) BADGES[p.name] = 'new';
 
         if (!tierMap[p.tier]) tierMap[p.tier] = { id: p.tier, label: p.tier === 'Y' ? '유스티어' : p.tier + '티어', T: [], Z: [], P: [] };
