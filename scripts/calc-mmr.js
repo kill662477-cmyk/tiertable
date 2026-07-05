@@ -485,8 +485,9 @@ function main() {
   for (const p of hidden) p.tier = displayTier(p.mmr);
 
   // ---- 표시 제외 인원 (계산 풀에는 유지, 출력에서만 제거) ----
-  const displayActive = finalActive.filter((p) => !EXCLUDED_PLAYER_NAMES.has(p.name));
-  const displayHidden = hidden.filter((p) => !EXCLUDED_PLAYER_NAMES.has(p.name));
+  const rosterNames = new Set(players.map(p => String(p.name).trim()));
+  const displayActive = finalActive.filter((p) => !EXCLUDED_PLAYER_NAMES.has(p.name) && rosterNames.has(p.name));
+  const displayHidden = hidden.filter((p) => !EXCLUDED_PLAYER_NAMES.has(p.name) && rosterNames.has(p.name));
 
   // 균등 재배치(분위수 강제 분할) 폐기 — 지정 경계선을 무시하고 순위로 억지 배분해서
   // MMR 1250 초과인데 6티어로 표시되는 등 경계선과 어긋나는 왜곡이 있었음.
@@ -539,3 +540,4 @@ function main() {
 }
 
 main();
+
