@@ -599,9 +599,11 @@ async function initBoard() {
       });
 
       TIERS = Object.values(tierMap).sort((a, b) => {
-        if (a.id === 'Y') return 1;
-        if (b.id === 'Y') return -1;
-        return parseInt(a.id) - parseInt(b.id);
+        if (a.id === 'Y' && b.id !== 'Y') return 1;
+        if (b.id === 'Y' && a.id !== 'Y') return -1;
+        if (a.id === 'B' && b.id !== 'B') return 1;
+        if (b.id === 'B' && a.id !== 'B') return -1;
+        return parseInt(a.id || "99") - parseInt(b.id || "99");
       });
     }
   } catch(e) { console.error('Failed to load data', e); }

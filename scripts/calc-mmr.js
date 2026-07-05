@@ -69,7 +69,7 @@ function isReliable(entry) {
 }
 const RESET_INTERVAL_MONTHS = 6;
 const RESET_COMPRESSION = 0.7; // MMR_SYSTEM_DESIGN.md §6 — 약한 압축(시즌 성과 보존 우선)
-const TIER_RANK_ORDER = ["1", "2", "3", "4", "5", "6", "7", "8", "Y"]; // 앞이 강함
+const TIER_RANK_ORDER = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "B", "Y"]; // 앞이 강함
 
 function addMonths(dateStr, months) {
   const d = new Date(dateStr + "T00:00:00Z");
@@ -517,6 +517,16 @@ function main() {
   }
 
   for (const p of displayActive) {
+    const original = players.find(x => x.name === p.name);
+    if (original && original.tierCode) {
+      const ogRank = rankOf(original.tierCode);
+      const calcRank = rankOf(p.tier);
+      if (calcRank > ogRank) {
+        p.tier = original.tierCode;
+        p.note = (p.note || "") + " / 관리자 하한선 보호";
+      }
+    }
+    
     if (FORCED_TIER_OVERRIDES[p.name]) {
       p.tier = FORCED_TIER_OVERRIDES[p.name];
       p.note = (p.note || "") + " / 관리자고정";
