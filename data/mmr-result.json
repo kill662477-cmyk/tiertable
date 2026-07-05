@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T16:16:48.330Z",
+  "generatedAt": "2026-07-05T16:18:01.798Z",
   "cutoff": "2024-04-10",
   "dataMaxDate": "2026-07-04",
   "hiddenCutoff": "2026-04-04",
@@ -4717,6 +4717,590 @@
       ]
     },
     {
+      "key": "uid:corgi1102",
+      "mmr": 760.9269735321699,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 602.7029825829527,
+          "win": true
+        },
+        {
+          "opponentRating": 610.057476296573,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 720.9166427314914,
+          "win": false
+        },
+        {
+          "opponentRating": 603.9942435531634,
+          "win": false
+        },
+        {
+          "opponentRating": 630.1140323935109,
+          "win": false
+        },
+        {
+          "opponentRating": 612.676768648908,
+          "win": true
+        }
+      ],
+      "note": "신규(배치확정) / 관리자고정",
+      "name": "냥냥코기",
+      "race": "Z",
+      "wins": 273,
+      "losses": 233,
+      "countedMatches": 506,
+      "lastMatchDate": "2026-07-02",
+      "placementSnapshot": [
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 602.7029825829527,
+          "win": true
+        },
+        {
+          "opponentRating": 610.057476296573,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 720.9166427314914,
+          "win": false
+        },
+        {
+          "opponentRating": 603.9942435531634,
+          "win": false
+        },
+        {
+          "opponentRating": 630.1140323935109,
+          "win": false
+        },
+        {
+          "opponentRating": 612.676768648908,
+          "win": true
+        }
+      ]
+    },
+    {
+      "key": "uid:bangsong12",
+      "mmr": 742.7536432266102,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 605.9827473227018,
+          "win": false
+        },
+        {
+          "opponentRating": 603.3712962735713,
+          "win": true
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 603.9942435531634,
+          "win": false
+        },
+        {
+          "opponentRating": 601.9827473227018,
+          "win": true
+        },
+        {
+          "opponentRating": 602.9798939276781,
+          "win": false
+        },
+        {
+          "opponentRating": 603.9756055418811,
+          "win": false
+        },
+        {
+          "opponentRating": 609.7369625087405,
+          "win": false
+        },
+        {
+          "opponentRating": 650.6096375190199,
+          "win": false
+        }
+      ],
+      "note": "복귀자(재측정완료) / 관리자고정",
+      "name": "사사삼",
+      "race": "P",
+      "wins": 249,
+      "losses": 309,
+      "countedMatches": 558,
+      "lastMatchDate": "2026-07-03",
+      "placementSnapshot": [
+        {
+          "opponentRating": 605.9827473227018,
+          "win": false
+        },
+        {
+          "opponentRating": 603.3712962735713,
+          "win": true
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 603.9942435531634,
+          "win": false
+        },
+        {
+          "opponentRating": 601.9827473227018,
+          "win": true
+        },
+        {
+          "opponentRating": 602.9798939276781,
+          "win": false
+        },
+        {
+          "opponentRating": 603.9756055418811,
+          "win": false
+        },
+        {
+          "opponentRating": 609.7369625087405,
+          "win": false
+        },
+        {
+          "opponentRating": 650.6096375190199,
+          "win": false
+        }
+      ],
+      "returnBadgeUntil": null
+    },
+    {
+      "key": "uid:eun0c0",
+      "mmr": 733.3723080711649,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 609.9589749180134,
+          "win": false
+        },
+        {
+          "opponentRating": 611.9303126465036,
+          "win": false
+        },
+        {
+          "opponentRating": 373.3248722056815,
+          "win": false
+        },
+        {
+          "opponentRating": 375.9550977115881,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 540.6229187019652,
+          "win": false
+        },
+        {
+          "opponentRating": 542.7934049303235,
+          "win": false
+        },
+        {
+          "opponentRating": 602.3355635429308,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        }
+      ],
+      "note": "신규(배치확정) / 관리자고정",
+      "name": "햇참새",
+      "race": "P",
+      "wins": 179,
+      "losses": 151,
+      "countedMatches": 330,
+      "lastMatchDate": "2026-06-14",
+      "placementSnapshot": [
+        {
+          "opponentRating": 609.9589749180134,
+          "win": false
+        },
+        {
+          "opponentRating": 611.9303126465036,
+          "win": false
+        },
+        {
+          "opponentRating": 373.3248722056815,
+          "win": false
+        },
+        {
+          "opponentRating": 375.9550977115881,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 540.6229187019652,
+          "win": false
+        },
+        {
+          "opponentRating": 542.7934049303235,
+          "win": false
+        },
+        {
+          "opponentRating": 602.3355635429308,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        }
+      ]
+    },
+    {
+      "key": "uid:begoniah",
+      "mmr": 701.8812014052976,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 605.9992144984545,
+          "win": true
+        },
+        {
+          "opponentRating": 604.7165577188402,
+          "win": false
+        },
+        {
+          "opponentRating": 609.559254968299,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 610.6328764387981,
+          "win": false
+        },
+        {
+          "opponentRating": 618.8394012693215,
+          "win": true
+        },
+        {
+          "opponentRating": 618.4835388193734,
+          "win": false
+        },
+        {
+          "opponentRating": 624.3239767471379,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 610.3233646346353,
+          "win": false
+        }
+      ],
+      "note": "신규(배치확정) / 관리자고정",
+      "name": "백원이야",
+      "race": "Z",
+      "wins": 271,
+      "losses": 254,
+      "countedMatches": 525,
+      "lastMatchDate": "2026-07-04",
+      "placementSnapshot": [
+        {
+          "opponentRating": 605.9992144984545,
+          "win": true
+        },
+        {
+          "opponentRating": 604.7165577188402,
+          "win": false
+        },
+        {
+          "opponentRating": 609.559254968299,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 610.6328764387981,
+          "win": false
+        },
+        {
+          "opponentRating": 618.8394012693215,
+          "win": true
+        },
+        {
+          "opponentRating": 618.4835388193734,
+          "win": false
+        },
+        {
+          "opponentRating": 624.3239767471379,
+          "win": false
+        },
+        {
+          "opponentRating": 602,
+          "win": false
+        },
+        {
+          "opponentRating": 610.3233646346353,
+          "win": false
+        }
+      ]
+    },
+    {
+      "key": "uid:2meonjin",
+      "mmr": 665.2654432082263,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 653.2070236252594,
+          "win": false
+        },
+        {
+          "opponentRating": 628.4498209630051,
+          "win": false
+        },
+        {
+          "opponentRating": 1046.9996855196978,
+          "win": false
+        },
+        {
+          "opponentRating": 394.69813824597577,
+          "win": false
+        },
+        {
+          "opponentRating": 609.5076432639598,
+          "win": true
+        },
+        {
+          "opponentRating": 607.480279774482,
+          "win": true
+        },
+        {
+          "opponentRating": 616.4081941345568,
+          "win": false
+        },
+        {
+          "opponentRating": 614.3609763312271,
+          "win": true
+        },
+        {
+          "opponentRating": 612.3196480027129,
+          "win": true
+        },
+        {
+          "opponentRating": 617.7682809755635,
+          "win": false
+        }
+      ],
+      "note": "복귀자(재측정완료) / 관리자고정",
+      "name": "먼진",
+      "race": "Z",
+      "wins": 464,
+      "losses": 483,
+      "countedMatches": 947,
+      "lastMatchDate": "2026-07-01",
+      "placementSnapshot": [
+        {
+          "opponentRating": 653.2070236252594,
+          "win": false
+        },
+        {
+          "opponentRating": 628.4498209630051,
+          "win": false
+        },
+        {
+          "opponentRating": 1046.9996855196978,
+          "win": false
+        },
+        {
+          "opponentRating": 394.69813824597577,
+          "win": false
+        },
+        {
+          "opponentRating": 609.5076432639598,
+          "win": true
+        },
+        {
+          "opponentRating": 607.480279774482,
+          "win": true
+        },
+        {
+          "opponentRating": 616.4081941345568,
+          "win": false
+        },
+        {
+          "opponentRating": 614.3609763312271,
+          "win": true
+        },
+        {
+          "opponentRating": 612.3196480027129,
+          "win": true
+        },
+        {
+          "opponentRating": 617.7682809755635,
+          "win": false
+        }
+      ],
+      "returnBadgeUntil": null
+    },
+    {
+      "key": "uid:wjddmstj79",
+      "mmr": 662.858522289851,
+      "tier": "7",
+      "status": "active",
+      "placementList": [
+        {
+          "opponentRating": 618.3796100359997,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 631.5549891706286,
+          "win": false
+        },
+        {
+          "opponentRating": 650.4338381093705,
+          "win": true
+        },
+        {
+          "opponentRating": 667.3330516431582,
+          "win": false
+        },
+        {
+          "opponentRating": 602.6855740751039,
+          "win": false
+        },
+        {
+          "opponentRating": 604.6778444100507,
+          "win": false
+        },
+        {
+          "opponentRating": 672.3259482030372,
+          "win": true
+        },
+        {
+          "opponentRating": 674.118525905159,
+          "win": false
+        },
+        {
+          "opponentRating": 671.9060010255016,
+          "win": true
+        }
+      ],
+      "note": "신규(배치확정) / 관리자고정",
+      "name": "쟈닌",
+      "race": "Z",
+      "wins": 316,
+      "losses": 388,
+      "countedMatches": 704,
+      "lastMatchDate": "2026-07-03",
+      "placementSnapshot": [
+        {
+          "opponentRating": 618.3796100359997,
+          "win": false
+        },
+        {
+          "opponentRating": 600,
+          "win": true
+        },
+        {
+          "opponentRating": 631.5549891706286,
+          "win": false
+        },
+        {
+          "opponentRating": 650.4338381093705,
+          "win": true
+        },
+        {
+          "opponentRating": 667.3330516431582,
+          "win": false
+        },
+        {
+          "opponentRating": 602.6855740751039,
+          "win": false
+        },
+        {
+          "opponentRating": 604.6778444100507,
+          "win": false
+        },
+        {
+          "opponentRating": 672.3259482030372,
+          "win": true
+        },
+        {
+          "opponentRating": 674.118525905159,
+          "win": false
+        },
+        {
+          "opponentRating": 671.9060010255016,
+          "win": true
+        }
+      ]
+    },
+    {
       "key": "uid:dlwldyal1004",
       "mmr": 625.1129789559558,
       "tier": "7",
@@ -5496,103 +6080,6 @@
       ]
     },
     {
-      "key": "uid:corgi1102",
-      "mmr": 760.9269735321699,
-      "tier": "8",
-      "status": "active",
-      "placementList": [
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 602.7029825829527,
-          "win": true
-        },
-        {
-          "opponentRating": 610.057476296573,
-          "win": false
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 720.9166427314914,
-          "win": false
-        },
-        {
-          "opponentRating": 603.9942435531634,
-          "win": false
-        },
-        {
-          "opponentRating": 630.1140323935109,
-          "win": false
-        },
-        {
-          "opponentRating": 612.676768648908,
-          "win": true
-        }
-      ],
-      "note": "신규(배치확정)",
-      "name": "냥냥코기",
-      "race": "Z",
-      "wins": 273,
-      "losses": 233,
-      "countedMatches": 506,
-      "lastMatchDate": "2026-07-02",
-      "placementSnapshot": [
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 602.7029825829527,
-          "win": true
-        },
-        {
-          "opponentRating": 610.057476296573,
-          "win": false
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 720.9166427314914,
-          "win": false
-        },
-        {
-          "opponentRating": 603.9942435531634,
-          "win": false
-        },
-        {
-          "opponentRating": 630.1140323935109,
-          "win": false
-        },
-        {
-          "opponentRating": 612.676768648908,
-          "win": true
-        }
-      ]
-    },
-    {
       "key": "uid:totoo23",
       "mmr": 752.4038899613435,
       "tier": "8",
@@ -5787,104 +6274,6 @@
       ]
     },
     {
-      "key": "uid:bangsong12",
-      "mmr": 742.7536432266102,
-      "tier": "8",
-      "status": "active",
-      "placementList": [
-        {
-          "opponentRating": 605.9827473227018,
-          "win": false
-        },
-        {
-          "opponentRating": 603.3712962735713,
-          "win": true
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 603.9942435531634,
-          "win": false
-        },
-        {
-          "opponentRating": 601.9827473227018,
-          "win": true
-        },
-        {
-          "opponentRating": 602.9798939276781,
-          "win": false
-        },
-        {
-          "opponentRating": 603.9756055418811,
-          "win": false
-        },
-        {
-          "opponentRating": 609.7369625087405,
-          "win": false
-        },
-        {
-          "opponentRating": 650.6096375190199,
-          "win": false
-        }
-      ],
-      "note": "복귀자(재측정완료)",
-      "name": "사사삼",
-      "race": "P",
-      "wins": 249,
-      "losses": 309,
-      "countedMatches": 558,
-      "lastMatchDate": "2026-07-03",
-      "placementSnapshot": [
-        {
-          "opponentRating": 605.9827473227018,
-          "win": false
-        },
-        {
-          "opponentRating": 603.3712962735713,
-          "win": true
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 603.9942435531634,
-          "win": false
-        },
-        {
-          "opponentRating": 601.9827473227018,
-          "win": true
-        },
-        {
-          "opponentRating": 602.9798939276781,
-          "win": false
-        },
-        {
-          "opponentRating": 603.9756055418811,
-          "win": false
-        },
-        {
-          "opponentRating": 609.7369625087405,
-          "win": false
-        },
-        {
-          "opponentRating": 650.6096375190199,
-          "win": false
-        }
-      ],
-      "returnBadgeUntil": null
-    },
-    {
       "key": "uid:youaregood",
       "mmr": 740.749238809362,
       "tier": "8",
@@ -5898,103 +6287,6 @@
       "countedMatches": 479,
       "lastMatchDate": "2026-07-01",
       "returnBadgeUntil": null
-    },
-    {
-      "key": "uid:eun0c0",
-      "mmr": 733.3723080711649,
-      "tier": "8",
-      "status": "active",
-      "placementList": [
-        {
-          "opponentRating": 609.9589749180134,
-          "win": false
-        },
-        {
-          "opponentRating": 611.9303126465036,
-          "win": false
-        },
-        {
-          "opponentRating": 373.3248722056815,
-          "win": false
-        },
-        {
-          "opponentRating": 375.9550977115881,
-          "win": false
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 540.6229187019652,
-          "win": false
-        },
-        {
-          "opponentRating": 542.7934049303235,
-          "win": false
-        },
-        {
-          "opponentRating": 602.3355635429308,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        }
-      ],
-      "note": "신규(배치확정)",
-      "name": "햇참새",
-      "race": "P",
-      "wins": 179,
-      "losses": 151,
-      "countedMatches": 330,
-      "lastMatchDate": "2026-06-14",
-      "placementSnapshot": [
-        {
-          "opponentRating": 609.9589749180134,
-          "win": false
-        },
-        {
-          "opponentRating": 611.9303126465036,
-          "win": false
-        },
-        {
-          "opponentRating": 373.3248722056815,
-          "win": false
-        },
-        {
-          "opponentRating": 375.9550977115881,
-          "win": false
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 540.6229187019652,
-          "win": false
-        },
-        {
-          "opponentRating": 542.7934049303235,
-          "win": false
-        },
-        {
-          "opponentRating": 602.3355635429308,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        }
-      ]
     },
     {
       "key": "uid:haeun5513",
@@ -6287,103 +6579,6 @@
         }
       ],
       "returnBadgeUntil": null
-    },
-    {
-      "key": "uid:begoniah",
-      "mmr": 701.8812014052976,
-      "tier": "8",
-      "status": "active",
-      "placementList": [
-        {
-          "opponentRating": 605.9992144984545,
-          "win": true
-        },
-        {
-          "opponentRating": 604.7165577188402,
-          "win": false
-        },
-        {
-          "opponentRating": 609.559254968299,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 610.6328764387981,
-          "win": false
-        },
-        {
-          "opponentRating": 618.8394012693215,
-          "win": true
-        },
-        {
-          "opponentRating": 618.4835388193734,
-          "win": false
-        },
-        {
-          "opponentRating": 624.3239767471379,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 610.3233646346353,
-          "win": false
-        }
-      ],
-      "note": "신규(배치확정)",
-      "name": "백원이야",
-      "race": "Z",
-      "wins": 271,
-      "losses": 254,
-      "countedMatches": 525,
-      "lastMatchDate": "2026-07-04",
-      "placementSnapshot": [
-        {
-          "opponentRating": 605.9992144984545,
-          "win": true
-        },
-        {
-          "opponentRating": 604.7165577188402,
-          "win": false
-        },
-        {
-          "opponentRating": 609.559254968299,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 610.6328764387981,
-          "win": false
-        },
-        {
-          "opponentRating": 618.8394012693215,
-          "win": true
-        },
-        {
-          "opponentRating": 618.4835388193734,
-          "win": false
-        },
-        {
-          "opponentRating": 624.3239767471379,
-          "win": false
-        },
-        {
-          "opponentRating": 602,
-          "win": false
-        },
-        {
-          "opponentRating": 610.3233646346353,
-          "win": false
-        }
-      ]
     },
     {
       "key": "uid:yyssaa33",
@@ -6965,201 +7160,6 @@
         {
           "opponentRating": 658.4522958740711,
           "win": false
-        }
-      ]
-    },
-    {
-      "key": "uid:2meonjin",
-      "mmr": 665.2654432082263,
-      "tier": "8",
-      "status": "active",
-      "placementList": [
-        {
-          "opponentRating": 653.2070236252594,
-          "win": false
-        },
-        {
-          "opponentRating": 628.4498209630051,
-          "win": false
-        },
-        {
-          "opponentRating": 1046.9996855196978,
-          "win": false
-        },
-        {
-          "opponentRating": 394.69813824597577,
-          "win": false
-        },
-        {
-          "opponentRating": 609.5076432639598,
-          "win": true
-        },
-        {
-          "opponentRating": 607.480279774482,
-          "win": true
-        },
-        {
-          "opponentRating": 616.4081941345568,
-          "win": false
-        },
-        {
-          "opponentRating": 614.3609763312271,
-          "win": true
-        },
-        {
-          "opponentRating": 612.3196480027129,
-          "win": true
-        },
-        {
-          "opponentRating": 617.7682809755635,
-          "win": false
-        }
-      ],
-      "note": "복귀자(재측정완료)",
-      "name": "먼진",
-      "race": "Z",
-      "wins": 464,
-      "losses": 483,
-      "countedMatches": 947,
-      "lastMatchDate": "2026-07-01",
-      "placementSnapshot": [
-        {
-          "opponentRating": 653.2070236252594,
-          "win": false
-        },
-        {
-          "opponentRating": 628.4498209630051,
-          "win": false
-        },
-        {
-          "opponentRating": 1046.9996855196978,
-          "win": false
-        },
-        {
-          "opponentRating": 394.69813824597577,
-          "win": false
-        },
-        {
-          "opponentRating": 609.5076432639598,
-          "win": true
-        },
-        {
-          "opponentRating": 607.480279774482,
-          "win": true
-        },
-        {
-          "opponentRating": 616.4081941345568,
-          "win": false
-        },
-        {
-          "opponentRating": 614.3609763312271,
-          "win": true
-        },
-        {
-          "opponentRating": 612.3196480027129,
-          "win": true
-        },
-        {
-          "opponentRating": 617.7682809755635,
-          "win": false
-        }
-      ],
-      "returnBadgeUntil": null
-    },
-    {
-      "key": "uid:wjddmstj79",
-      "mmr": 662.858522289851,
-      "tier": "8",
-      "status": "active",
-      "placementList": [
-        {
-          "opponentRating": 618.3796100359997,
-          "win": false
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 631.5549891706286,
-          "win": false
-        },
-        {
-          "opponentRating": 650.4338381093705,
-          "win": true
-        },
-        {
-          "opponentRating": 667.3330516431582,
-          "win": false
-        },
-        {
-          "opponentRating": 602.6855740751039,
-          "win": false
-        },
-        {
-          "opponentRating": 604.6778444100507,
-          "win": false
-        },
-        {
-          "opponentRating": 672.3259482030372,
-          "win": true
-        },
-        {
-          "opponentRating": 674.118525905159,
-          "win": false
-        },
-        {
-          "opponentRating": 671.9060010255016,
-          "win": true
-        }
-      ],
-      "note": "신규(배치확정)",
-      "name": "쟈닌",
-      "race": "Z",
-      "wins": 316,
-      "losses": 388,
-      "countedMatches": 704,
-      "lastMatchDate": "2026-07-03",
-      "placementSnapshot": [
-        {
-          "opponentRating": 618.3796100359997,
-          "win": false
-        },
-        {
-          "opponentRating": 600,
-          "win": true
-        },
-        {
-          "opponentRating": 631.5549891706286,
-          "win": false
-        },
-        {
-          "opponentRating": 650.4338381093705,
-          "win": true
-        },
-        {
-          "opponentRating": 667.3330516431582,
-          "win": false
-        },
-        {
-          "opponentRating": 602.6855740751039,
-          "win": false
-        },
-        {
-          "opponentRating": 604.6778444100507,
-          "win": false
-        },
-        {
-          "opponentRating": 672.3259482030372,
-          "win": true
-        },
-        {
-          "opponentRating": 674.118525905159,
-          "win": false
-        },
-        {
-          "opponentRating": 671.9060010255016,
-          "win": true
         }
       ]
     },
