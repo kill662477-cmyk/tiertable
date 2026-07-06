@@ -522,6 +522,29 @@ function main() {
       p.note = (p.note || "") + " / 관리자고정";
     }
   }
+
+  // players.json에 있지만 전적 데이터에 없는 인원 → 유스티어로 강제 추가
+  const activeNames = new Set(displayActive.map(p => p.name));
+  const hiddenNames = new Set(hidden.map(p => p.name));
+  const placementNames = new Set(stillPlacement.map(p => p.name));
+  for (const pl of players) {
+    if (!activeNames.has(pl.name) && !hiddenNames.has(pl.name) && !placementNames.has(pl.name) && !EXCLUDED_PLAYER_NAMES.has(pl.name)) {
+      displayActive.push({
+        key: "uid:" + pl.userId,
+        name: pl.name,
+        race: pl.race,
+        mmr: 600,
+        tier: FORCED_TIER_OVERRIDES[pl.name] || "Y",
+        status: "active",
+        wins: 0, losses: 0, countedMatches: 0,
+        seeded: false,
+        note: "신규(전적없음)",
+        lastMatchDate: dataMaxDate,
+        isTemporaryDormant: false,
+      });
+    }
+  }
+
   displayActive.sort((a, b) => {
     const rankDiff = rankOf(a.tier) - rankOf(b.tier);
     return rankDiff !== 0 ? rankDiff : b.mmr - a.mmr;

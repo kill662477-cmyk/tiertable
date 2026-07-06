@@ -555,6 +555,30 @@ footer b{color:var(--cyan);font-weight:700}
   </div>
 </div>
 
+<div id="adminPanel" class="admin-panel">
+  <div class="admin-header">
+    <h2>관리자 — 선수 사진 관리</h2>
+    <div>
+      <button id="copyPhotosBtn" class="guide-btn" style="margin-right:10px;">PHOTOS 코드 복사</button>
+      <button id="closeAdminBtn" class="guide-btn">닫기</button>
+    </div>
+  </div>
+  <div class="admin-table-wrap">
+    <table id="adminTable">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>티어</th>
+          <th>MMR</th>
+          <th>미리보기</th>
+          <th>이미지 URL (비우면 삭제)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
 <script>
 /* ============ 계산 결과 — MMR 기반 티어 (승강제 시뮬레이션 + 수동 강등유예 반영) ============ */
 let TIERS = [];
@@ -725,7 +749,7 @@ adminBtn.addEventListener("click", async () => {
   
   let mmrData = {};
   try {
-    const res = await fetch("data/mmr-result.json");
+    const res = await fetch('https://rljvzultuyiudhjjfotg.supabase.co/storage/v1/object/public/calmsv-assets/tiertable/mmr-result.json?t=' + Date.now());
     if(res.ok) {
       const json = await res.json();
       json.active.forEach(p => {
@@ -784,13 +808,38 @@ adminBtn.addEventListener("click", async () => {
   });
 });
 
+function refreshCardPhotos() {
+  document.querySelectorAll(".card").forEach(card => {
+    const nm = card.querySelector(".nm")?.textContent;
+    if (!nm) return;
+    const ph = card.querySelector(".ph");
+    const existingImg = ph.querySelector("img");
+    const url = PHOTOS[nm];
+    if (url) {
+      if (existingImg) existingImg.src = url;
+      else {
+        ph.querySelector(".init")?.remove();
+        const img = document.createElement("img");
+        img.src = url; img.alt = nm; img.loading = "lazy";
+        ph.appendChild(img);
+      }
+    } else if (existingImg) {
+      existingImg.remove();
+      const span = document.createElement("span");
+      span.className = "init";
+      span.textContent = nm.slice(0, 2);
+      ph.appendChild(span);
+    }
+  });
+}
+
 closeAdminBtn.addEventListener("click", () => {
   adminPanel.style.display = "none";
   boardEl.style.display = "block";
   navEl.style.display = "block";
   mainHeader.style.display = "block";
   mainFooter.style.display = "block";
-  renderBoard(); // refresh preview
+  refreshCardPhotos(); // 관리자 창에서 수정한 사진 미리보기 반영
 });
 
 copyPhotosBtn.addEventListener("click", () => {
