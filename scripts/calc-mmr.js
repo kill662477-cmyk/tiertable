@@ -523,22 +523,37 @@ function main() {
     }
   }
 
-  // players.json에 있지만 전적 데이터에 없는 인원 → 유스티어로 강제 추가
+  // 수동으로 추가할 신규/유스 인원 목록
+  const manualNewcomers = [
+    { name: "진서랄까", race: "T", uid: "janjanoo" },
+    { name: "타마양", race: "T", uid: "tamama88" },
+    { name: "온도이", race: "T", uid: "ode0411" },
+    { name: "또아임니더", race: "Z", uid: "jooyoung0040" }, 
+    { name: "김바다", race: "Z", uid: "littlekim12" },
+    { name: "떠아", race: "Z", uid: "kidsaoq" },
+    { name: "여지니", race: "P", uid: "e2003jin" },
+    { name: "휘연", race: "P", uid: "rldyal71" },
+    { name: "이아라", race: "P", uid: "ara9687" },
+    { name: "유네", race: "P", uid: "yune12" },
+    { name: "남덕선", race: "Z", uid: "namdeoksun" }
+  ];
+
   const activeNames = new Set(displayActive.map(p => p.name));
   const hiddenNames = new Set(hidden.map(p => p.name));
   const placementNames = new Set(stillPlacement.map(p => p.name));
-  for (const pl of players) {
-    if (!activeNames.has(pl.name) && !hiddenNames.has(pl.name) && !placementNames.has(pl.name) && !EXCLUDED_PLAYER_NAMES.has(pl.name)) {
+
+  for (const nc of manualNewcomers) {
+    if (!activeNames.has(nc.name) && !hiddenNames.has(nc.name) && !placementNames.has(nc.name) && !EXCLUDED_PLAYER_NAMES.has(nc.name)) {
       displayActive.push({
-        key: "uid:" + pl.userId,
-        name: pl.name,
-        race: pl.race,
+        key: "uid:" + nc.uid,
+        name: nc.name,
+        race: nc.race,
         mmr: 600,
-        tier: FORCED_TIER_OVERRIDES[pl.name] || "Y",
+        tier: FORCED_TIER_OVERRIDES[nc.name] || "Y",
         status: "active",
         wins: 0, losses: 0, countedMatches: 0,
         seeded: false,
-        note: "신규(전적없음)",
+        note: "신규(수동추가)",
         lastMatchDate: dataMaxDate,
         isTemporaryDormant: false,
       });
