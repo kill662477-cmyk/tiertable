@@ -10,7 +10,13 @@ const MONSTARZNEW_ENV_PATH = path.join(
 );
 
 function loadMonstarznewEnv() {
-  const raw = fs.readFileSync(MONSTARZNEW_ENV_PATH, "utf8");
+  let raw;
+  try {
+    raw = fs.readFileSync(MONSTARZNEW_ENV_PATH, "utf8");
+  } catch (e) {
+    // 만약 파일이 없으면(Github Actions 환경 등) 에러를 무시하고 0을 리턴
+    return 0;
+  }
   const lines = raw.split(/\r?\n/);
   let loaded = 0;
   for (const line of lines) {
