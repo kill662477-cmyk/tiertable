@@ -2,8 +2,8 @@ name: Update MMR Daily
 
 on:
   schedule:
-    # 19:00 UTC = 04:00 KST
-    - cron: '0 19 * * *'
+    # 19:00 UTC = 04:00 KST, every 14th and 29th (which maps to 15th and 30th KST)
+    - cron: '0 19 14,29 * *'
   workflow_dispatch: # Allows manual trigger from GitHub Actions tab
 
 jobs:
