@@ -811,7 +811,7 @@ adminBtn.addEventListener("click", async () => {
   
   let mmrData = {};
   try {
-    const res = await fetch('https://rljvzultuyiudhjjfotg.supabase.co/storage/v1/object/public/calmsv-assets/tiertable/mmr-result.json?t=' + Date.now());
+    const res = await fetch('https://rljvzultuyiudhjjfotg.supabase.co/storage/v1/object/public/calmsv-assets/tiertable/mmr-result-admin.json?t=' + Date.now());
     if(res.ok) {
       const json = await res.json();
       json.active.forEach(p => {

@@ -38,8 +38,28 @@ async function uploadPlainJson(bucket, objectPath, data) {
 async function main() {
   const mmrPath = path.join(__dirname, "..", "data", "mmr-result.json");
   const mmr = JSON.parse(fs.readFileSync(mmrPath, "utf8"));
-  const r1 = await uploadPlainJson(BUCKET, "tiertable/mmr-result.json", mmr);
-  console.log(`업로드 완료: tiertable/mmr-result.json (${r1.size} bytes)`);
+  
+  // 1. 관리자용 일일 업로드 (항상 실행)
+  const rAdmin = await uploadPlainJson(BUCKET, "tiertable/mmr-result-admin.json", mmr);
+  console.log(`[Admin] 업로드 완료: tiertable/mmr-result-admin.json (${rAdmin.size} bytes)`);
+
+  // 2. 퍼블릭 업로드 (15일, 30일(또는 말일)에만 실행)
+  // 한국 시간(KST) 기준으로 날짜 판별
+  const now = new Date();
+  const kstOffset = 9 * 60 * 60 * 1000;
+  const kstDate = new Date(now.getTime() + kstOffset);
+  const day = kstDate.getUTCDate();
+  
+  // 다음날이 1일인지 판별 (말일 판별 로직: 2월 28/29일, 30일이 없는 달 등)
+  const tomorrow = new Date(kstDate.getTime() + 24 * 60 * 60 * 1000);
+  const isLastDay = tomorrow.getUTCDate() === 1;
+
+  if (day === 15 || day === 30 || isLastDay) {
+    const rPublic = await uploadPlainJson(BUCKET, "tiertable/mmr-result.json", mmr);
+    console.log(`[Public] 업로드 완료: tiertable/mmr-result.json (${rPublic.size} bytes) - 오늘은 KST ${day}일입니다.`);
+  } else {
+    console.log(`[Public] 업로드 스킵: 오늘은 KST ${day}일입니다. (15일/30일/말일 아님)`);
+  }
 }
 
 main().catch((e) => {
