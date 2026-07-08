@@ -554,7 +554,7 @@ footer b{color:var(--cyan);font-weight:700}
         <li><strong>0티어:</strong> 3100점 이상</li>
         <li><strong>1티어:</strong> 2800점 이상</li>
         <li><strong>2티어:</strong> 2500점 이상</li>
-        <li><strong>3티어:</strong> 2150점 이상</li>
+        <li><strong>3티어:</strong> 2200점 이상</li>
         <li><strong>4티어:</strong> 1950점 이상</li>
         <li><strong>5티어:</strong> 1650점 이상</li>
         <li><strong>6티어:</strong> 1350점 이상</li>
@@ -575,7 +575,7 @@ footer b{color:var(--cyan);font-weight:700}
   <div class="admin-header">
     <h2>관리자 — 선수 사진 관리</h2>
     <div>
-      <button id="copyPhotosBtn" class="guide-btn" style="margin-right:10px;">PHOTOS 코드 복사</button>
+      <button id="copyPhotosBtn" class="guide-btn" style="margin-right:10px;">Supabase 덮어쓰기 저장</button>
       <button id="closeAdminBtn" class="guide-btn">닫기</button>
     </div>
   </div>
@@ -741,6 +741,36 @@ window.addEventListener("click", (e) => {
   }
 });
 
+let adminKey = null;
+
+function base64ToUint8(b64) {
+  const bin = atob(b64);
+  const u8 = new Uint8Array(bin.length);
+  for(let i=0; i<bin.length; i++) u8[i] = bin.charCodeAt(i);
+  return u8;
+}
+
+async function decryptKey(password) {
+  try {
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey('raw', enc.encode(password), {name: 'PBKDF2'}, false, ['deriveBits', 'deriveKey']);
+    const salt = enc.encode('tiertable-salt');
+    const key = await crypto.subtle.deriveKey(
+      {name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256'},
+      keyMaterial,
+      {name: 'AES-GCM', length: 256},
+      false,
+      ['decrypt']
+    );
+    const iv = base64ToUint8("NRuGBTQkQaCJiJvj");
+    const cipher = base64ToUint8("fF1bdW80i0t6Jfz0v68aXXivIdna0AdPw7RojnJFmjZR40tyw6ojotXpwN0TsoxD2uQ6KjP83IacP/gyvG9wUz3PKUTrCq/fuDfvvNj5/BGWpspOjBUPe3U/gwgpF/4klg4Nnrn5zxJ0q/rqTKj/PwkHpavb0wO1O7iHHFI1NhknMAvkRXJrDcGaJFrT8fzQLa1mxLglVVa5RyPbuVWVqA9XiFOw4QH9ePn+sLCzKrgnyVM7Tdz/++QiWII1tle13zZ7qsSGf0d19AbVNp1rQA6eQZLQmSwUzU/cu/yfgDRB5pUbKdCU7KE15Q==");
+    const decrypted = await crypto.subtle.decrypt({name: 'AES-GCM', iv}, key, cipher);
+    return new TextDecoder().decode(decrypted);
+  } catch (e) {
+    return null;
+  }
+}
+
 /* ============ Admin Mode ============ */
 const adminBtn = document.getElementById("adminBtn");
 const adminPanel = document.getElementById("adminPanel");
@@ -752,8 +782,10 @@ const mainFooter = document.querySelector("footer");
 
 adminBtn.addEventListener("click", async () => {
   const pw = prompt("관리자 비밀번호를 입력하세요:");
-  if (pw !== "!rkxh141256") {
-    if (pw !== null) alert("비밀번호가 틀렸습니다.");
+  if (!pw) return;
+  adminKey = await decryptKey(pw);
+  if (!adminKey) {
+    alert("비밀번호가 틀렸거나 권한이 없습니다.");
     return;
   }
   
@@ -859,13 +891,47 @@ closeAdminBtn.addEventListener("click", () => {
   refreshCardPhotos(); // 관리자 창에서 수정한 사진 미리보기 반영
 });
 
-copyPhotosBtn.addEventListener("click", () => {
-  const code = "const PHOTOS = " + JSON.stringify(PHOTOS, null, 2) + ";";
-  navigator.clipboard.writeText(code).then(() => {
-    alert("PHOTOS 코드가 복사되었습니다! index.html의 PHOTOS 부분에 덮어쓰기 하세요.");
-  }).catch(() => {
-    prompt("아래 코드를 복사하세요:", code);
+copyPhotosBtn.innerText = "Supabase 덮어쓰기 저장";
+copyPhotosBtn.addEventListener("click", async () => {
+  if (!adminKey) return alert("저장 권한이 없습니다.");
+  
+  const inputs = document.querySelectorAll('#adminTable input.photo-input');
+  let newPhotos = { ...PHOTOS };
+  inputs.forEach(inp => {
+    const name = inp.dataset.name;
+    const val = inp.value.trim();
+    if (val) newPhotos[name] = val;
+    else delete newPhotos[name];
   });
+  
+  try {
+    copyPhotosBtn.innerText = "저장 중...";
+    const SUPABASE_URL = "https://rljvzultuyiudhjjfotg.supabase.co";
+    const bucket = "calmsv-assets";
+    const path = "tiertable/photos.json";
+    const url = `${SUPABASE_URL}/storage/v1/object/${bucket}/${path}`;
+    
+    const headers = {
+      'apikey': adminKey,
+      'Authorization': `Bearer ${adminKey}`,
+      'Content-Type': 'application/json',
+      'x-upsert': 'true'
+    };
+
+    let res = await fetch(url, { method: 'POST', headers, body: JSON.stringify(newPhotos, null, 2) });
+    if (res.status === 400 || res.status === 409) {
+      res = await fetch(url, { method: 'PUT', headers, body: JSON.stringify(newPhotos, null, 2) });
+    }
+
+    if (!res.ok) throw new Error(await res.text());
+    
+    alert("사진이 Supabase에 성공적으로 저장되었습니다! 새로고침 시에도 유지됩니다.");
+    PHOTOS = newPhotos;
+  } catch (e) {
+    alert("저장 실패: " + e.message);
+  } finally {
+    copyPhotosBtn.innerText = "Supabase 덮어쓰기 저장";
+  }
 });
 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
