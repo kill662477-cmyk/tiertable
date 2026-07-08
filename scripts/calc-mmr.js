@@ -562,7 +562,7 @@ function main() {
   }
 
   const forceYoning = displayActive.find(p => p.name === "요닝");
-  if (forceYoning) { forceYoning.mmr = 2150; forceYoning.tier = displayTier(2150); forceYoning.note = "관리자 강제조정"; }
+  if (forceYoning) { forceYoning.mmr = 2300; forceYoning.tier = displayTier(2300); forceYoning.note = "관리자 강제조정"; }
 
   const forceDaye = displayActive.find(p => p.name === "다예");
   if (forceDaye) { forceDaye.mmr = 2204; forceDaye.tier = displayTier(2204); forceDaye.note = "관리자 강제조정 (구 얌지금)"; }
