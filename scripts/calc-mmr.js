@@ -177,7 +177,7 @@ function ratingFor(entry) {
   return entry.mmr != null ? entry.mmr : FALLBACK_UNRATED_MMR;
 }
 
-function main() {
+async function main() {
   const { fileEarliest, matches: allMatches } = JSON.parse(fs.readFileSync(MATCHES_PATH, "utf8"));
   // 누락자(상대 파일이 없어 한쪽 기록만 존재하는 경기) 전부 제외 — 양쪽 다 크롤링된 경기만 사용
   const matches = allMatches.filter((m) => m.bothSided);
@@ -590,6 +590,30 @@ function main() {
 
   // active = 표시 대상(제외자 필터 + 균등재배치 + 수동고정 반영).
   // placement(배치중)는 데이터 유지용으로만 저장 — 디스플레이에는 노출하지 않음.
+  
+  // --- DIFF LOGIC ---
+  try {
+    const res = await fetch('https://rljvzultuyiudhjjfotg.supabase.co/storage/v1/object/public/calmsv-assets/tiertable/mmr-result.json?t=' + Date.now());
+    if (res.ok) {
+      const oldData = await res.json();
+      const oldTiers = new Map();
+      for (const p of [...(oldData.active || []), ...(oldData.hidden || [])]) {
+        oldTiers.set(p.name, rankOf(p.tier));
+      }
+      for (const p of displayActive) {
+        const oRank = oldTiers.get(p.name);
+        if (oRank !== undefined) {
+          const nRank = rankOf(p.tier);
+          if (nRank < oRank) p.diff = 'up';
+          else if (nRank > oRank) p.diff = 'down';
+        }
+      }
+    }
+  } catch (e) {
+    console.warn("이전 데이터 가져오기 실패, 승급/강등 비교 생략:", e.message);
+  }
+  // ------------------
+
   fs.writeFileSync(
     OUT_PATH,
     JSON.stringify(
@@ -601,5 +625,5 @@ function main() {
   console.log(`\n저장: ${OUT_PATH}`);
 }
 
-main();
+main().catch(console.error);
 
