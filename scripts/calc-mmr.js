@@ -561,6 +561,15 @@ function main() {
     }
   }
 
+  const forceYoning = displayActive.find(p => p.name === "요닝");
+  if (forceYoning) { forceYoning.mmr = 2150; forceYoning.tier = displayTier(2150); forceYoning.note = "관리자 강제조정"; }
+
+  const forceDaye = displayActive.find(p => p.name === "다예");
+  if (forceDaye) { forceDaye.mmr = 2204; forceDaye.tier = displayTier(2204); forceDaye.note = "관리자 강제조정 (구 얌지금)"; }
+
+  const forceSijo = displayActive.find(p => p.name === "시조새");
+  if (forceSijo) { forceSijo.mmr = 2200; forceSijo.tier = displayTier(2200); forceSijo.note = "관리자 강제조정"; }
+
   displayActive.sort((a, b) => {
     const rankDiff = rankOf(a.tier) - rankOf(b.tier);
     return rankDiff !== 0 ? rankDiff : b.mmr - a.mmr;

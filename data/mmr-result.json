@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T13:52:26.923Z",
+  "generatedAt": "2026-07-08T14:06:10.347Z",
   "cutoff": "2025-09-30",
   "dataMaxDate": "2026-07-04",
   "hiddenCutoff": "2026-04-04",
@@ -51,7 +51,7 @@
     {
       "key": "uid:bijyu90",
       "mmr": 3078.401834767209,
-      "tier": "0",
+      "tier": "1",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -93,7 +93,7 @@
     {
       "key": "uid:ehgmldud1233",
       "mmr": 2745.9854586029846,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -107,7 +107,7 @@
     {
       "key": "uid:gddms97",
       "mmr": 2708.3529992963304,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -121,7 +121,7 @@
     {
       "key": "uid:llqqqq",
       "mmr": 2685.3136119514725,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -135,7 +135,7 @@
     {
       "key": "uid:s1on0106",
       "mmr": 2680.852473522882,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "placementList": [
         {
@@ -234,7 +234,7 @@
     {
       "key": "uid:cyj982002",
       "mmr": 2632.049733190101,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -248,7 +248,7 @@
     {
       "key": "uid:simcheong23",
       "mmr": 2612.632639880264,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -262,7 +262,7 @@
     {
       "key": "uid:seul0316",
       "mmr": 2609.5258696982714,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -276,7 +276,7 @@
     {
       "key": "uid:measin",
       "mmr": 2608.412352129007,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "placementList": [
         {
@@ -429,63 +429,6 @@
       "lastMatchDate": "2026-07-03"
     },
     {
-      "key": "uid:eeceec",
-      "mmr": 2475.7984661741775,
-      "tier": "2",
-      "status": "active",
-      "note": "시드(2024.04)",
-      "seeded": true,
-      "name": "뚜미",
-      "race": "T",
-      "wins": 839,
-      "losses": 688,
-      "countedMatches": 1527,
-      "lastMatchDate": "2026-06-22"
-    },
-    {
-      "key": "uid:pazzy1",
-      "mmr": 2467.91952856623,
-      "tier": "2",
-      "status": "active",
-      "note": "시드(2024.04)",
-      "seeded": true,
-      "name": "파찌",
-      "race": "Z",
-      "wins": 257,
-      "losses": 210,
-      "countedMatches": 467,
-      "lastMatchDate": "2026-06-30"
-    },
-    {
-      "key": "uid:wjswlgns09",
-      "mmr": 2428.0626364485074,
-      "tier": "2",
-      "status": "active",
-      "note": "복귀자(재측정완료)",
-      "seeded": true,
-      "name": "지두두",
-      "race": "T",
-      "wins": 506,
-      "losses": 458,
-      "countedMatches": 964,
-      "lastMatchDate": "2026-06-30",
-      "returnBadgeUntil": null
-    },
-    {
-      "key": "uid:parkle1006",
-      "mmr": 2414.9553679922287,
-      "tier": "2",
-      "status": "active",
-      "note": "시드(2024.04)",
-      "seeded": true,
-      "name": "박듀듀",
-      "race": "P",
-      "wins": 748,
-      "losses": 717,
-      "countedMatches": 1465,
-      "lastMatchDate": "2026-07-01"
-    },
-    {
       "key": "uid:rnaqpdrjf",
       "name": "남덕선",
       "race": "Z",
@@ -501,9 +444,82 @@
       "isTemporaryDormant": false
     },
     {
+      "key": "uid:killgusdnk",
+      "mmr": 2200,
+      "tier": "2",
+      "status": "active",
+      "note": "복귀자(재측정중) / 관리자 2티어 강제조정",
+      "seeded": true,
+      "name": "클템",
+      "race": "T",
+      "wins": 13,
+      "losses": 3,
+      "countedMatches": 16,
+      "lastMatchDate": "2026-04-07",
+      "returnBadgeUntil": 26,
+      "isTemporaryDormant": true
+    },
+    {
+      "key": "uid:eeceec",
+      "mmr": 2475.7984661741775,
+      "tier": "3",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "뚜미",
+      "race": "T",
+      "wins": 839,
+      "losses": 688,
+      "countedMatches": 1527,
+      "lastMatchDate": "2026-06-22"
+    },
+    {
+      "key": "uid:pazzy1",
+      "mmr": 2467.91952856623,
+      "tier": "3",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "파찌",
+      "race": "Z",
+      "wins": 257,
+      "losses": 210,
+      "countedMatches": 467,
+      "lastMatchDate": "2026-06-30"
+    },
+    {
+      "key": "uid:wjswlgns09",
+      "mmr": 2428.0626364485074,
+      "tier": "3",
+      "status": "active",
+      "note": "복귀자(재측정완료)",
+      "seeded": true,
+      "name": "지두두",
+      "race": "T",
+      "wins": 506,
+      "losses": 458,
+      "countedMatches": 964,
+      "lastMatchDate": "2026-06-30",
+      "returnBadgeUntil": null
+    },
+    {
+      "key": "uid:parkle1006",
+      "mmr": 2414.9553679922287,
+      "tier": "3",
+      "status": "active",
+      "note": "시드(2024.04)",
+      "seeded": true,
+      "name": "박듀듀",
+      "race": "P",
+      "wins": 748,
+      "losses": 717,
+      "countedMatches": 1465,
+      "lastMatchDate": "2026-07-01"
+    },
+    {
       "key": "uid:phh95426",
       "mmr": 2374.170175152653,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -517,7 +533,7 @@
     {
       "key": "uid:rlsk0705",
       "mmr": 2367.4758615101496,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -531,7 +547,7 @@
     {
       "key": "uid:qpqpro",
       "mmr": 2364.0655124708096,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "placementList": [
         {
@@ -629,7 +645,7 @@
     {
       "key": "uid:freshtomato",
       "mmr": 2325.003198810383,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -643,7 +659,7 @@
     {
       "key": "uid:jscando77",
       "mmr": 2319.284554944981,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -657,7 +673,7 @@
     {
       "key": "uid:pookygamja",
       "mmr": 2305.84306780327,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "복귀자(재측정중)",
       "seeded": true,
@@ -673,7 +689,7 @@
     {
       "key": "uid:bagguul",
       "mmr": 2297.0829725096073,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -688,7 +704,7 @@
     {
       "key": "uid:forweourus",
       "mmr": 2285.7758885451253,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "placementList": [
         {
@@ -786,7 +802,7 @@
     {
       "key": "uid:jjyjeh5454",
       "mmr": 2283.616872519966,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -801,7 +817,7 @@
     {
       "key": "uid:dmswls4565",
       "mmr": 2281.4779069724914,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -813,24 +829,9 @@
       "lastMatchDate": "2026-07-02"
     },
     {
-      "key": "uid:tjgpdus97",
-      "mmr": 2259.965418559012,
-      "tier": "2",
-      "status": "active",
-      "note": "복귀자(재측정완료)",
-      "seeded": true,
-      "name": "요닝",
-      "race": "Z",
-      "wins": 378,
-      "losses": 395,
-      "countedMatches": 773,
-      "lastMatchDate": "2026-06-11",
-      "returnBadgeUntil": null
-    },
-    {
       "key": "uid:bora99",
       "mmr": 2255.88417135308,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -842,25 +843,9 @@
       "lastMatchDate": "2026-07-03"
     },
     {
-      "key": "uid:jieun3297",
-      "mmr": 2251.9573497959263,
-      "tier": "2",
-      "status": "active",
-      "note": "복귀자(재측정중)",
-      "seeded": true,
-      "name": "다예",
-      "race": "Z",
-      "wins": 472,
-      "losses": 562,
-      "countedMatches": 1034,
-      "lastMatchDate": "2026-05-14",
-      "returnBadgeUntil": 1038,
-      "isTemporaryDormant": true
-    },
-    {
       "key": "uid:ovoa3316",
       "mmr": 2240.6678104437087,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -874,7 +859,7 @@
     {
       "key": "uid:595935",
       "mmr": 2228.48942151733,
-      "tier": "2",
+      "tier": "3",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -887,20 +872,36 @@
       "isTemporaryDormant": true
     },
     {
-      "key": "uid:killgusdnk",
-      "mmr": 2200,
-      "tier": "2",
+      "key": "uid:jieun3297",
+      "mmr": 2204,
+      "tier": "3",
       "status": "active",
-      "note": "복귀자(재측정중) / 관리자 2티어 강제조정",
+      "note": "관리자 강제조정 (구 얌지금)",
       "seeded": true,
-      "name": "클템",
-      "race": "T",
-      "wins": 13,
-      "losses": 3,
-      "countedMatches": 16,
-      "lastMatchDate": "2026-04-07",
-      "returnBadgeUntil": 26,
+      "name": "다예",
+      "race": "Z",
+      "wins": 472,
+      "losses": 562,
+      "countedMatches": 1034,
+      "lastMatchDate": "2026-05-14",
+      "returnBadgeUntil": 1038,
       "isTemporaryDormant": true
+    },
+    {
+      "key": "uid:superbsw123",
+      "mmr": 2200,
+      "tier": "3",
+      "status": "active",
+      "note": "관리자 강제조정",
+      "seeded": true,
+      "name": "시조새",
+      "race": "P",
+      "wins": 11,
+      "losses": 24,
+      "countedMatches": 35,
+      "lastMatchDate": "2026-07-04",
+      "returnBadgeUntil": null,
+      "isTemporaryDormant": false
     },
     {
       "key": "uid:haru1207",
@@ -976,9 +977,24 @@
       "isTemporaryDormant": true
     },
     {
+      "key": "uid:tjgpdus97",
+      "mmr": 2150,
+      "tier": "3",
+      "status": "active",
+      "note": "관리자 강제조정",
+      "seeded": true,
+      "name": "요닝",
+      "race": "Z",
+      "wins": 378,
+      "losses": 395,
+      "countedMatches": 773,
+      "lastMatchDate": "2026-06-11",
+      "returnBadgeUntil": null
+    },
+    {
       "key": "uid:totlllsz",
       "mmr": 2124.188123399044,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -992,7 +1008,7 @@
     {
       "key": "uid:alaelddl97",
       "mmr": 2098.6744072389893,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1006,7 +1022,7 @@
     {
       "key": "uid:ftrudals",
       "mmr": 2098.5792853938387,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1020,7 +1036,7 @@
     {
       "key": "uid:agah1106",
       "mmr": 2078.1007970470164,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1034,7 +1050,7 @@
     {
       "key": "uid:gks2wl",
       "mmr": 2074.75063599441,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "placementList": [
         {
@@ -1132,7 +1148,7 @@
     {
       "key": "uid:123rhaxld",
       "mmr": 2057.553821976533,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1146,7 +1162,7 @@
     {
       "key": "uid:lily0104",
       "mmr": 2045.6605852256798,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1161,7 +1177,7 @@
     {
       "key": "uid:rabbitmiffy",
       "mmr": 1991.555826662252,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1176,7 +1192,7 @@
     {
       "key": "uid:chchchshai",
       "mmr": 1990.2761393449025,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1190,7 +1206,7 @@
     {
       "key": "uid:djathekd",
       "mmr": 1989.6682018836818,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1202,25 +1218,9 @@
       "lastMatchDate": "2026-07-03"
     },
     {
-      "key": "uid:superbsw123",
-      "mmr": 1950,
-      "tier": "3",
-      "status": "active",
-      "note": "관리자 3티어 강제조정",
-      "seeded": true,
-      "name": "시조새",
-      "race": "P",
-      "wins": 11,
-      "losses": 24,
-      "countedMatches": 35,
-      "lastMatchDate": "2026-07-04",
-      "returnBadgeUntil": null,
-      "isTemporaryDormant": false
-    },
-    {
       "key": "uid:9rumee",
       "mmr": 1947.5133202535467,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1234,7 +1234,7 @@
     {
       "key": "uid:ekfrqkf",
       "mmr": 1919.5607277804406,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1249,7 +1249,7 @@
     {
       "key": "uid:della2440",
       "mmr": 1896.7250874620001,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1264,7 +1264,7 @@
     {
       "key": "uid:soju2022",
       "mmr": 1886.214520126803,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1278,7 +1278,7 @@
     {
       "key": "uid:aram1213",
       "mmr": 1859.5902901972026,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1292,7 +1292,7 @@
     {
       "key": "uid:gkdud3294",
       "mmr": 1849.397263971138,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1306,7 +1306,7 @@
     {
       "key": "uid:lkim12",
       "mmr": 1836.4723232557758,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1320,7 +1320,7 @@
     {
       "key": "uid:nerve89",
       "mmr": 1830.8083506232203,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1334,7 +1334,7 @@
     {
       "key": "uid:db001202",
       "mmr": 1818.1669994283377,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1348,7 +1348,7 @@
     {
       "key": "uid:bjcherrybs",
       "mmr": 1802.0126177833085,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "복귀자(재측정중)",
       "seeded": true,
@@ -1363,7 +1363,7 @@
     {
       "key": "uid:ys9024",
       "mmr": 1796.3369952174721,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1377,7 +1377,7 @@
     {
       "key": "uid:snowssa",
       "mmr": 1796.0797199887757,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1392,7 +1392,7 @@
     {
       "key": "uid:hee4343",
       "mmr": 1771.498189416664,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1406,7 +1406,7 @@
     {
       "key": "uid:synyoung",
       "mmr": 1753.3881056316964,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1420,7 +1420,7 @@
     {
       "key": "uid:rhf104",
       "mmr": 1705.8267147257877,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1435,7 +1435,7 @@
     {
       "key": "uid:fpahsdltu1",
       "mmr": 1686.311337919447,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1449,7 +1449,7 @@
     {
       "key": "uid:lingolinga",
       "mmr": 1671.6510215275384,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1463,7 +1463,7 @@
     {
       "key": "uid:mew030709",
       "mmr": 1670.8182744840801,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1478,7 +1478,7 @@
     {
       "key": "uid:qocnrhdwn1",
       "mmr": 1670.1430691188448,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1493,7 +1493,7 @@
     {
       "key": "uid:ldk8481",
       "mmr": 1668.9912878615003,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1507,7 +1507,7 @@
     {
       "key": "uid:goni2677",
       "mmr": 1664.8952397789494,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1521,7 +1521,7 @@
     {
       "key": "uid:kangsinwoos",
       "mmr": 1663.8592593151504,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "placementList": [
         {
@@ -1620,7 +1620,7 @@
     {
       "key": "uid:moguleave",
       "mmr": 1629.0132459358324,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1634,7 +1634,7 @@
     {
       "key": "uid:zzzz809",
       "mmr": 1624.0733468773772,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1648,7 +1648,7 @@
     {
       "key": "uid:dmsthfdldia",
       "mmr": 1622.0102550160755,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1662,7 +1662,7 @@
     {
       "key": "uid:dlaguswl501",
       "mmr": 1619.577191553274,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1676,7 +1676,7 @@
     {
       "key": "uid:2ahgo1203",
       "mmr": 1595.7729112604288,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1690,7 +1690,7 @@
     {
       "key": "uid:sdkels",
       "mmr": 1591.9303956837857,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1704,7 +1704,7 @@
     {
       "key": "uid:busky3",
       "mmr": 1591.1515031894994,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1718,7 +1718,7 @@
     {
       "key": "uid:rnfma14",
       "mmr": 1588.0568137865505,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1733,7 +1733,7 @@
     {
       "key": "uid:aybjc2319",
       "mmr": 1578.2531655766522,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1747,7 +1747,7 @@
     {
       "key": "uid:qkrgkdms01",
       "mmr": 1574.5789327077857,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1761,7 +1761,7 @@
     {
       "key": "uid:wlsdkd1",
       "mmr": 1565.1650748595778,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1775,7 +1775,7 @@
     {
       "key": "uid:ouo20411",
       "mmr": 1551.8305858815745,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1791,7 +1791,7 @@
     {
       "key": "uid:ynblbee",
       "mmr": 1548.8558205546265,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "placementList": [
         {
@@ -1889,7 +1889,7 @@
     {
       "key": "uid:tato1104",
       "mmr": 1547.6939308904477,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1903,7 +1903,7 @@
     {
       "key": "uid:wlgua7272",
       "mmr": 1533.917312642788,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1917,7 +1917,7 @@
     {
       "key": "uid:seols2",
       "mmr": 1509.2449689018065,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1931,7 +1931,7 @@
     {
       "key": "uid:mooaoom",
       "mmr": 1501.9068355236132,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -1946,7 +1946,7 @@
     {
       "key": "uid:tjwjddms1565",
       "mmr": 1492.9167629465876,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1960,7 +1960,7 @@
     {
       "key": "uid:yunheehoho",
       "mmr": 1488.778586509938,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1974,7 +1974,7 @@
     {
       "key": "uid:khsoo0105",
       "mmr": 1478.9780926449173,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -1988,7 +1988,7 @@
     {
       "key": "uid:seemin88",
       "mmr": 1476.7749084294696,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2002,7 +2002,7 @@
     {
       "key": "uid:maeong2",
       "mmr": 1465.5411876137211,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2016,7 +2016,7 @@
     {
       "key": "uid:nreupne",
       "mmr": 1437.1885202930287,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2030,7 +2030,7 @@
     {
       "key": "uid:have1y",
       "mmr": 1430.9708023295311,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2044,7 +2044,7 @@
     {
       "key": "uid:jjjjeong",
       "mmr": 1406.0500119147043,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -2059,7 +2059,7 @@
     {
       "key": "uid:imducko3o",
       "mmr": 1347.8531415408067,
-      "tier": "5",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2073,7 +2073,7 @@
     {
       "key": "uid:queen030",
       "mmr": 1334.4230745103914,
-      "tier": "5",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2087,7 +2087,7 @@
     {
       "key": "uid:kittysh1",
       "mmr": 1321.0107761209226,
-      "tier": "5",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -2185,7 +2185,7 @@
     {
       "key": "uid:nasd06",
       "mmr": 1298.6688690517492,
-      "tier": "5",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2199,7 +2199,7 @@
     {
       "key": "uid:diniowo",
       "mmr": 1287.8632006530513,
-      "tier": "5",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2213,7 +2213,7 @@
     {
       "key": "uid:eunseo0152",
       "mmr": 1240.994287094052,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2227,7 +2227,7 @@
     {
       "key": "uid:youaregood",
       "mmr": 1212.6906392034714,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -2325,7 +2325,7 @@
     {
       "key": "uid:min030606",
       "mmr": 1205.3819412148148,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2339,7 +2339,7 @@
     {
       "key": "uid:queenzu",
       "mmr": 1199.5084501379279,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2353,7 +2353,7 @@
     {
       "key": "uid:shj06170",
       "mmr": 1185.0611602969316,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -2451,7 +2451,7 @@
     {
       "key": "uid:jiinii000",
       "mmr": 1174.5921540145562,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2465,7 +2465,7 @@
     {
       "key": "uid:vldpfm2",
       "mmr": 1139.3357236967327,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2479,7 +2479,7 @@
     {
       "key": "uid:nylove276",
       "mmr": 1125.29990093831,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -2576,7 +2576,7 @@
     {
       "key": "uid:bangsong12",
       "mmr": 1123.9764761378044,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -2674,7 +2674,7 @@
     {
       "key": "uid:rudzhd123",
       "mmr": 1123.7329003054206,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -2771,7 +2771,7 @@
     {
       "key": "uid:gangeda",
       "mmr": 1120.8373211916585,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2785,7 +2785,7 @@
     {
       "key": "uid:wittyku",
       "mmr": 1116.914639871791,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -2799,7 +2799,7 @@
     {
       "key": "uid:toy2053",
       "mmr": 1058.9932855375732,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -2814,7 +2814,7 @@
     {
       "key": "uid:2meonjin",
       "mmr": 1057.3811166784901,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -2912,7 +2912,7 @@
     {
       "key": "uid:hckkhc21",
       "mmr": 1055.9738587013799,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -3009,7 +3009,7 @@
     {
       "key": "uid:danu619",
       "mmr": 1054.724789562229,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -3024,7 +3024,7 @@
     {
       "key": "uid:dollooo",
       "mmr": 1054.0314064571742,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -3121,7 +3121,7 @@
     {
       "key": "uid:dyaan0v0",
       "mmr": 1051.8121321593762,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3290,7 +3290,7 @@
     {
       "key": "uid:5eulgii",
       "mmr": 986.6187462950895,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3304,7 +3304,7 @@
     {
       "key": "uid:dlqudgk1227",
       "mmr": 986.2480583738418,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "placementList": [
         {
@@ -3402,7 +3402,7 @@
     {
       "key": "uid:asdsa1113",
       "mmr": 933.4974425676239,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -3418,7 +3418,7 @@
     {
       "key": "uid:ghlidhjgioew",
       "mmr": 932.559137026353,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3432,7 +3432,7 @@
     {
       "key": "uid:khl1589",
       "mmr": 928.5620295603511,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3446,7 +3446,7 @@
     {
       "key": "uid:owoouoowo",
       "mmr": 926.2211226959788,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3460,7 +3460,7 @@
     {
       "key": "uid:corgi1102",
       "mmr": 911.5381309598431,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3474,7 +3474,7 @@
     {
       "key": "uid:tkdduddb06",
       "mmr": 906.7644834309518,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3489,7 +3489,7 @@
     {
       "key": "uid:dlwldyal1004",
       "mmr": 905.0368454439172,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3504,7 +3504,7 @@
     {
       "key": "uid:begoniah",
       "mmr": 902.3658998419103,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3518,7 +3518,7 @@
     {
       "key": "uid:totoo23",
       "mmr": 893.4452513625079,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3532,7 +3532,7 @@
     {
       "key": "uid:jungym0116",
       "mmr": 892.9041566406278,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3546,7 +3546,7 @@
     {
       "key": "uid:jiwooris2",
       "mmr": 884.0549415824946,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3560,7 +3560,7 @@
     {
       "key": "uid:chanmeyo",
       "mmr": 876.2205109007281,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -3575,7 +3575,7 @@
     {
       "key": "uid:as1823",
       "mmr": 841.3853512219198,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -3590,7 +3590,7 @@
     {
       "key": "uid:haeun5513",
       "mmr": 823.6708029054547,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "placementList": [
         {
@@ -3870,7 +3870,7 @@
     {
       "key": "uid:arr0530",
       "mmr": 692.9595423997864,
-      "tier": "8",
+      "tier": "Y",
       "status": "active",
       "placementList": [
         {
@@ -3967,7 +3967,7 @@
     {
       "key": "uid:kimp1ay",
       "mmr": 664.1896264172965,
-      "tier": "8",
+      "tier": "Y",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -3981,7 +3981,7 @@
     {
       "key": "uid:yuna1024",
       "mmr": 663.3669015416565,
-      "tier": "8",
+      "tier": "Y",
       "status": "active",
       "placementList": [
         {
@@ -4078,7 +4078,7 @@
     {
       "key": "uid:eunjo0105",
       "mmr": 655.2759010030952,
-      "tier": "8",
+      "tier": "Y",
       "status": "active",
       "placementList": [
         {
@@ -4175,7 +4175,7 @@
     {
       "key": "uid:x1aohongmao",
       "mmr": 651.6779919238676,
-      "tier": "8",
+      "tier": "Y",
       "status": "active",
       "placementList": [
         {
@@ -4272,7 +4272,7 @@
     {
       "key": "uid:yuzzzz",
       "mmr": 650.4341320546068,
-      "tier": "8",
+      "tier": "Y",
       "status": "active",
       "placementList": [
         {
@@ -5601,7 +5601,7 @@
     {
       "key": "uid:igoldtree",
       "mmr": 3008.4575598630095,
-      "tier": "0",
+      "tier": "1",
       "status": "active",
       "placementList": [
         {
@@ -5698,7 +5698,7 @@
     {
       "key": "uid:thetis",
       "mmr": 2749.153777519369,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -5712,7 +5712,7 @@
     {
       "key": "uid:vlfvlf789",
       "mmr": 2702.2783568321643,
-      "tier": "1",
+      "tier": "2",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -5741,7 +5741,7 @@
     {
       "key": "uid:zalalz",
       "mmr": 2100,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -5755,7 +5755,7 @@
     {
       "key": "uid:yyh3397",
       "mmr": 1963.0082299731434,
-      "tier": "3",
+      "tier": "4",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -5769,7 +5769,7 @@
     {
       "key": "uid:kitty1029",
       "mmr": 1872.89585395003,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -5783,7 +5783,7 @@
     {
       "key": "uid:dptmfl1258",
       "mmr": 1697.4654252762075,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -5797,7 +5797,7 @@
     {
       "key": "uid:ititit",
       "mmr": 1696.6723359354842,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "복귀자(재측정중)",
       "seeded": true,
@@ -5812,7 +5812,7 @@
     {
       "key": "uid:ka9rapang",
       "mmr": 1679.3083700411908,
-      "tier": "4",
+      "tier": "5",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -5826,7 +5826,7 @@
     {
       "key": "uid:alsgus00",
       "mmr": 1615.2327026325502,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "placementList": [
         {
@@ -5924,7 +5924,7 @@
     {
       "key": "uid:dlrnf",
       "mmr": 1508.6421335434757,
-      "tier": "5",
+      "tier": "6",
       "status": "active",
       "note": "복귀자(재측정중)",
       "seeded": true,
@@ -5939,7 +5939,7 @@
     {
       "key": "uid:dduuccu",
       "mmr": 1206.4346193161668,
-      "tier": "6",
+      "tier": "7",
       "status": "active",
       "placementList": [
         {
@@ -6037,7 +6037,7 @@
     {
       "key": "uid:nyayoung98",
       "mmr": 917.9339016118378,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "복귀자(재측정완료)",
       "seeded": true,
@@ -6052,7 +6052,7 @@
     {
       "key": "uid:xltb355",
       "mmr": 917.0603465538123,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -6066,7 +6066,7 @@
     {
       "key": "uid:roket0829",
       "mmr": 808.4960326790264,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "시드(2024.04)",
       "seeded": true,
@@ -6080,7 +6080,7 @@
     {
       "key": "uid:tiger3006",
       "mmr": 804.5277040091055,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "note": "복귀자(재측정중)",
       "seeded": true,
@@ -6095,7 +6095,7 @@
     {
       "key": "uid:mangd11",
       "mmr": 802.7709868653117,
-      "tier": "7",
+      "tier": "8",
       "status": "active",
       "placementList": [
         {
