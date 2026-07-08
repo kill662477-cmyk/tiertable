@@ -640,8 +640,10 @@ async function initBoard() {
       
       const tierMap = {};
       active.forEach(p => {
-        ACTIVE_PLAYERS.add(p.name);\n        window.DIFFS = window.DIFFS || {};
-        if (p.isTemporaryDormant) TEMP_DORMANT_PLAYERS.add(p.name);\n        if (p.diff) window.DIFFS[p.name] = p.diff;
+        ACTIVE_PLAYERS.add(p.name);
+        window.DIFFS = window.DIFFS || {};
+        if (p.isTemporaryDormant) TEMP_DORMANT_PLAYERS.add(p.name);
+        if (p.diff) window.DIFFS[p.name] = p.diff;
         if (p.note && (p.note.includes('복귀자(재측정중)') || p.note.includes('복귀자(배치중)'))) BADGES[p.name] = 'ret';
         if (p.seeded === false && p.countedMatches < 10) BADGES[p.name] = 'new';
 
