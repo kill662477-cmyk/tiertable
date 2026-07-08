@@ -2,8 +2,8 @@
 // 판수 보정(provisional) 없음. K 상한 32.
 
 // 실험용: env로 임시 오버라이드 가능 (기본값은 설계서의 16/32)
-const K_BASE = Number(process.env.MMR_K_BASE || 16);
-const K_CAP = Number(process.env.MMR_K_CAP || 32);
+const K_BASE = Number(process.env.MMR_K_BASE || 12);
+const K_CAP = Number(process.env.MMR_K_CAP || 24);
 
 function expectedScore(ratingSelf, ratingOpp) {
   return 1 / (1 + Math.pow(10, (ratingOpp - ratingSelf) / 400));

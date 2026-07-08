@@ -1,4 +1,5 @@
-// 2025년 9월 30일 기준 티어현황 시드 명단 + 초기 MMR 기준선.
+const fs = require('fs');
+const content = `// 2025년 9월 30일 기준 티어현황 시드 명단 + 초기 MMR 기준선.
 // index.html의 TIERS 배열과 반드시 동기화 상태를 유지할 것.
 
 const TIER_ORDER = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "Y"];
@@ -31,13 +32,15 @@ const TIERS = [
 ];
 
 function buildSeedIndex() {
-  const index = new Map();
+  const index = {};
   for (const t of TIERS) {
-    for (const p of t.T) index.set(p, { tier: t.id, race: "T", initialMMR: TIER_BASELINE_MMR[t.id] });
-    for (const p of t.Z) index.set(p, { tier: t.id, race: "Z", initialMMR: TIER_BASELINE_MMR[t.id] });
-    for (const p of t.P) index.set(p, { tier: t.id, race: "P", initialMMR: TIER_BASELINE_MMR[t.id] });
+    for (const p of t.T) index[p] = { tier: t.id, race: "T", initialMMR: TIER_BASELINE_MMR[t.id] };
+    for (const p of t.Z) index[p] = { tier: t.id, race: "Z", initialMMR: TIER_BASELINE_MMR[t.id] };
+    for (const p of t.P) index[p] = { tier: t.id, race: "P", initialMMR: TIER_BASELINE_MMR[t.id] };
   }
   return index;
 }
 
 module.exports = { TIERS, TIER_BASELINE_MMR, buildSeedIndex, TIER_ORDER };
+`;
+fs.writeFileSync('scripts/lib/seed.js', content);

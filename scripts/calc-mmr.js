@@ -19,7 +19,7 @@ const players = require(path.join(MONSTARZNEW_ROOT, "data", "manual", "players.j
 
 const MATCHES_PATH = path.join(__dirname, "..", "data", "matches.json");
 const OUT_PATH = path.join(__dirname, "..", "data", "mmr-result.json");
-const CUTOFF = "2024-04-10";
+const CUTOFF = "2025-09-30";
 const PLACEMENT_GAMES = 10;
 const FALLBACK_UNRATED_MMR = 600; // 유스 기준선. 배치중 상대 추정치가 없을 때 사용.
 const RELIABLE_MIN_MATCHES = 10; // 배치 판정용 상대로 인정하는 최소 검증 판수
@@ -69,7 +69,7 @@ function isReliable(entry) {
 }
 const RESET_INTERVAL_MONTHS = 6;
 const RESET_COMPRESSION = 0.7; // MMR_SYSTEM_DESIGN.md §6 — 약한 압축(시즌 성과 보존 우선)
-const TIER_RANK_ORDER = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "B", "Y"]; // 앞이 강함
+const TIER_RANK_ORDER = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "Y"]; // 앞이 강함
 
 function addMonths(dateStr, months) {
   const d = new Date(dateStr + "T00:00:00Z");
@@ -150,7 +150,7 @@ const BOUNDARY = { ...TIER_BASELINE_MMR };
 const CALIBRATION_PATH = path.join(__dirname, "..", "data", "calibration.json");
 
 function deriveTier(mmr) {
-  for (let k = 1; k <= 8; k++) {
+  for (let k = 0; k <= 8; k++) {
     if (mmr >= BOUNDARY[k]) return String(k);
   }
   return "Y";
@@ -361,12 +361,13 @@ function main() {
       // 둘 다 배치중(미검증) — 서로를 기준으로 삼을 수 없으므로 배치 표본에서 제외.
       // 실제 매치 자체는 있었으니 통계(승/패/판수)는 위에서 이미 반영됨.
     } else {
-      // 한쪽만 placement: 배치중 상대와 맞붙은 active측 변동은 절반으로 보호
+      // 한쪽만 placement: 배치중 상대(장기휴면/신규)와 맞붙은 active측 변동 보호
+      // 상대와 동일한 MMR(승률 50%)이라고 간주하여 점수 변동
       const activeEntry = w.status === "active" ? w : l;
       const activeIsWinner = activeEntry === w;
-      const halfDelta = baseDelta * 0.5;
-      if (activeIsWinner) activeEntry.mmr += halfDelta;
-      else activeEntry.mmr = clampFloor(activeEntry.mmr - halfDelta);
+      const safeDelta = k * 0.5 * repeatDamping;
+      if (activeIsWinner) activeEntry.mmr += safeDelta;
+      else activeEntry.mmr = clampFloor(activeEntry.mmr - safeDelta);
 
       // active측이 신뢰 가능한 상대일 때만 배치 10경기 표본으로 인정.
       // (active측도 막 생긴 미검증 상대면 "실력 정도가 맞아서 붙었다"는 매칭 신호를 못 믿으므로 제외)
@@ -465,18 +466,18 @@ function main() {
     const cal = JSON.parse(fs.readFileSync(CALIBRATION_PATH, "utf8"));
     if (cal.boundaries) {
       DISPLAY_BOUNDARY = {};
-      for (let kk = 1; kk <= 8; kk++) DISPLAY_BOUNDARY[kk] = cal.boundaries[kk];
+      for (let kk = 0; kk <= 8; kk++) DISPLAY_BOUNDARY[kk] = cal.boundaries[kk];
       console.log(`고정 경계선(수동 지정) 사용:`, cal.boundaries);
     } else {
       const { A, G } = cal;
       DISPLAY_BOUNDARY = {};
-      for (let kk = 1; kk <= 8; kk++) DISPLAY_BOUNDARY[kk] = A - G * (kk + 0.5);
+      for (let kk = 0; kk <= 8; kk++) DISPLAY_BOUNDARY[kk] = A - G * (kk + 0.5);
       console.log(`고정 캘리브레이션 경계선 사용: A=${A.toFixed(0)}, G=${G.toFixed(1)}`);
     }
   }
 
   function displayTier(mmr) {
-    for (let kk = 1; kk <= 8; kk++) {
+    for (let kk = 0; kk <= 8; kk++) {
       if (mmr >= DISPLAY_BOUNDARY[kk]) return String(kk);
     }
     return "Y";
