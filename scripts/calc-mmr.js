@@ -535,7 +535,7 @@ function main() {
     { name: "휘연", race: "P", uid: "rldyal71" },
     { name: "이아라", race: "P", uid: "ara9687" },
     { name: "유네", race: "P", uid: "yune12" },
-    { name: "남덕선", race: "Z", uid: "namdeoksun" }
+    { name: "남덕선", race: "Z", uid: "rnaqpdrjf" }
   ];
 
   const activeNames = new Set(displayActive.map(p => p.name));
