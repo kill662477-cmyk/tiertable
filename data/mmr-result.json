@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T13:40:32.450Z",
+  "generatedAt": "2026-07-08T13:52:26.923Z",
   "cutoff": "2025-09-30",
   "dataMaxDate": "2026-07-04",
   "hiddenCutoff": "2026-04-04",
@@ -484,6 +484,21 @@
       "losses": 717,
       "countedMatches": 1465,
       "lastMatchDate": "2026-07-01"
+    },
+    {
+      "key": "uid:rnaqpdrjf",
+      "name": "남덕선",
+      "race": "Z",
+      "mmr": 2400,
+      "tier": "2",
+      "status": "active",
+      "wins": 0,
+      "losses": 0,
+      "countedMatches": 0,
+      "seeded": false,
+      "note": "신규(수동추가)",
+      "lastMatchDate": "2026-07-04",
+      "isTemporaryDormant": false
     },
     {
       "key": "uid:phh95426",
@@ -5570,21 +5585,6 @@
       "key": "uid:yune12",
       "name": "유네",
       "race": "P",
-      "mmr": 600,
-      "tier": "Y",
-      "status": "active",
-      "wins": 0,
-      "losses": 0,
-      "countedMatches": 0,
-      "seeded": false,
-      "note": "신규(수동추가)",
-      "lastMatchDate": "2026-07-04",
-      "isTemporaryDormant": false
-    },
-    {
-      "key": "uid:rnaqpdrjf",
-      "name": "남덕선",
-      "race": "Z",
       "mmr": 600,
       "tier": "Y",
       "status": "active",
