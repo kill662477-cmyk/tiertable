@@ -640,8 +640,8 @@ async function initBoard() {
       
       const tierMap = {};
       active.forEach(p => {
-        ACTIVE_PLAYERS.add(p.name);
-        if (p.isTemporaryDormant) TEMP_DORMANT_PLAYERS.add(p.name);
+        ACTIVE_PLAYERS.add(p.name);\n        window.DIFFS = window.DIFFS || {};
+        if (p.isTemporaryDormant) TEMP_DORMANT_PLAYERS.add(p.name);\n        if (p.diff) window.DIFFS[p.name] = p.diff;
         if (p.note && (p.note.includes('복귀자(재측정중)') || p.note.includes('복귀자(배치중)'))) BADGES[p.name] = 'ret';
         if (p.seeded === false && p.countedMatches < 10) BADGES[p.name] = 'new';
 
@@ -700,8 +700,9 @@ async function initBoard() {
         const badge = BADGES[name]
           ? `<span class="bdg ${BADGES[name]}">${BADGES[name]==="new"?"NEW":BADGES[name]==="keep"?"유지":"복귀"}</span>` : "";
         let diffBadge = "";
-        if (p.diff === "up") diffBadge = `<span class="diff-bdg up">▲ 승급</span>`;
-        if (p.diff === "down") diffBadge = `<span class="diff-bdg down">▼ 강등</span>`;
+        const diff = window.DIFFS ? window.DIFFS[name] : null;
+        if (diff === "up") diffBadge = `<span class="diff-bdg up">▲ 승급</span>`;
+        if (diff === "down") diffBadge = `<span class="diff-bdg down">▼ 강등</span>`;
         card.innerHTML = `<div class="ph">${badge}${diffBadge}${img}</div><div class="nm">${name}</div>`;
         grid.appendChild(card);
       });
