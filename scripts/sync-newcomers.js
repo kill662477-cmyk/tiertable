@@ -26,7 +26,7 @@ for (const p of players) {
       status[uid] = "youth";
       updated++;
       console.log(`신규 등록 (유스): ${p.name} (${uid})`);
-    } else if (["1","2","3","4","5","6","7","8"].includes(tc) || (p.tier && p.tier.match(/[1-8]티어/))) {
+    } else if (["0","1","2","3","4","5","6","7","8"].includes(tc) || (p.tier && p.tier.match(/[0-8]티어/))) {
       status[uid] = "returnee";
       updated++;
       console.log(`신규 등록 (복귀자): ${p.name} (${uid})`);
