@@ -71,7 +71,10 @@ async function main() {
   let updated = 0;
 
   for (const p of players) {
-    if (p.elo && p.elo.trim() !== "") {
+    const tc = String(p.tierCode);
+    const isTargetTier = tc === "B" || ["0","1","2","3","4","5","6","7","8"].includes(tc) || (p.tier && p.tier.match(/[0-8]티어/));
+    
+    if (isTargetTier && p.elo && p.elo.trim() !== "") {
       const currentPhoto = photos[p.name] || "";
       // 아프리카TV 프사(sooplive.com, afreecatv.com)이거나 사진이 없는 경우
       if (!currentPhoto || currentPhoto.includes("sooplive.com") || currentPhoto.includes("afreecatv.com")) {
