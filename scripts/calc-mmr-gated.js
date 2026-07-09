@@ -18,8 +18,7 @@ const {
   FORCED_TIER_OVERRIDES,
 } = require("./lib/aliases");
 
-const MONSTARZNEW_ROOT = "C:\\Users\\silve\\OneDrive\\Desktop\\MONSTARZNEW_PROJECT_REPOS_20260617-104902\\monstarznew";
-const players = require(path.join(MONSTARZNEW_ROOT, "data", "manual", "players.json"));
+const players = require(path.join(__dirname, "..", "data", "players.json"));
 
 const MATCHES_PATH = path.join(__dirname, "..", "data", "matches.json");
 const OUT_PATH = path.join(__dirname, "..", "data", "mmr-result-gated.json");

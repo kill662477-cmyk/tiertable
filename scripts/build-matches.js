@@ -6,8 +6,7 @@ const fs = require("fs");
 const path = require("path");
 const { classifyMatchType, multiplierFor } = require("./lib/classify");
 
-const MONSTARZNEW_ROOT = "C:\\Users\\silve\\OneDrive\\Desktop\\MONSTARZNEW_PROJECT_REPOS_20260617-104902\\monstarznew";
-const players = require(path.join(MONSTARZNEW_ROOT, "data", "manual", "players.json"));
+const players = require(path.join(__dirname, "..", "data", "players.json"));
 
 const RAW_DIR = path.join(__dirname, "..", "data", "raw-records");
 const OUT_PATH = path.join(__dirname, "..", "data", "matches.json");

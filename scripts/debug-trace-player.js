@@ -7,8 +7,7 @@ const { RENAMED_TO_SEED_NAME } = require("./lib/aliases");
 
 const TARGET_NAME = process.argv[2] || "히엉";
 
-const MONSTARZNEW_ROOT = "C:\\Users\\silve\\OneDrive\\Desktop\\MONSTARZNEW_PROJECT_REPOS_20260617-104902\\monstarznew";
-const players = require(path.join(MONSTARZNEW_ROOT, "data", "manual", "players.json"));
+const players = require(path.join(__dirname, "..", "data", "players.json"));
 
 const MATCHES_PATH = path.join(__dirname, "..", "data", "matches.json");
 const CUTOFF = "2024-04-10";
