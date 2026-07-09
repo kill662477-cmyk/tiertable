@@ -549,7 +549,7 @@ async function main() {
         key: "uid:" + nc.uid,
         name: nc.name,
         race: nc.race,
-        mmr: nc.name === "남덕선" ? 2400 : 600,
+        mmr: nc.name === "남덕선" ? 2500 : 600,
         tier: FORCED_TIER_OVERRIDES[nc.name] || (nc.name === "남덕선" ? "2" : "Y"),
         status: "active",
         wins: 0, losses: 0, countedMatches: 0,
