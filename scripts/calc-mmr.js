@@ -309,12 +309,13 @@ async function main() {
     // 공백 전 점수는 그 당시 실제 전적으로 쌓인 데이터라 유지가 원칙이고,
     // 공백 중 소프트리셋 압축이 이미 기준선 쪽으로 자연 감쇠시킨다.
     for (const e of [w, l]) {
-      if (e.status === "active" && e.lastMatchDate && m.date >= addMonths(e.lastMatchDate, INACTIVE_MONTHS)) {
-        e.note = "복귀자(재측정중)";
-        e.returnBadgeUntil = e.countedMatches + PLACEMENT_GAMES; // 복귀 후 10경기 동안 뱃지 표시
-      }
-      if (e.returnBadgeUntil != null && e.countedMatches >= e.returnBadgeUntil) {
-        e.note = "복귀자(재측정완료)";
+      // 1년(12개월) 이상 전적이 없으면 완전 초기화(장기휴면 배치)
+      if (e.status === "active" && e.lastMatchDate && m.date >= addMonths(e.lastMatchDate, 12)) {
+        e.status = "placement";
+        e.mmr = null;
+        e.tier = null;
+        e.placementList = [];
+        e.note = "장기휴면(배치중)";
         e.returnBadgeUntil = null;
       }
       e.lastMatchDate = m.date;
