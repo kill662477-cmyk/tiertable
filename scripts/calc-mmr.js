@@ -185,8 +185,13 @@ async function main() {
 
   const registry = new Map(); // key -> entry
 
+  let playerInitStatus = {};
+  const statusPath = path.join(__dirname, "..", "data", "player_init_status.json");
+  if (fs.existsSync(statusPath)) {
+    playerInitStatus = JSON.parse(fs.readFileSync(statusPath, "utf8"));
+  }
+
   // meetingRating: 크롤링 안 된 상대(nm: 키)를 처음 만났을 때 부여할 초기 MMR.
-  // "만난 시점의 내(추적 대상) MMR과 동일" 규칙 — 상대 실력을 모르니 기대승률 50%로 중립 처리.
   function ensure(key, name, race, meetingRating) {
     let e = registry.get(key);
     if (e) {
@@ -198,17 +203,23 @@ async function main() {
       e = { mmr: s.mmr, tier: s.tier, status: "active", note: "시드(2024.04)", seeded: true };
     } else if (key.startsWith("uid:")) {
       const userId = key.slice(4);
-      const earliest = fileEarliest[userId];
-      const forced = FORCE_RETURNEE_NAMES.has(name);
-      if ((earliest && earliest < CUTOFF) || forced) {
-        e = { mmr: null, tier: null, status: "placement", placementList: [], note: "복귀자(배치중)" };
-      } else if (process.env.NEWCOMER_MODE === "youth") {
+      const st = playerInitStatus[userId];
+      
+      if (st === "youth") {
         e = { mmr: FALLBACK_UNRATED_MMR, tier: "Y", status: "active", note: "신규(유스 시작)" };
+      } else if (st === "returnee") {
+        e = { mmr: null, tier: null, status: "placement", placementList: [], note: "복귀자(배치중)" };
       } else {
-        // 신규도 복귀자와 동일하게 배치고사 — 유스(600) 고정 주입은 제로섬 풀에
-        // 구조적 디플레이션을 일으킴(실제 실력과의 차액만큼 기존 인원이 잃음).
-        // 붙는 상대 자체가 실력 신호("그 사람이랑 붙는 건 실력이 되니까")라는 원칙을 신규에도 적용.
-        e = { mmr: null, tier: null, status: "placement", placementList: [], note: "신규(배치중)" };
+        // 기존 파일에 명시되지 않은 과거 인원 등은 기존 로직 폴백
+        const earliest = fileEarliest[userId];
+        const forced = FORCE_RETURNEE_NAMES.has(name);
+        if ((earliest && earliest < CUTOFF) || forced) {
+          e = { mmr: null, tier: null, status: "placement", placementList: [], note: "복귀자(배치중)" };
+        } else if (process.env.NEWCOMER_MODE === "youth") {
+          e = { mmr: FALLBACK_UNRATED_MMR, tier: "Y", status: "active", note: "신규(유스 시작)" };
+        } else {
+          e = { mmr: null, tier: null, status: "placement", placementList: [], note: "신규(배치중)" };
+        }
       }
     } else {
       // 크롤링 대상 밖(자기 파일 없음) — 이름 기준 임시 추적, 상대 MMR 그대로 미러링해서 시작
@@ -523,41 +534,40 @@ async function main() {
     }
   }
 
-  // 수동으로 추가할 신규/유스 인원 목록
-  const manualNewcomers = [
-    { name: "진서랄까", race: "T", uid: "janjanoo" },
-    { name: "타마양", race: "T", uid: "tamama88" },
-    { name: "온도이", race: "T", uid: "ode0411" },
-    { name: "또아임니더", race: "Z", uid: "jooyoung0040" }, 
-    { name: "김바다", race: "Z", uid: "littlekim12" },
-    { name: "떠아", race: "Z", uid: "kidsaoq" },
-    { name: "여지니", race: "P", uid: "e2003jin" },
-    { name: "휘연", race: "P", uid: "rldyal71" },
-    { name: "이아라", race: "P", uid: "ara9687" },
-    { name: "유네", race: "P", uid: "yune12" },
-    { name: "남덕선", race: "Z", uid: "rnaqpdrjf" }
-  ];
-
   const activeNames = new Set(displayActive.map(p => p.name));
   const hiddenNames = new Set(hidden.map(p => p.name));
   const placementNames = new Set(stillPlacement.map(p => p.name));
 
-  for (const nc of manualNewcomers) {
-    if (!activeNames.has(nc.name) && !hiddenNames.has(nc.name) && !placementNames.has(nc.name) && !EXCLUDED_PLAYER_NAMES.has(nc.name)) {
+  // player_init_status.json에 명시된 인원 중 아직 전적이 없어 보드에 나타나지 않은 인원 강제 추가
+  for (const [uid, st] of Object.entries(playerInitStatus)) {
+    if (st !== "youth" && st !== "returnee") continue;
+    // players.json에서 이름/종족 찾기
+    const playerInfo = players.find(p => p.userId === uid);
+    if (!playerInfo) continue;
+    
+    if (!activeNames.has(playerInfo.name) && !hiddenNames.has(playerInfo.name) && !placementNames.has(playerInfo.name) && !EXCLUDED_PLAYER_NAMES.has(playerInfo.name)) {
       displayActive.push({
-        key: "uid:" + nc.uid,
-        name: nc.name,
-        race: nc.race,
-        mmr: nc.name === "남덕선" ? 2600 : 600,
-        tier: FORCED_TIER_OVERRIDES[nc.name] || (nc.name === "남덕선" ? "2" : "Y"),
-        status: "active",
+        key: "uid:" + uid,
+        name: playerInfo.name,
+        race: playerInfo.race || "R",
+        mmr: st === "youth" ? 600 : null,
+        tier: FORCED_TIER_OVERRIDES[playerInfo.name] || (st === "youth" ? "Y" : "배치"),
+        status: st === "youth" ? "active" : "placement",
         wins: 0, losses: 0, countedMatches: 0,
         seeded: false,
-        note: "신규(수동추가)",
+        note: st === "youth" ? "신규(유스 시작)" : "복귀자(배치중)",
         lastMatchDate: dataMaxDate,
         isTemporaryDormant: false,
       });
     }
+  }
+
+  // 남덕선 하드코딩 추가 로직 (기존 유지, 위에서 추가 안 된 경우만)
+  if (!activeNames.has("남덕선") && !hiddenNames.has("남덕선") && !placementNames.has("남덕선")) {
+    displayActive.push({
+      key: "uid:rnaqpdrjf", name: "남덕선", race: "Z", mmr: 2600, tier: "2", status: "active",
+      wins: 0, losses: 0, countedMatches: 0, seeded: false, note: "신규(수동추가)", lastMatchDate: dataMaxDate, isTemporaryDormant: false
+    });
   }
 
   const forceYoning = displayActive.find(p => p.name === "요닝");
