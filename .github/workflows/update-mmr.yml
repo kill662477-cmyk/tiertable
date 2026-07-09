@@ -28,6 +28,9 @@ jobs:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
+      - name: Fetch players.json from monstarznew
+        run: node scripts/sync-players.js
+
       - name: Build matches
         run: node scripts/build-matches.js
 
