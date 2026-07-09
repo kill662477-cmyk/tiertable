@@ -18,6 +18,7 @@ const players = require(path.join(__dirname, "..", "data", "players.json"));
 
 const MATCHES_PATH = path.join(__dirname, "..", "data", "matches.json");
 const OUT_PATH = path.join(__dirname, "..", "data", "mmr-result.json");
+const PUBLIC_MMR_URL = "https://rljvzultuyiudhjjfotg.supabase.co/storage/v1/object/public/calmsv-assets/tiertable/mmr-result.json";
 const CUTOFF = "2025-09-30";
 const PLACEMENT_GAMES = 10;
 const FALLBACK_UNRATED_MMR = 600; // 유스 기준선. 배치중 상대 추정치가 없을 때 사용.
@@ -69,10 +70,27 @@ function isReliable(entry) {
 const RESET_INTERVAL_MONTHS = 6;
 const RESET_COMPRESSION = 0.7; // MMR_SYSTEM_DESIGN.md §6 — 약한 압축(시즌 성과 보존 우선)
 const TIER_RANK_ORDER = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "Y"]; // 앞이 강함
+const PROMO_MARGIN = 30;
+const PROMO_MIN_GAMES_IN_TIER = 15;
+const PROMO_MIN_TOTAL_GAMES = 10;
+const PROMO_SERIES_GAMES = 3;
+const PROMO_SERIES_WINS_NEEDED = 2;
+const PROMO_FAIL_COOLDOWN_GAMES = 10;
+const PROMO_FAIL_MMR_OFFSET = -20;
+const RELEGATION_DAYS = 30;
+const RELEGATION_MIN_GAMES_BELOW = 10;
+const RELEGATION_PROTECTION_START = 3;
+const RELEGATION_DEPTH_MARGIN = 50;
 
 function addMonths(dateStr, months) {
   const d = new Date(dateStr + "T00:00:00Z");
   d.setUTCMonth(d.getUTCMonth() + months);
+  return d.toISOString().slice(0, 10);
+}
+
+function addDays(dateStr, days) {
+  const d = new Date(dateStr + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + days);
   return d.toISOString().slice(0, 10);
 }
 
@@ -83,6 +101,79 @@ function rankOf(tier) {
 function tierAtRank(rank) {
   const clamped = Math.max(0, Math.min(TIER_RANK_ORDER.length - 1, rank));
   return TIER_RANK_ORDER[clamped];
+}
+
+function isDisplayUpdateDate(dateStr) {
+  const d = new Date(dateStr + "T00:00:00Z");
+  const day = d.getUTCDate();
+  const tomorrow = new Date(d.getTime() + 24 * 60 * 60 * 1000);
+  return day === 15 || day === 30 || tomorrow.getUTCDate() === 1;
+}
+
+function previousDisplayUpdateDate(dateStr) {
+  const d = new Date(dateStr + "T00:00:00Z");
+  for (let offset = 1; offset <= 62; offset++) {
+    const prev = new Date(d.getTime() - offset * 24 * 60 * 60 * 1000);
+    const prevStr = prev.toISOString().slice(0, 10);
+    if (isDisplayUpdateDate(prevStr)) return prevStr;
+  }
+  return CUTOFF;
+}
+
+function normalizeTierId(value) {
+  const text = String(value || "").trim().toUpperCase();
+  if (!text) return null;
+  if (text.includes("Y") || text.includes("유스")) return "Y";
+  const match = text.match(/[0-8]/);
+  return match ? match[0] : null;
+}
+
+function tiersFromMmrResult(data) {
+  const byName = new Map();
+  for (const p of [...(data.active || []), ...(data.hidden || [])]) {
+    const tier = normalizeTierId(p.tier);
+    if (!tier || !p.name) continue;
+    byName.set(String(p.name).trim(), tier);
+  }
+  return byName;
+}
+
+function tiersFromFinalTiers() {
+  const tiersPath = path.join(__dirname, "..", "data", "final-tiers.json");
+  if (!fs.existsSync(tiersPath)) return new Map();
+
+  const tiers = JSON.parse(fs.readFileSync(tiersPath, "utf8"));
+  const byName = new Map();
+  for (const tier of tiers) {
+    const tierId = normalizeTierId(tier.id);
+    if (!tierId) continue;
+    for (const race of ["T", "Z", "P"]) {
+      for (const name of tier[race] || []) {
+        byName.set(String(name).trim(), tierId);
+      }
+    }
+  }
+  return byName;
+}
+
+async function loadBaseDisplayTiers() {
+  if (process.env.BASE_TIER_SOURCE === "final-tiers") {
+    return { source: "local data/final-tiers.json (recovery override)", tiers: tiersFromFinalTiers() };
+  }
+
+  try {
+    const res = await fetch(`${PUBLIC_MMR_URL}?t=${Date.now()}`);
+    if (!res.ok) throw new Error(`public_fetch_${res.status}`);
+    return { source: "Supabase public mmr-result.json", tiers: tiersFromMmrResult(await res.json()) };
+  } catch (e) {
+    console.warn(`Supabase 기준 티어 가져오기 실패, 로컬 기존 data/mmr-result.json 사용: ${e.message}`);
+  }
+
+  if (fs.existsSync(OUT_PATH)) {
+    return { source: "local data/mmr-result.json", tiers: tiersFromMmrResult(JSON.parse(fs.readFileSync(OUT_PATH, "utf8"))) };
+  }
+
+  return { source: "none", tiers: new Map() };
 }
 
 // ---- 시드(2024.04) <-> players.json 이름+종족 교차 매칭 (93명) ----
@@ -148,9 +239,34 @@ function buildSeedByUid() {
 const BOUNDARY = { ...TIER_BASELINE_MMR };
 const CALIBRATION_PATH = path.join(__dirname, "..", "data", "calibration.json");
 
+function loadDisplayBoundary() {
+  if (!fs.existsSync(CALIBRATION_PATH) || process.env.IGNORE_CALIBRATION === "1") return BOUNDARY;
+
+  const cal = JSON.parse(fs.readFileSync(CALIBRATION_PATH, "utf8"));
+  if (cal.boundaries) {
+    const out = {};
+    for (let kk = 0; kk <= 8; kk++) out[kk] = cal.boundaries[kk];
+    return out;
+  }
+
+  const { A, G } = cal;
+  const out = {};
+  for (let kk = 0; kk <= 8; kk++) out[kk] = A - G * (kk + 0.5);
+  return out;
+}
+
+const DISPLAY_BOUNDARY = loadDisplayBoundary();
+
 function deriveTier(mmr) {
   for (let k = 0; k <= 8; k++) {
     if (mmr >= BOUNDARY[k]) return String(k);
+  }
+  return "Y";
+}
+
+function displayTier(mmr) {
+  for (let kk = 0; kk <= 8; kk++) {
+    if (mmr >= DISPLAY_BOUNDARY[kk]) return String(kk);
   }
   return "Y";
 }
@@ -176,12 +292,125 @@ function ratingFor(entry) {
   return entry.mmr != null ? entry.mmr : FALLBACK_UNRATED_MMR;
 }
 
+function lowerBoundOf(tier) {
+  if (tier === "Y") return -Infinity;
+  return DISPLAY_BOUNDARY[Number(tier)];
+}
+
+function upperNeighborLowerBound(tier) {
+  const rank = rankOf(tier);
+  if (rank <= 0) return Infinity;
+  return lowerBoundOf(tierAtRank(rank - 1));
+}
+
+function initMovementState(entry, baseTier) {
+  const tier = normalizeTierId(baseTier) || normalizeTierId(entry.tier) || (entry.mmr != null ? displayTier(entry.mmr) : null);
+  entry.movementTier = tier;
+  entry.rawTier = entry.mmr != null ? displayTier(entry.mmr) : null;
+  entry.gamesInMovementTier = 0;
+  entry.promoSeries = null;
+  entry.promoCooldownUntil = 0;
+  entry.belowSince = null;
+  entry.belowGames = 0;
+  entry.relegationProtection = RELEGATION_PROTECTION_START;
+}
+
+function resetGateCounters(entry) {
+  entry.gamesInMovementTier = 0;
+  entry.promoSeries = null;
+  entry.belowSince = null;
+  entry.belowGames = 0;
+  entry.relegationProtection = RELEGATION_PROTECTION_START;
+}
+
+function processPromoSeries(entry, won, matchIndex) {
+  if (!entry.promoSeries) return false;
+
+  entry.promoSeries.games += 1;
+  if (won) entry.promoSeries.wins += 1;
+  else entry.promoSeries.losses += 1;
+
+  if (entry.promoSeries.wins >= PROMO_SERIES_WINS_NEEDED) {
+    entry.movementTier = tierAtRank(rankOf(entry.movementTier) - 1);
+    entry.gateLog = (entry.gateLog || []).concat(`승급@${entry.lastMatchDate}`);
+    resetGateCounters(entry);
+    return true;
+  }
+
+  if (
+    entry.promoSeries.losses > PROMO_SERIES_GAMES - PROMO_SERIES_WINS_NEEDED ||
+    entry.promoSeries.games >= PROMO_SERIES_GAMES
+  ) {
+    entry.promoCooldownUntil = matchIndex + PROMO_FAIL_COOLDOWN_GAMES;
+    const lower = lowerBoundOf(entry.movementTier);
+    if (Number.isFinite(lower)) entry.mmr = clampFloor(lower + PROMO_FAIL_MMR_OFFSET);
+    entry.gateLog = (entry.gateLog || []).concat(`승급실패@${entry.lastMatchDate}`);
+    entry.promoSeries = null;
+    return true;
+  }
+
+  return false;
+}
+
+function evaluateMovementGate(entry, won, matchIndex) {
+  if (entry.status !== "active" || !entry.movementTier || entry.mmr == null) return;
+
+  entry.rawTier = displayTier(entry.mmr);
+  if (processPromoSeries(entry, won, matchIndex)) return;
+
+  entry.gamesInMovementTier += 1;
+
+  const lower = lowerBoundOf(entry.movementTier);
+  const isBelow = Number.isFinite(lower) && entry.mmr < lower;
+  if (isBelow) {
+    if (entry.belowSince == null) entry.belowSince = entry.lastMatchDate;
+    entry.belowGames += 1;
+    if (won) entry.relegationProtection = Math.min(RELEGATION_PROTECTION_START, entry.relegationProtection + 1);
+    else entry.relegationProtection = Math.max(0, entry.relegationProtection - 1);
+  } else {
+    entry.belowSince = null;
+    entry.belowGames = 0;
+    entry.relegationProtection = RELEGATION_PROTECTION_START;
+  }
+
+  if (
+    entry.movementTier !== "8" &&
+    entry.movementTier !== "Y" &&
+    entry.belowSince != null &&
+    entry.lastMatchDate >= addDays(entry.belowSince, RELEGATION_DAYS) &&
+    entry.belowGames >= RELEGATION_MIN_GAMES_BELOW &&
+    entry.relegationProtection <= 0 &&
+    entry.mmr <= lower - RELEGATION_DEPTH_MARGIN
+  ) {
+    entry.movementTier = tierAtRank(rankOf(entry.movementTier) + 1);
+    entry.gateLog = (entry.gateLog || []).concat(`강등@${entry.lastMatchDate}`);
+    resetGateCounters(entry);
+    return;
+  }
+
+  const targetLower = upperNeighborLowerBound(entry.movementTier);
+  if (
+    !entry.promoSeries &&
+    matchIndex >= entry.promoCooldownUntil &&
+    Number.isFinite(targetLower) &&
+    entry.mmr >= targetLower + PROMO_MARGIN &&
+    entry.gamesInMovementTier >= PROMO_MIN_GAMES_IN_TIER &&
+    entry.countedMatches >= PROMO_MIN_TOTAL_GAMES
+  ) {
+    entry.promoSeries = { wins: 0, losses: 0, games: 0 };
+  }
+}
+
 async function main() {
   const { fileEarliest, matches: allMatches } = JSON.parse(fs.readFileSync(MATCHES_PATH, "utf8"));
   // 누락자(상대 파일이 없어 한쪽 기록만 존재하는 경기) 전부 제외 — 양쪽 다 크롤링된 경기만 사용
   const matches = allMatches.filter((m) => m.bothSided);
   console.log(`전체 매치 ${allMatches.length}건 중 양쪽기록 매치 ${matches.length}건만 사용`);
   const seedByUid = buildSeedByUid();
+  const baseDisplay = await loadBaseDisplayTiers();
+  const baseDisplayTiers = baseDisplay.tiers;
+  const dataMaxDate = matches.length ? matches[matches.length - 1].date : CUTOFF;
+  const baseDisplayDate = previousDisplayUpdateDate(dataMaxDate);
 
   const registry = new Map(); // key -> entry
 
@@ -231,6 +460,7 @@ async function main() {
     e.wins = 0;
     e.losses = 0;
     e.countedMatches = 0;
+    initMovementState(e, baseDisplayTiers.get(String(name || "").trim()));
     registry.set(key, e);
     return e;
   }
@@ -244,6 +474,8 @@ async function main() {
     const perf = avgOpp + (400 * (wins - losses)) / list.length;
     entry.mmr = perf;
     entry.tier = deriveTier(perf);
+    if (!entry.movementTier) entry.movementTier = displayTier(perf);
+    entry.rawTier = displayTier(perf);
     entry.status = "active";
     entry.note = entry.note === "신규(배치중)" ? "신규(배치확정)" : "복귀자(배치확정)";
     entry.placementSnapshot = list.slice(); // 검증용 — 배치 10경기 원본 기록 보존
@@ -393,6 +625,10 @@ async function main() {
 
     finalizePlacementIfReady(w);
     finalizePlacementIfReady(l);
+    if (m.date > baseDisplayDate) {
+      evaluateMovementGate(w, true, processed);
+      evaluateMovementGate(l, false, processed);
+    }
 
     processed += 1;
   }
@@ -443,7 +679,6 @@ async function main() {
   // 승급 게이트 삭제 — 출력 시점 최종 mmr 기준으로 티어를 다시 계산한다.
   // 마지막 전적이 3개월 이상 지난 사람은 hidden(휴면) — 티어표 표시에서 제외.
   // 마지막 전적이 1개월 이상 지난 사람은 isTemporaryDormant 처리.
-  const dataMaxDate = matches.length ? matches[matches.length - 1].date : CUTOFF;
   const hiddenCutoff = addMonths(dataMaxDate, -INACTIVE_MONTHS);
   const tempDormantCutoff = addMonths(dataMaxDate, -TEMP_INACTIVE_MONTHS);
 
@@ -452,7 +687,8 @@ async function main() {
   const stillPlacement = [];
   for (const [key, e] of registry.entries()) {
     if (e.status === "active") {
-      e.tier = deriveTier(e.mmr);
+      e.rawTier = displayTier(e.mmr);
+      e.tier = e.movementTier || e.rawTier;
       if (e.lastMatchDate && e.lastMatchDate < hiddenCutoff) {
         hidden.push({ key, ...e });
       } else {
@@ -468,33 +704,7 @@ async function main() {
   finalActive.sort((a, b) => b.mmr - a.mmr);
   hidden.sort((a, b) => b.mmr - a.mmr);
 
-  // ---- 표시 티어용 경계선: 1회성 고정 캘리브레이션 ----
-  // 매 실행마다 재적합(self-calibration)하면 개인 성적과 무관하게 전체가 출렁이는
-  // 왜곡이 생겨서 폐기함. data/calibration.json은 수동으로만 갱신되는 고정값 —
-  // 여기서는 읽기만 한다. boundaries(수동 하한 지정) 또는 A/G(회귀) 둘 다 지원.
-  let DISPLAY_BOUNDARY = BOUNDARY;
-  if (fs.existsSync(CALIBRATION_PATH) && process.env.IGNORE_CALIBRATION !== "1") {
-    const cal = JSON.parse(fs.readFileSync(CALIBRATION_PATH, "utf8"));
-    if (cal.boundaries) {
-      DISPLAY_BOUNDARY = {};
-      for (let kk = 0; kk <= 8; kk++) DISPLAY_BOUNDARY[kk] = cal.boundaries[kk];
-      console.log(`고정 경계선(수동 지정) 사용:`, cal.boundaries);
-    } else {
-      const { A, G } = cal;
-      DISPLAY_BOUNDARY = {};
-      for (let kk = 0; kk <= 8; kk++) DISPLAY_BOUNDARY[kk] = A - G * (kk + 0.5);
-      console.log(`고정 캘리브레이션 경계선 사용: A=${A.toFixed(0)}, G=${G.toFixed(1)}`);
-    }
-  }
-
-  function displayTier(mmr) {
-    for (let kk = 0; kk <= 8; kk++) {
-      if (mmr >= DISPLAY_BOUNDARY[kk]) return String(kk);
-    }
-    return "Y";
-  }
-  for (const p of finalActive) p.tier = displayTier(p.mmr);
-  for (const p of hidden) p.tier = displayTier(p.mmr);
+  console.log(`표시 티어 기준: ${baseDisplay.source} (${baseDisplayTiers.size}명), 승강 판정 시작일 ${baseDisplayDate}, rawTier는 MMR 참고값`);
 
   // ---- 표시 제외 인원 (계산 풀에는 유지, 출력에서만 제거) ----
   const rosterNames = new Set(players.map(p => String(p.name).trim()));
@@ -603,24 +813,17 @@ async function main() {
   
   // --- DIFF LOGIC ---
   try {
-    const res = await fetch('https://rljvzultuyiudhjjfotg.supabase.co/storage/v1/object/public/calmsv-assets/tiertable/mmr-result.json?t=' + Date.now());
-    if (res.ok) {
-      const oldData = await res.json();
-      const oldTiers = new Map();
-      for (const p of [...(oldData.active || []), ...(oldData.hidden || [])]) {
-        oldTiers.set(p.name, rankOf(p.tier));
-      }
-      for (const p of displayActive) {
-        const oRank = oldTiers.get(p.name);
-        if (oRank !== undefined) {
-          const nRank = rankOf(p.tier);
-          if (nRank < oRank) p.diff = 'up';
-          else if (nRank > oRank) p.diff = 'down';
-        }
+    for (const p of displayActive) {
+      const oldTier = baseDisplayTiers.get(p.name);
+      const oRank = rankOf(oldTier);
+      const nRank = rankOf(p.tier);
+      if (oRank >= 0 && nRank >= 0) {
+        if (nRank < oRank) p.diff = "up";
+        else if (nRank > oRank) p.diff = "down";
       }
     }
   } catch (e) {
-    console.warn("이전 데이터 가져오기 실패, 승급/강등 비교 생략:", e.message);
+    console.warn("기준 티어 비교 실패, 승급/강등 비교 생략:", e.message);
   }
   // ------------------
 

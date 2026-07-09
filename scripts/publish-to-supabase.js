@@ -53,10 +53,12 @@ async function main() {
   // 다음날이 1일인지 판별 (말일 판별 로직: 2월 28/29일, 30일이 없는 달 등)
   const tomorrow = new Date(kstDate.getTime() + 24 * 60 * 60 * 1000);
   const isLastDay = tomorrow.getUTCDate() === 1;
+  const forcePublicUpload = process.env.FORCE_PUBLIC_UPLOAD === "1";
 
-  if (day === 15 || day === 30 || isLastDay) {
+  if (forcePublicUpload || day === 15 || day === 30 || isLastDay) {
     const rPublic = await uploadPlainJson(BUCKET, "tiertable/mmr-result.json", mmr);
-    console.log(`[Public] 업로드 완료: tiertable/mmr-result.json (${rPublic.size} bytes) - 오늘은 KST ${day}일입니다.`);
+    const reason = forcePublicUpload ? "강제 업로드" : `오늘은 KST ${day}일입니다.`;
+    console.log(`[Public] 업로드 완료: tiertable/mmr-result.json (${rPublic.size} bytes) - ${reason}`);
   } else {
     console.log(`[Public] 업로드 스킵: 오늘은 KST ${day}일입니다. (15일/30일/말일 아님)`);
   }
