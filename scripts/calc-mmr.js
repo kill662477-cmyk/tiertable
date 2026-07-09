@@ -523,14 +523,20 @@ async function main() {
     }
   }
 
-  // 수동으로 추가할 신규/유스 인원 목록 (monstarznew players.json에서 eloboard 주소가 있는 인원 자동 추출)
-  const manualNewcomers = players
-    .filter(p => (p.eloboardKey && p.eloboardKey.trim() !== "") || (p.elo && p.elo.trim() !== ""))
-    .map(p => ({
-      name: p.name,
-      race: p.race,
-      uid: p.userId
-    }));
+  // 수동으로 추가할 신규/유스 인원 목록
+  const manualNewcomers = [
+    { name: "진서랄까", race: "T", uid: "janjanoo" },
+    { name: "타마양", race: "T", uid: "tamama88" },
+    { name: "온도이", race: "T", uid: "ode0411" },
+    { name: "또아임니더", race: "Z", uid: "jooyoung0040" }, 
+    { name: "김바다", race: "Z", uid: "littlekim12" },
+    { name: "떠아", race: "Z", uid: "kidsaoq" },
+    { name: "여지니", race: "P", uid: "e2003jin" },
+    { name: "휘연", race: "P", uid: "rldyal71" },
+    { name: "이아라", race: "P", uid: "ara9687" },
+    { name: "유네", race: "P", uid: "yune12" },
+    { name: "남덕선", race: "Z", uid: "rnaqpdrjf" }
+  ];
 
   const activeNames = new Set(displayActive.map(p => p.name));
   const hiddenNames = new Set(hidden.map(p => p.name));
