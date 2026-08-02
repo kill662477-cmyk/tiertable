@@ -5,6 +5,7 @@ loadMonstarznewEnv();
 
 const BUCKET = "calmsv-assets";
 const PHOTOS_OBJECT = "tiertable/photos.json";
+const ELOBOARD_ORIGIN = "https://eloboard.com";
 
 function getConfig() {
   const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/\/+$/, "");
@@ -23,6 +24,26 @@ async function fetchCurrentPhotos() {
     console.log("기존 photos.json 로드 실패, 빈 객체로 시작합니다.");
   }
   return {};
+}
+
+function absolutizePhotoUrl(url) {
+  const value = String(url || "").trim();
+  if (!value) return "";
+  if (value.startsWith("//")) return "https:" + value;
+  if (value.startsWith("/")) return ELOBOARD_ORIGIN + value;
+  return value;
+}
+
+function normalizeExistingPhotos(photos) {
+  let updated = 0;
+  for (const [name, url] of Object.entries(photos)) {
+    const normalized = absolutizePhotoUrl(url);
+    if (normalized && normalized !== url) {
+      photos[name] = normalized;
+      updated++;
+    }
+  }
+  return updated;
 }
 
 async function uploadPhotos(data) {
@@ -51,7 +72,7 @@ async function scrapeEloboardImage(url) {
     const html = await res.text();
     const match = html.match(/<img[^>]+src=[\`"']([^>]+data\/file\/(?:bj_list|bj_m_list)[^>]+)[\`"'][^>]*>/i);
     if (match && match[1]) {
-      return match[1].split('"')[0].split("'")[0];
+      return absolutizePhotoUrl(match[1].split('"')[0].split("'")[0]);
     }
   } catch (e) {
     // Ignore fetch errors
@@ -68,7 +89,7 @@ async function main() {
   const players = JSON.parse(fs.readFileSync(playersPath, "utf8"));
   
   let photos = await fetchCurrentPhotos();
-  let updated = 0;
+  let updated = normalizeExistingPhotos(photos);
 
   for (const p of players) {
     const tc = String(p.tierCode);
