@@ -791,8 +791,10 @@ async function main() {
   if (forceSijo) { forceSijo.mmr = 2200; forceSijo.tier = displayTier(2200); forceSijo.note = "관리자 강제조정"; }
 
   displayActive.sort((a, b) => {
-    const rankDiff = rankOf(a.tier) - rankOf(b.tier);
-    return rankDiff !== 0 ? rankDiff : b.mmr - a.mmr;
+    const aRank = rankOf(a.tier);
+    const bRank = rankOf(b.tier);
+    const rankDiff = (aRank < 0 ? 999 : aRank) - (bRank < 0 ? 999 : bRank);
+    return rankDiff !== 0 ? rankDiff : (b.mmr ?? -Infinity) - (a.mmr ?? -Infinity);
   });
 
   const tierCounts = {};
@@ -803,8 +805,9 @@ async function main() {
   console.log("티어 분포(표시 대상):", tierCounts);
   console.log("\n상위 15명:");
   for (const p of displayActive.slice(0, 15)) {
+    const mmrText = p.mmr == null ? "       -" : p.mmr.toFixed(1).padStart(8);
     console.log(
-      `  ${p.mmr.toFixed(1).padStart(8)}  [${p.tier}] ${p.name} (${p.race}) - ${p.wins}승${p.losses}패 [${p.note}]`
+      `  ${mmrText}  [${p.tier}] ${p.name} (${p.race}) - ${p.wins}승${p.losses}패 [${p.note}]`
     );
   }
 
@@ -838,5 +841,8 @@ async function main() {
   console.log(`\n저장: ${OUT_PATH}`);
 }
 
-main().catch(console.error);
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
 
