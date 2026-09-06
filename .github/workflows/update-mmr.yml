@@ -5,6 +5,11 @@ on:
     # 19:00 UTC = 04:00 KST
     - cron: '0 19 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+    inputs:
+      force_public_upload:
+        description: "공개 mmr-result.json을 오늘 게시 (평소엔 15일/30일/말일만)"
+        required: false
+        default: "0"
 
 permissions:
   contents: write
@@ -57,6 +62,7 @@ jobs:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          FORCE_PUBLIC_UPLOAD: ${{ inputs.force_public_upload }}
 
       - name: Sync Eloboard Photos
         run: node scripts/sync-photos.js
