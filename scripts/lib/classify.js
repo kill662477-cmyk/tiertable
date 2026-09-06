@@ -1,3 +1,21 @@
+// eloboard가 경기마다 category를 내려주므로 그 값을 그대로 쓴다.
+// 없는 행(구 수집분)만 memo 텍스트 추정으로 넘어간다.
+//
+// eloboard 카테고리 -> 기존 등급 대응 (중요도 순):
+//   college_event 대학대전(대회)          -> 대회
+//   college_war   대학대전                -> 대학대전
+//   team_event/pro_league/college_mini    -> CK   (팀리그·프로리그·미니대전은 동급)
+//   solo_event/sponsored                  -> 스폰 (개인전·스폰은 동급)
+const ELOBOARD_CATEGORY_TO_TIER = {
+  college_event: "대회",
+  college_war: "대학대전",
+  team_event: "CK",
+  pro_league: "CK",
+  college_mini: "CK",
+  solo_event: "스폰",
+  sponsored: "스폰",
+};
+
 // eloboard 전적의 memo(메모) 텍스트로 경기 카테고리를 분류.
 // 판정 순서가 중요: 먼저 걸리는 카테고리를 적용한다. (MMR_SYSTEM_DESIGN.md §3)
 //   1) 대회   : JPL, 큐센, 대학리그, 씨나인배, 라네트배, 숲퍼컵, 스타워즈
@@ -15,7 +33,10 @@ const MULTIPLIER = {
   스폰: 0.5, // 일반 스폰은 물량이 많아 비중 축소 (실효 K = 16×0.5 = 8)
 };
 
-function classifyMatchType(memo) {
+function classifyMatchType(memo, category) {
+  const mapped = ELOBOARD_CATEGORY_TO_TIER[String(category || "").trim()];
+  if (mapped) return mapped;
+
   const text = String(memo || "");
 
   if (TOURNAMENT_KEYWORDS.some((kw) => text.includes(kw))) return "대회";
@@ -44,4 +65,4 @@ function isTeamMatch(matchType, memo) {
   return TEAM_MATCH_PATTERN.test(String(matchType || "")) || TEAM_MATCH_PATTERN.test(String(memo || ""));
 }
 
-module.exports = { classifyMatchType, multiplierFor, isTeamMatch, TOURNAMENT_KEYWORDS, CK_KEYWORDS, MULTIPLIER };
+module.exports = { classifyMatchType, multiplierFor, isTeamMatch, TOURNAMENT_KEYWORDS, CK_KEYWORDS, MULTIPLIER, ELOBOARD_CATEGORY_TO_TIER };

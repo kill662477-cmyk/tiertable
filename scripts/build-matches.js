@@ -112,7 +112,7 @@ function main() {
     if (anchor.date < CUTOFF) continue;
     if (isExcludedKey(winnerKey) || isExcludedKey(loserKey)) { eventTierExcluded += 1; continue; }
 
-    const category = classifyMatchType(anchor.memo);
+    const category = classifyMatchType(anchor.memo, anchor.category);
     matches.push({
       date: anchor.date,
       map: anchor.map,
