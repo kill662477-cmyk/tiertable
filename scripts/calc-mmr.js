@@ -342,8 +342,9 @@ function processPromoSeries(entry, won, matchIndex) {
     entry.promoSeries.games >= PROMO_SERIES_GAMES
   ) {
     entry.promoCooldownUntil = matchIndex + PROMO_FAIL_COOLDOWN_GAMES;
-    const lower = lowerBoundOf(entry.movementTier);
-    if (Number.isFinite(lower)) entry.mmr = clampFloor(lower + PROMO_FAIL_MMR_OFFSET);
+    // 현재 점수에서 깎는다. 특정 점수로 강제 리셋하면 티어 안에서의 서열이 통째로
+    // 지워져서, 1티어 최상위가 한 번의 실패로 1티어 바닥과 같은 점수가 된다.
+    entry.mmr = clampFloor(entry.mmr + PROMO_FAIL_MMR_OFFSET);
     entry.gateLog = (entry.gateLog || []).concat(`승급실패@${entry.lastMatchDate}`);
     entry.promoSeries = null;
     return true;
