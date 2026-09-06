@@ -651,13 +651,14 @@ async function initBoard() {
         if (tierMap[p.tier][p.race]) tierMap[p.tier][p.race].push(p.name);
       });
 
-      TIERS = Object.values(tierMap).sort((a, b) => {
-        if (a.id === 'Y' && b.id !== 'Y') return 1;
-        if (b.id === 'Y' && a.id !== 'Y') return -1;
-        if (a.id === 'B' && b.id !== 'B') return 1;
-        if (b.id === 'B' && a.id !== 'B') return -1;
-        return parseInt(a.id || "99") - parseInt(b.id || "99");
-      });
+      // 숫자 티어 먼저, 그 다음 유스, 배치는 항상 맨 아래.
+      const tierRank = (id) => {
+        if (id === '배치') return 3000;
+        if (id === 'Y' || id === 'B') return 2000;
+        const n = parseInt(id, 10);
+        return Number.isNaN(n) ? 1000 : n;
+      };
+      TIERS = Object.values(tierMap).sort((a, b) => tierRank(a.id) - tierRank(b.id));
     }
   } catch(e) { console.error('Failed to load data', e); }
 
