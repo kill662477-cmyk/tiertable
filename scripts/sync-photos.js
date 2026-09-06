@@ -6,6 +6,9 @@ loadMonstarznewEnv();
 const BUCKET = "calmsv-assets";
 const PHOTOS_OBJECT = "tiertable/photos.json";
 const ELOBOARD_ORIGIN = "https://eloboard.com";
+const ELOBOARD_API = "https://eloboard.com/api";
+// Profile images are served from the .co.kr host, not the site origin.
+const ELOBOARD_IMAGE_ORIGIN = "https://eloboard.co.kr/static/";
 
 function getConfig() {
   const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/\/+$/, "");
@@ -66,20 +69,78 @@ async function uploadPhotos(data) {
   return res.json();
 }
 
-async function scrapeEloboardImage(url) {
-  try {
-    const res = await fetch(url);
-    const html = await res.text();
-    const match = html.match(/<img[^>]+src=[\`"']([^>]+data\/file\/(?:bj_list|bj_m_list)[^>]+)[\`"'][^>]*>/i);
-    if (match && match[1]) {
-      return absolutizePhotoUrl(match[1].split('"')[0].split("'")[0]);
+// eloboard moved to a Next.js app, so the old profile HTML no longer carries a
+// data/file/bj_list image tag. Its JSON API exposes soop_id, which lets us look a
+// player up directly instead of scraping.
+let eloboardIndexPromise = null;
+
+async function loadEloboardIndex() {
+  if (eloboardIndexPromise) return eloboardIndexPromise;
+
+  eloboardIndexPromise = (async () => {
+    const rows = [];
+    for (let offset = 0; ; offset += 200) {
+      const res = await fetch(`${ELOBOARD_API}/players?limit=200&offset=${offset}`, {
+        headers: { accept: "application/json" },
+      });
+      if (!res.ok) throw new Error(`eloboard players HTTP ${res.status}`);
+      const batch = await res.json();
+      if (!Array.isArray(batch)) break;
+      rows.push(...batch);
+      if (batch.length < 200) break;
+      if (offset > 50000) break;
     }
-  } catch (e) {
-    // Ignore fetch errors
-  }
-  return null;
+
+    const bySoopId = new Map();
+    const byName = new Map();
+    for (const row of rows) {
+      if (!row || !row.id) continue;
+      const soopId = String(row.soop_id || "").trim().toLowerCase();
+      if (soopId) {
+        if (!bySoopId.has(soopId)) bySoopId.set(soopId, []);
+        bySoopId.get(soopId).push(row);
+      }
+      const name = String(row.name || "").trim();
+      if (name) {
+        if (!byName.has(name)) byName.set(name, []);
+        byName.get(name).push(row);
+      }
+    }
+
+    console.log(`[eloboard] ${rows.length}명 색인, soop id ${bySoopId.size}개`);
+    return { bySoopId, byName };
+  })().catch((e) => {
+    eloboardIndexPromise = null;
+    throw e;
+  });
+
+  return eloboardIndexPromise;
 }
 
+function pickEntry(list, race) {
+  if (!list || !list.length) return null;
+  const target = String(race || "").trim().toUpperCase();
+  const sameRace = list.filter((row) => String(row.main_race || "").trim().toUpperCase() === target);
+  const pool = sameRace.length ? sameRace : list;
+  return pool.find((row) => row.is_main_race) || pool[0];
+}
+
+function eloboardPhotoUrl(entry) {
+  const thumb = String(entry && entry.thumb_url || "").trim();
+  if (!thumb) return "";
+  if (/^https?:\/\//i.test(thumb)) return thumb;
+  if (thumb.startsWith("//")) return "https:" + thumb;
+  return ELOBOARD_IMAGE_ORIGIN + thumb.replace(/^\/+/, "");
+}
+
+async function findEloboardPhoto(player) {
+  const index = await loadEloboardIndex();
+  const entry =
+    pickEntry(index.bySoopId.get(String(player.userId || "").trim().toLowerCase()), player.race) ||
+    pickEntry(index.byName.get(String(player.name || "").trim()), player.race);
+
+  return eloboardPhotoUrl(entry);
+}
 async function main() {
   const playersPath = path.join(__dirname, "..", "data", "players.json");
   if (!fs.existsSync(playersPath)) {
@@ -95,12 +156,12 @@ async function main() {
     const tc = String(p.tierCode);
     const isTargetTier = tc === "B" || ["0","1","2","3","4","5","6","7","8"].includes(tc) || (p.tier && p.tier.match(/[0-8]티어/));
     
-    if (isTargetTier && p.elo && p.elo.trim() !== "") {
+    if (isTargetTier) {
       const currentPhoto = photos[p.name] || "";
       // 아프리카TV 프사(sooplive.com, afreecatv.com)이거나 사진이 없는 경우
       if (!currentPhoto || currentPhoto.includes("sooplive.com") || currentPhoto.includes("afreecatv.com")) {
         console.log(`${p.name} eloboard 이미지 찾는 중...`);
-        const eloImg = await scrapeEloboardImage(p.elo);
+        const eloImg = await findEloboardPhoto(p).catch(() => "");
         if (eloImg) {
           photos[p.name] = eloImg;
           updated++;
@@ -108,7 +169,6 @@ async function main() {
         } else {
           console.log(`  => 실패`);
         }
-        await new Promise(r => setTimeout(r, 500)); // 속도 제한
       }
     }
   }
