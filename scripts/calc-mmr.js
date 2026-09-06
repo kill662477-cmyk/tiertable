@@ -80,7 +80,15 @@ const PROMO_FAIL_MMR_OFFSET = -20;
 const RELEGATION_DAYS = 30;
 const RELEGATION_MIN_GAMES_BELOW = 10;
 const RELEGATION_PROTECTION_START = 3;
-const RELEGATION_DEPTH_MARGIN = 50;
+const RELEGATION_DEPTH_MARGIN = 100;
+// 이번 계산에서만 강등을 면제할 선수 이름(쉼표 구분). 다음 실행에 남지 않도록
+// 코드가 아니라 실행 시 환경변수로만 지정한다.
+const RELEGATION_EXEMPT_NAMES = new Set(
+  String(process.env.RELEGATION_EXEMPT || "")
+    .split(",")
+    .map((name) => name.trim())
+    .filter(Boolean)
+);
 
 function addMonths(dateStr, months) {
   const d = new Date(dateStr + "T00:00:00Z");
@@ -342,8 +350,9 @@ function processPromoSeries(entry, won, matchIndex) {
     entry.promoSeries.games >= PROMO_SERIES_GAMES
   ) {
     entry.promoCooldownUntil = matchIndex + PROMO_FAIL_COOLDOWN_GAMES;
-    const lower = lowerBoundOf(entry.movementTier);
-    if (Number.isFinite(lower)) entry.mmr = clampFloor(lower + PROMO_FAIL_MMR_OFFSET);
+    // 현재 점수에서 깎는다. 특정 점수로 강제 리셋하면 티어 안에서의 서열이 통째로
+    // 지워져서, 1티어 최상위가 한 번의 실패로 1티어 바닥과 같은 점수가 된다.
+    entry.mmr = clampFloor(entry.mmr + PROMO_FAIL_MMR_OFFSET);
     entry.gateLog = (entry.gateLog || []).concat(`승급실패@${entry.lastMatchDate}`);
     entry.promoSeries = null;
     return true;
@@ -352,11 +361,14 @@ function processPromoSeries(entry, won, matchIndex) {
   return false;
 }
 
-function evaluateMovementGate(entry, won, matchIndex) {
+// allowMovement: 실제 승급/강등 판정을 내려도 되는 경기인지. 직전 게시일 이전 경기는
+// 이미 기준 티어에 반영돼 있으므로 판정은 건너뛰되, "이 티어에서 몇 판 했나" 카운터는
+// 계속 쌓는다 — 승급 요건은 기간이 아니라 해당 티어에서의 누적 경기 수다.
+function evaluateMovementGate(entry, won, matchIndex, allowMovement) {
   if (entry.status !== "active" || !entry.movementTier || entry.mmr == null) return;
 
   entry.rawTier = displayTier(entry.mmr);
-  if (processPromoSeries(entry, won, matchIndex)) return;
+  if (allowMovement && processPromoSeries(entry, won, matchIndex)) return;
 
   entry.gamesInMovementTier += 1;
 
@@ -374,6 +386,8 @@ function evaluateMovementGate(entry, won, matchIndex) {
   }
 
   if (
+    allowMovement &&
+    !RELEGATION_EXEMPT_NAMES.has(entry.name) &&
     entry.movementTier !== "8" &&
     entry.movementTier !== "Y" &&
     entry.belowSince != null &&
@@ -390,6 +404,7 @@ function evaluateMovementGate(entry, won, matchIndex) {
 
   const targetLower = upperNeighborLowerBound(entry.movementTier);
   if (
+    allowMovement &&
     !entry.promoSeries &&
     matchIndex >= entry.promoCooldownUntil &&
     Number.isFinite(targetLower) &&
@@ -410,7 +425,12 @@ async function main() {
   const baseDisplay = await loadBaseDisplayTiers();
   const baseDisplayTiers = baseDisplay.tiers;
   const dataMaxDate = matches.length ? matches[matches.length - 1].date : CUTOFF;
-  const baseDisplayDate = previousDisplayUpdateDate(dataMaxDate);
+  // BASE_DISPLAY_DATE로 승강 판정 시작일을 앞당길 수 있다. 게시 주기를 건너뛴 회차에서
+  // 밀린 구간을 한 번에 판정할 때만 쓰는 수동 스위치이고, 평소에는 직전 게시일을 쓴다.
+  const baseDisplayDateOverride = String(process.env.BASE_DISPLAY_DATE || "").trim();
+  const baseDisplayDate = /^\d{4}-\d{2}-\d{2}$/.test(baseDisplayDateOverride)
+    ? baseDisplayDateOverride
+    : previousDisplayUpdateDate(dataMaxDate);
 
   const registry = new Map(); // key -> entry
 
@@ -625,10 +645,9 @@ async function main() {
 
     finalizePlacementIfReady(w);
     finalizePlacementIfReady(l);
-    if (m.date > baseDisplayDate) {
-      evaluateMovementGate(w, true, processed);
-      evaluateMovementGate(l, false, processed);
-    }
+    const allowMovement = m.date > baseDisplayDate;
+    evaluateMovementGate(w, true, processed, allowMovement);
+    evaluateMovementGate(l, false, processed, allowMovement);
 
     processed += 1;
   }
