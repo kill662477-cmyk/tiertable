@@ -80,7 +80,7 @@ const PROMO_FAIL_MMR_OFFSET = -20;
 const RELEGATION_DAYS = 30;
 const RELEGATION_MIN_GAMES_BELOW = 10;
 const RELEGATION_PROTECTION_START = 3;
-const RELEGATION_DEPTH_MARGIN = 50;
+const RELEGATION_DEPTH_MARGIN = 100;
 
 function addMonths(dateStr, months) {
   const d = new Date(dateStr + "T00:00:00Z");
