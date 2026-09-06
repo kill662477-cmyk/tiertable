@@ -352,11 +352,14 @@ function processPromoSeries(entry, won, matchIndex) {
   return false;
 }
 
-function evaluateMovementGate(entry, won, matchIndex) {
+// allowMovement: 실제 승급/강등 판정을 내려도 되는 경기인지. 직전 게시일 이전 경기는
+// 이미 기준 티어에 반영돼 있으므로 판정은 건너뛰되, "이 티어에서 몇 판 했나" 카운터는
+// 계속 쌓는다 — 승급 요건은 기간이 아니라 해당 티어에서의 누적 경기 수다.
+function evaluateMovementGate(entry, won, matchIndex, allowMovement) {
   if (entry.status !== "active" || !entry.movementTier || entry.mmr == null) return;
 
   entry.rawTier = displayTier(entry.mmr);
-  if (processPromoSeries(entry, won, matchIndex)) return;
+  if (allowMovement && processPromoSeries(entry, won, matchIndex)) return;
 
   entry.gamesInMovementTier += 1;
 
@@ -374,6 +377,7 @@ function evaluateMovementGate(entry, won, matchIndex) {
   }
 
   if (
+    allowMovement &&
     entry.movementTier !== "8" &&
     entry.movementTier !== "Y" &&
     entry.belowSince != null &&
@@ -390,6 +394,7 @@ function evaluateMovementGate(entry, won, matchIndex) {
 
   const targetLower = upperNeighborLowerBound(entry.movementTier);
   if (
+    allowMovement &&
     !entry.promoSeries &&
     matchIndex >= entry.promoCooldownUntil &&
     Number.isFinite(targetLower) &&
@@ -625,10 +630,9 @@ async function main() {
 
     finalizePlacementIfReady(w);
     finalizePlacementIfReady(l);
-    if (m.date > baseDisplayDate) {
-      evaluateMovementGate(w, true, processed);
-      evaluateMovementGate(l, false, processed);
-    }
+    const allowMovement = m.date > baseDisplayDate;
+    evaluateMovementGate(w, true, processed, allowMovement);
+    evaluateMovementGate(l, false, processed, allowMovement);
 
     processed += 1;
   }
