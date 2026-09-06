@@ -10,6 +10,10 @@ on:
         description: "공개 mmr-result.json을 오늘 게시 (평소엔 15일/30일/말일만)"
         required: false
         default: "0"
+      base_display_date:
+        description: "승강 판정 시작일 override (YYYY-MM-DD, 비우면 직전 게시일)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -55,6 +59,8 @@ jobs:
 
       - name: Calculate MMR
         run: node scripts/calc-mmr.js
+        env:
+          BASE_DISPLAY_DATE: ${{ inputs.base_display_date }}
 
       - name: Publish to Supabase
         run: node scripts/publish-to-supabase.js

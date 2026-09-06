@@ -415,7 +415,12 @@ async function main() {
   const baseDisplay = await loadBaseDisplayTiers();
   const baseDisplayTiers = baseDisplay.tiers;
   const dataMaxDate = matches.length ? matches[matches.length - 1].date : CUTOFF;
-  const baseDisplayDate = previousDisplayUpdateDate(dataMaxDate);
+  // BASE_DISPLAY_DATE로 승강 판정 시작일을 앞당길 수 있다. 게시 주기를 건너뛴 회차에서
+  // 밀린 구간을 한 번에 판정할 때만 쓰는 수동 스위치이고, 평소에는 직전 게시일을 쓴다.
+  const baseDisplayDateOverride = String(process.env.BASE_DISPLAY_DATE || "").trim();
+  const baseDisplayDate = /^\d{4}-\d{2}-\d{2}$/.test(baseDisplayDateOverride)
+    ? baseDisplayDateOverride
+    : previousDisplayUpdateDate(dataMaxDate);
 
   const registry = new Map(); // key -> entry
 
