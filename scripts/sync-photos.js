@@ -141,6 +141,15 @@ async function findEloboardPhoto(player) {
 
   return eloboardPhotoUrl(entry);
 }
+// Photos scraped from the old PHP board (eloboard.com/.../data/file/...) all 404 now,
+// so they count as missing and get looked up again.
+function isStalePhoto(url) {
+  const value = String(url || "").trim();
+  if (!value) return true;
+  // SOOP serves these from sooplive.co.kr as well as sooplive.com.
+  if (/sooplive\.|afreecatv\./i.test(value)) return true;
+  return /(^|\/\/)([^\/]*\.)?eloboard\.com\//i.test(value);
+}
 async function main() {
   const playersPath = path.join(__dirname, "..", "data", "players.json");
   if (!fs.existsSync(playersPath)) {
@@ -158,8 +167,7 @@ async function main() {
     
     if (isTargetTier) {
       const currentPhoto = photos[p.name] || "";
-      // 아프리카TV 프사(sooplive.com, afreecatv.com)이거나 사진이 없는 경우
-      if (!currentPhoto || currentPhoto.includes("sooplive.com") || currentPhoto.includes("afreecatv.com")) {
+      if (isStalePhoto(currentPhoto)) {
         console.log(`${p.name} eloboard 이미지 찾는 중...`);
         const eloImg = await findEloboardPhoto(p).catch(() => "");
         if (eloImg) {
