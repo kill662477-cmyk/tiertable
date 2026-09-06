@@ -81,6 +81,14 @@ const RELEGATION_DAYS = 30;
 const RELEGATION_MIN_GAMES_BELOW = 10;
 const RELEGATION_PROTECTION_START = 3;
 const RELEGATION_DEPTH_MARGIN = 100;
+// 이번 계산에서만 강등을 면제할 선수 이름(쉼표 구분). 다음 실행에 남지 않도록
+// 코드가 아니라 실행 시 환경변수로만 지정한다.
+const RELEGATION_EXEMPT_NAMES = new Set(
+  String(process.env.RELEGATION_EXEMPT || "")
+    .split(",")
+    .map((name) => name.trim())
+    .filter(Boolean)
+);
 
 function addMonths(dateStr, months) {
   const d = new Date(dateStr + "T00:00:00Z");
@@ -379,6 +387,7 @@ function evaluateMovementGate(entry, won, matchIndex, allowMovement) {
 
   if (
     allowMovement &&
+    !RELEGATION_EXEMPT_NAMES.has(entry.name) &&
     entry.movementTier !== "8" &&
     entry.movementTier !== "Y" &&
     entry.belowSince != null &&

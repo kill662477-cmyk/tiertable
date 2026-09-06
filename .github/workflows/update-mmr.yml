@@ -14,6 +14,10 @@ on:
         description: "승강 판정 시작일 override (YYYY-MM-DD, 비우면 직전 게시일)"
         required: false
         default: ""
+      relegation_exempt:
+        description: "이번 계산에서만 강등 면제할 선수 (쉼표 구분)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -61,6 +65,7 @@ jobs:
         run: node scripts/calc-mmr.js
         env:
           BASE_DISPLAY_DATE: ${{ inputs.base_display_date }}
+          RELEGATION_EXEMPT: ${{ inputs.relegation_exempt }}
 
       - name: Publish to Supabase
         run: node scripts/publish-to-supabase.js
