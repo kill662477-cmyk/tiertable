@@ -174,6 +174,19 @@ async function main() {
           photos[p.name] = eloImg;
           updated++;
           console.log(`  => 찾음: ${eloImg}`);
+        } else if (currentPhoto && !/sooplive\.|afreecatv\./i.test(currentPhoto)) {
+          // No photo on eloboard, and what we hold is a dead link - fall back to the
+          // SOOP profile image rather than leaving a broken one in place.
+          const fallback = absolutizePhotoUrl(p.image || p.sourceImage || "");
+          if (fallback) {
+            photos[p.name] = fallback;
+            updated++;
+            console.log(`  => eloboard 사진 없음, SOOP 프사로 대체: ${fallback}`);
+          } else {
+            delete photos[p.name];
+            updated++;
+            console.log(`  => eloboard 사진 없음, 죽은 링크 제거`);
+          }
         } else {
           console.log(`  => 실패`);
         }
