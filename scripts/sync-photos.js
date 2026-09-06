@@ -150,6 +150,17 @@ function isStalePhoto(url) {
   if (/sooplive\.|afreecatv\./i.test(value)) return true;
   return /(^|\/\/)([^\/]*\.)?eloboard\.com\//i.test(value);
 }
+// 손으로 정해둔 사진. eloboard에 사진이 없거나 자동으로 고른 것보다 나은 경우를 위해
+// 두는 목록이고, 동기화는 여기 있는 이름을 건드리지 않는다.
+function loadManualPhotos() {
+  const manualPath = path.join(__dirname, "..", "data", "photos-manual.json");
+  try {
+    const parsed = JSON.parse(fs.readFileSync(manualPath, "utf8"));
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch (e) {
+    return {};
+  }
+}
 async function main() {
   const playersPath = path.join(__dirname, "..", "data", "players.json");
   if (!fs.existsSync(playersPath)) {
@@ -158,13 +169,26 @@ async function main() {
   }
   const players = JSON.parse(fs.readFileSync(playersPath, "utf8"));
   
+  const manualPhotos = loadManualPhotos();
+  const manualNames = new Set(Object.keys(manualPhotos));
+
   let photos = await fetchCurrentPhotos();
   let updated = normalizeExistingPhotos(photos);
+
+  for (const [name, url] of Object.entries(manualPhotos)) {
+    if (photos[name] !== url) {
+      photos[name] = url;
+      updated++;
+      console.log(`${name} 고정 사진 적용: ${url}`);
+    }
+  }
 
   for (const p of players) {
     const tc = String(p.tierCode);
     const isTargetTier = tc === "B" || ["0","1","2","3","4","5","6","7","8"].includes(tc) || (p.tier && p.tier.match(/[0-8]티어/));
     
+    if (manualNames.has(p.name)) continue;
+
     if (isTargetTier) {
       const currentPhoto = photos[p.name] || "";
       if (isStalePhoto(currentPhoto)) {
