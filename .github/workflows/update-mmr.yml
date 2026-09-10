@@ -68,12 +68,22 @@ jobs:
           RELEGATION_EXEMPT: ${{ inputs.relegation_exempt }}
 
       - name: Publish to Supabase
+        id: publish
         run: node scripts/publish-to-supabase.js
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           FORCE_PUBLIC_UPLOAD: ${{ inputs.force_public_upload }}
+
+      # 공개본이 갱신된 회차(15일/30일/말일 또는 강제 게시)에만 다시 찍는다.
+      - name: Screenshot tier table
+        if: steps.publish.outputs.published == 'true'
+        run: node scripts/screenshot.js
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
       - name: Sync Eloboard Photos
         run: node scripts/sync-photos.js
