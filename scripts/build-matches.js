@@ -42,7 +42,15 @@ function resolveKey(userId, name, race) {
   return `nm:${name}:${race}`;
 }
 
+// 같은 경기의 승자 관점 행과 패자 관점 행을 하나로 묶는 키.
+//
+// 이름으로 묶으면 안 된다: playerName은 우리 로스터 이름인데 opponentName은
+// eloboard 이름이라, 둘이 다른 선수(46명)는 같은 경기인데도 키가 갈려서 양쪽 다
+// "한쪽 기록"으로 떨어지고 계산에서 통째로 빠졌다. (오조은 vs 조은 등)
+// eloboard가 주는 matchId는 양쪽 파일에 같은 값이 찍히므로 이름과 무관하게 정확하다.
 function signature(r) {
+  if (r.matchId != null && r.matchId !== "") return `m:${r.matchId}`;
+
   const names = [r.playerName, r.opponentName].sort().join(",");
   return [r.date, r.map, r.matchType, r.memo, Math.abs(r.eloChange).toFixed(2), names].join("|");
 }
