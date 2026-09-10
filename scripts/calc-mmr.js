@@ -462,8 +462,11 @@ async function main() {
         // 기존 파일에 명시되지 않은 과거 인원 등은 기존 로직 폴백
         const earliest = fileEarliest[userId];
         const forced = FORCE_RETURNEE_NAMES.has(name);
+        // 이 분기는 "최근에 복귀했다"가 아니라 "시드 스냅샷 이전 전적이 있는데
+        // 시드 명단엔 없다"는 뜻이다. 복귀자로 부르면 26개월째 무출전인 사람도
+        // 복귀자로 표시된다.
         if ((earliest && earliest < CUTOFF) || forced) {
-          e = { mmr: null, tier: null, status: "placement", placementList: [], note: "복귀자(배치중)" };
+          e = { mmr: null, tier: null, status: "placement", placementList: [], note: "미시드(배치중)" };
         } else if (process.env.NEWCOMER_MODE === "youth") {
           e = { mmr: FALLBACK_UNRATED_MMR, tier: "Y", status: "active", note: "신규(유스 시작)" };
         } else {
@@ -497,7 +500,12 @@ async function main() {
     if (!entry.movementTier) entry.movementTier = displayTier(perf);
     entry.rawTier = displayTier(perf);
     entry.status = "active";
-    entry.note = entry.note === "신규(배치중)" ? "신규(배치확정)" : "복귀자(배치확정)";
+    entry.note =
+      entry.note === "신규(배치중)"
+        ? "신규(배치확정)"
+        : entry.note === "미시드(배치중)"
+          ? "미시드(배치확정)"
+          : "복귀자(배치확정)";
     entry.placementSnapshot = list.slice(); // 검증용 — 배치 10경기 원본 기록 보존
   }
 
@@ -728,6 +736,18 @@ async function main() {
   // ---- 표시 제외 인원 (계산 풀에는 유지, 출력에서만 제거) ----
   const rosterNames = new Set(players.map(p => String(p.name).trim()));
   const displayActive = finalActive.filter((p) => !EXCLUDED_PLAYER_NAMES.has(p.name) && rosterNames.has(p.name));
+  // 배치중 목록에도 같은 필터를 건다. 제외 명단이나 로스터 밖 인원이 여기에만 남아
+  // 데이터에 계속 실려 나가고 있었다.
+  const displayPlacement = stillPlacement
+    .filter((p) => !EXCLUDED_PLAYER_NAMES.has(p.name) && rosterNames.has(p.name))
+    .map((p) => {
+      // 등록 시점 라벨은 그 뒤로 경기를 안 하면 영영 갱신되지 않는다. 마지막 경기가
+      // 오래된 사람은 출력 시점에 휴면으로 바로잡는다.
+      if (!p.lastMatchDate) return p;
+      if (p.lastMatchDate < addMonths(dataMaxDate, -12)) return { ...p, note: "장기휴면(배치중)" };
+      if (p.lastMatchDate < addMonths(dataMaxDate, -3)) return { ...p, note: "휴면(배치중)" };
+      return p;
+    });
   const displayHidden = hidden.filter((p) => !EXCLUDED_PLAYER_NAMES.has(p.name) && rosterNames.has(p.name));
 
   // 균등 재배치(분위수 강제 분할) 폐기 — 지정 경계선을 무시하고 순위로 억지 배분해서
@@ -766,7 +786,7 @@ async function main() {
 
   const activeNames = new Set(displayActive.map(p => p.name));
   const hiddenNames = new Set(hidden.map(p => p.name));
-  const placementNames = new Set(stillPlacement.map(p => p.name));
+  const placementNames = new Set(displayPlacement.map(p => p.name));
 
   // player_init_status.json에 명시된 인원 중 아직 전적이 없어 보드에 나타나지 않은 인원 강제 추가
   for (const [uid, st] of Object.entries(playerInitStatus)) {
@@ -820,7 +840,7 @@ async function main() {
   for (const p of displayActive) tierCounts[p.tier] = (tierCounts[p.tier] || 0) + 1;
 
   console.log(`처리한 매치: ${processed} (데이터 최종일 ${dataMaxDate}, 휴면 기준 ${hiddenCutoff} 이전)`);
-  console.log(`표시 대상: ${finalActive.length}, 휴면(숨김): ${hidden.length}, 배치 진행중: ${stillPlacement.length}`);
+  console.log(`표시 대상: ${finalActive.length}, 휴면(숨김): ${hidden.length}, 배치 진행중: ${displayPlacement.length}`);
   console.log("티어 분포(표시 대상):", tierCounts);
   console.log("\n상위 15명:");
   for (const p of displayActive.slice(0, 15)) {
@@ -852,7 +872,7 @@ async function main() {
   fs.writeFileSync(
     OUT_PATH,
     JSON.stringify(
-      { generatedAt: new Date().toISOString(), cutoff: CUTOFF, dataMaxDate, hiddenCutoff, active: displayActive, hidden: displayHidden, placement: stillPlacement },
+      { generatedAt: new Date().toISOString(), cutoff: CUTOFF, dataMaxDate, hiddenCutoff, active: displayActive, hidden: displayHidden, placement: displayPlacement },
       null,
       2
     )
