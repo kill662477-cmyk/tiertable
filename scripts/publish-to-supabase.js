@@ -55,12 +55,20 @@ async function main() {
   const isLastDay = tomorrow.getUTCDate() === 1;
   const forcePublicUpload = process.env.FORCE_PUBLIC_UPLOAD === "1";
 
-  if (forcePublicUpload || day === 15 || day === 30 || isLastDay) {
+  const willPublish = forcePublicUpload || day === 15 || day === 30 || isLastDay;
+
+  if (willPublish) {
     const rPublic = await uploadPlainJson(BUCKET, "tiertable/mmr-result.json", mmr);
     const reason = forcePublicUpload ? "강제 업로드" : `오늘은 KST ${day}일입니다.`;
     console.log(`[Public] 업로드 완료: tiertable/mmr-result.json (${rPublic.size} bytes) - ${reason}`);
   } else {
     console.log(`[Public] 업로드 스킵: 오늘은 KST ${day}일입니다. (15일/30일/말일 아님)`);
+  }
+
+  // 공개본이 실제로 바뀐 회차에만 스샷을 다시 찍도록 워크플로에 알린다.
+  if (process.env.GITHUB_OUTPUT) {
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, `published=${willPublish ? "true" : "false"}
+`);
   }
 }
 
