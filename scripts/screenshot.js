@@ -48,66 +48,58 @@ async function capture() {
     // 티어 섹션이 그려질 때까지 기다린다(데이터는 Supabase에서 런타임에 받아온다).
     await page.waitForSelector("section[id^='tier-'] .card", { timeout: 120000 });
 
-    // 사진은 전부 외부 호스트라 늦게 온다. 끝까지 훑어 전부 요청시킨다.
-    await page.evaluate(async () => {
-      const step = window.innerHeight;
-      for (let y = 0; y < document.body.scrollHeight; y += step) {
-        window.scrollTo(0, y);
-        await new Promise((r) => setTimeout(r, 120));
-      }
-      window.scrollTo(0, 0);
-    });
+    // 사진은 loading="lazy"라 뷰포트 근처에 와야 요청이 나간다. 스크롤로 훑는 것만으로는
+    // 브라우저가 따라오지 못해 201장 중 147장이 요청조차 안 된 채로 남았다.
+    // 페이지 전체 높이를 뷰포트로 잡아 모든 이미지를 한 번에 "보이는" 상태로 만든다.
+    const pageHeight = await page.evaluate(() => document.body.scrollHeight);
+    await page.setViewport({ width: WIDTH, height: pageHeight, deviceScaleFactor: 1 });
 
     // 카드는 스크롤 진입 시 .in이 붙어야 보인다(붙기 전엔 opacity:0). 카드당 28ms씩
-    // 지연돼 붙는 데다 캡처가 뷰포트를 다시 잡으면 따라오지 못해, 아래쪽 티어가 통째로
-    // 비어 나왔다. 관찰자에 맡기지 말고 캡처 직전에 전부 붙인다.
+    // 지연돼 붙으므로 관찰자에 맡기지 말고 직접 붙인다.
     await page.evaluate(() => {
       document.querySelectorAll(".card").forEach((c) => c.classList.add("in"));
     });
 
-    await page.evaluate(
-      () =>
+    // 이미지가 전부 끝날 때까지 기다린다. 조용히 포기하면 빈 카드가 그대로 찍히므로
+    // 남은 장수를 그대로 돌려받아 아래에서 검사한다.
+    const pending = await page.evaluate(
+      (timeoutMs) =>
         new Promise((resolve) => {
-          const pending = [...document.images].filter((img) => !img.complete);
-          if (!pending.length) return resolve();
-
-          let left = pending.length;
-          const done = () => (--left <= 0 ? resolve() : undefined);
-          pending.forEach((img) => {
-            img.addEventListener("load", done, { once: true });
-            img.addEventListener("error", done, { once: true });
-          });
-          setTimeout(resolve, 60000);
-        })
+          const left = () => [...document.images].filter((i) => !i.complete || i.naturalWidth === 0);
+          const check = () => {
+            if (!left().length) return resolve(0);
+            if (Date.now() - started > timeoutMs) return resolve(left().length);
+            setTimeout(check, 500);
+          };
+          const started = Date.now();
+          check();
+        }),
+      180000
     );
+
+    await new Promise((r) => setTimeout(r, 1500)); // 페이드인 transition(0.5s) 여유
 
     const stats = await page.evaluate(() => ({
       height: document.body.scrollHeight,
       cards: document.querySelectorAll("section[id^='tier-'] .card").length,
-      broken: [...document.images].filter((i) => i.complete && i.naturalWidth === 0).length,
       // 페이드인이 안 붙은 카드는 opacity 0으로 남는다. 휴면 카드는 정상적으로
       // 0.5(.card.grayscale)이므로 완전히 투명한 것만 문제로 센다.
       visible: [...document.querySelectorAll("section[id^='tier-'] .card")].filter(
         (c) => Number(getComputedStyle(c).opacity) > 0.1
       ).length,
+      images: document.images.length,
     }));
+
     console.log(
-      `[shot] ${WIDTH}x${stats.height}, 카드 ${stats.cards}장(표시 ${stats.visible}장), 로드 실패 이미지 ${stats.broken}장`
+      `[shot] ${WIDTH}x${stats.height}, 카드 ${stats.cards}장(표시 ${stats.visible}장), ` +
+        `이미지 ${stats.images}장(미완료 ${pending}장)`
     );
 
     if (!stats.cards) throw new Error("카드가 하나도 없습니다 — 데이터 로드 실패로 보입니다.");
     if (stats.visible < stats.cards) {
       throw new Error(`카드 ${stats.cards}장 중 ${stats.cards - stats.visible}장이 투명합니다.`);
     }
-
-    // fullPage는 캡처 시점에 뷰포트를 다시 잡아 페이드인 상태가 흔들린다.
-    // 전체 높이를 뷰포트로 그대로 잡고 한 번에 찍는다.
-    await page.setViewport({ width: WIDTH, height: stats.height, deviceScaleFactor: 1 });
-    await page.evaluate(() => {
-      document.querySelectorAll(".card").forEach((c) => c.classList.add("in"));
-    });
-    await new Promise((r) => setTimeout(r, 1500)); // 페이드인 transition(0.5s)이 끝나기를 기다린다
-
+    if (pending) throw new Error(`이미지 ${pending}장이 로드되지 않았습니다.`);
     const out = path.join(os.tmpdir(), "tiertable.jpg");
     await page.screenshot({ path: out, type: "jpeg", quality: QUALITY });
     return { file: out, ...stats };
