@@ -8,6 +8,7 @@ const { buildSeedIndex, TIER_BASELINE_MMR } = require("./lib/seed");
 const { kEffective, expectedScore } = require("./lib/elo");
 const {
   RENAMED_TO_SEED_NAME,
+  PREVIOUS_DISPLAY_NAMES,
   FORCE_RETURNEE_NAMES,
   DIRECT_UID_SEED_OVERRIDES,
   EXCLUDED_PLAYER_NAMES,
@@ -311,6 +312,13 @@ function upperNeighborLowerBound(tier) {
   return lowerBoundOf(tierAtRank(rank - 1));
 }
 
+function baseTierFor(baseDisplayTiers, name) {
+  const key = String(name || "").trim();
+  if (baseDisplayTiers.has(key)) return baseDisplayTiers.get(key);
+  const previous = PREVIOUS_DISPLAY_NAMES[key];
+  return previous ? baseDisplayTiers.get(previous) : undefined;
+}
+
 function initMovementState(entry, baseTier) {
   const tier = normalizeTierId(baseTier) || normalizeTierId(entry.tier) || (entry.mmr != null ? displayTier(entry.mmr) : null);
   entry.movementTier = tier;
@@ -483,7 +491,7 @@ async function main() {
     e.wins = 0;
     e.losses = 0;
     e.countedMatches = 0;
-    initMovementState(e, baseDisplayTiers.get(String(name || "").trim()));
+    initMovementState(e, baseTierFor(baseDisplayTiers, name));
     registry.set(key, e);
     return e;
   }
@@ -823,8 +831,8 @@ async function main() {
   const forceYoning = displayActive.find(p => p.name === "요닝");
   if (forceYoning) { forceYoning.mmr = 2300; forceYoning.tier = displayTier(2300); forceYoning.note = "관리자 강제조정"; }
 
-  const forceDaye = displayActive.find(p => p.name === "다예");
-  if (forceDaye) { forceDaye.mmr = 2204; forceDaye.tier = displayTier(2204); forceDaye.note = "관리자 강제조정 (구 얌지금)"; }
+  const forceDaye = displayActive.find(p => p.name === "얌지금");
+  if (forceDaye) { forceDaye.mmr = 2204; forceDaye.tier = displayTier(2204); forceDaye.note = "관리자 강제조정 (구 다예)"; }
 
   const forceSijo = displayActive.find(p => p.name === "시조새");
   if (forceSijo) { forceSijo.mmr = 2200; forceSijo.tier = displayTier(2200); forceSijo.note = "관리자 강제조정"; }
@@ -856,7 +864,7 @@ async function main() {
   // --- DIFF LOGIC ---
   try {
     for (const p of displayActive) {
-      const oldTier = baseDisplayTiers.get(p.name);
+      const oldTier = baseTierFor(baseDisplayTiers, p.name);
       const oRank = rankOf(oldTier);
       const nRank = rankOf(p.tier);
       if (oRank >= 0 && nRank >= 0) {

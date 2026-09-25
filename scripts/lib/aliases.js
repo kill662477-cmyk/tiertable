@@ -4,6 +4,18 @@
 // key: 현재 players.json 상의 이름, value: 2024.04 시드 명단상의 원래 이름
 const RENAMED_TO_SEED_NAME = {
   얌지금: "다예",
+  민지: "찌킹",
+  루비: "뚜비",
+};
+
+// 직전 게시본(mmr-result.json)에 실린 이름. 승강 기준 티어를 이름으로 찾기 때문에
+// 개명 직후 회차에는 옛 이름으로도 찾아야 기준 티어가 끊기지 않는다.
+// key: 현재 이름, value: 직전 게시본의 이름
+const PREVIOUS_DISPLAY_NAMES = {
+  얌지금: "다예",
+  민지: "찌킹",
+  루비: "뚜비",
+  유체리: "빵체리",
 };
 
 // 2024.04 시드 명단엔 없지만 실제로는 신규가 아니라 복귀자로 확인된 인원.
@@ -25,6 +37,7 @@ const FORCED_TIER_OVERRIDES = {};
 
 module.exports = {
   RENAMED_TO_SEED_NAME,
+  PREVIOUS_DISPLAY_NAMES,
   FORCE_RETURNEE_NAMES,
   DIRECT_UID_SEED_OVERRIDES,
   EXCLUDED_PLAYER_NAMES,
