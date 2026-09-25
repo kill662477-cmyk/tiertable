@@ -441,6 +441,7 @@ async function main() {
     : previousDisplayUpdateDate(dataMaxDate);
 
   const registry = new Map(); // key -> entry
+  const rosterNameByUid = new Map(players.map((p) => [String(p.userId).trim(), String(p.name).trim()]));
 
   let playerInitStatus = {};
   const statusPath = path.join(__dirname, "..", "data", "player_init_status.json");
@@ -449,12 +450,25 @@ async function main() {
   }
 
   // meetingRating: 크롤링 안 된 상대(nm: 키)를 처음 만났을 때 부여할 초기 MMR.
+  // 표시 이름은 경기 행이 아니라 로스터에서 가져온다. 개명하면 전적 파일 안에
+  // 옛 이름 행과 새 이름 행이 섞이는데(증분 수집은 새 행에만 새 이름을 찍는다),
+  // 행의 이름을 따라가면 마지막으로 처리된 행에 따라 옛 이름이 남고, 그 이름은
+  // 로스터에 없어서 표시 필터에서 통째로 빠진다. (찌킹 -> 민지)
+  function displayNameFor(key, fallback) {
+    if (key.startsWith("uid:")) {
+      const rosterName = rosterNameByUid.get(key.slice(4));
+      if (rosterName) return rosterName;
+    }
+    return fallback;
+  }
+
   function ensure(key, name, race, meetingRating) {
     let e = registry.get(key);
     if (e) {
-      e.name = name; // 최신 이름으로 갱신
+      e.name = displayNameFor(key, name);
       return e;
     }
+    name = displayNameFor(key, name);
     if (seedByUid.has(key)) {
       const s = seedByUid.get(key);
       e = { mmr: s.mmr, tier: s.tier, status: "active", note: "시드(2024.04)", seeded: true };
